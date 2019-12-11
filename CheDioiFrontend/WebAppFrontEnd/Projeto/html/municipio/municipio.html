@@ -1,0 +1,60 @@
+<div ng-controller="municipioControllerRead">    
+
+    <h2 class="text-center">Lista de municípios</h2>
+    <button class="btn btn-success">Criar</button>
+    <br /><br />
+
+    <form>        
+        <input 
+            type="text" class="form-control" 
+            placeholder="Digite um município ..." ng-model="busca.nome" 
+        />        
+        <br><br>
+        
+        <select
+                class="btn btn-secondary dropdown-toggle text-center"                
+                ng-options="estado.nome for estado in estados | orderBy:'nome' "
+                ng-model="buscaPorEstado"                
+                >
+                <option value="">Selecione um estado</option>                
+            
+        </select>        
+        
+    </form>
+    <br /><br />
+    <p class="este">{{estarosa}}</p>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thread>
+                <tr>
+                    <td>DESCRIÇÃO</td>
+                    <td>UF</td>
+                    <td colspan="2" align="center">Ação</td>
+                </tr>
+            </thread>
+            <tbody>
+                <tr dir-paginate="municipio in municipios | orderBy:'nome' | filter:busca| filter:change | itemsPerPage:20"
+                    scope="col-2" id="remove-{{municipio.id}}">
+                    <td>{{municipio.nome}}</td>
+                    <td>{{municipio.microrregiao.mesorregiao.UF.sigla}}</td>
+
+                    <td align="center">
+                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="update(municipio)">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </td>
+                    <td align="center">
+                        <button class="btn btn-danger" ng-click ="confirDelete(municipio); testandoFuncao()"><i class="far fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+        template-url="dirPagination.tpl.html" max-size="12" ></dir-pagination-controls>        
+</div>    
+<div ng-controller="municipioControllerDelete" ng-include="modalDelete.template"></div>
+<div ng-controller="municipioControllerUpdate" ng-include="modalUpdate.template"></div>
+
+    

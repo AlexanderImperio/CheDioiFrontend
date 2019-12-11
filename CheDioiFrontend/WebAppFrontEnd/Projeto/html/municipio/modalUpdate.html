@@ -1,0 +1,36 @@
+<div class="modal fade" id="modal-update">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 style="font-weight: normal;">Alterar municipio <strong>{{municipioAtual.nome}}</strong></h5>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>                
+            </div>
+            <form>
+                <div class="modal-body">
+
+                    <p>Nomo do municipio</p>
+                    <input class="form-control" type="text" required value="{{municipioAtual.nome}}">
+                    <p>Estado em que municipio esta inserido</p>
+                    <input class="form-control" type="text" required value="{{municipioAtual.microrregiao.mesorregiao.UF.nome}}">
+                    <p>Sigla do estado</p>
+                    <input class="form-control" type="text" required value="{{municipioAtual.microrregiao.mesorregiao.UF.sigla}}">                    
+
+                </div>
+                <div class="modal-footer">
+                    <table class="col-12 text-center">
+                        <tr>
+                            <td>
+                                <input type="submit" ng-click="mensagelUpdate()" class="btn btn-success" value="Alterar" data-dismiss="modal">                                
+                            </td>
+
+                            <td>
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">cancelar
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

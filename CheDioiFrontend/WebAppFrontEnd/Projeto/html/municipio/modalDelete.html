@@ -1,0 +1,30 @@
+<div class="modal fade" id="modal-delete">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+            </div>
+            <div class="modal-body">
+                <p>deseja realmente deletar o municipio <strong>{{municipioAtual.nome}}</strong></p>
+            </div>
+            <div class="modal-footer">
+                <table class="col-12 text-center">
+                    <tr>                        
+                        <td>
+                            <button type="button" class="btn btn-danger" ng-click="fakeDelete(municipioAtual)"
+                             data-dismiss="modal">Deletar</button>
+                        </td>
+
+                        <td>
+                            <button
+                                type="button" class="btn btn-warning" 
+                                data-dismiss="modal">cancelar
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

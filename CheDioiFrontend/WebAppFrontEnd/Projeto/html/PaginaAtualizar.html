@@ -1,0 +1,31 @@
+﻿<div ng-controller="atualizarController" class="row">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>
+                    <label>ID selecionado:</label>
+                    <input class="form-control" value="{{estadoSelecionado.id}}" disabled>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nome do Estado:</label>
+                    <input class="form-control" ng-model="nomeEstado" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>UF: </label>
+                    <input class="form-control" ng-model="ufEstado" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+                </td>
+            </tr>
+            <tr style="text-align: center">
+                <td>
+                    <button type="button" class="btn btn-primary" ng-click="atualizar(nomeEstado, ufEstado)">Atualizar</button>
+                    <button ng-click="voltar()" type="button" class="btn btn-warning">Voltar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+﻿
+<div ng-controller="estadoController">
+    <div class="row">
+        <div class="col-12">
+            <button ng-click="criar()" class="btn btn-success">Criar</button>
+        </div>
+    </div><br />
+    <div class="row">
+        <div class="col-12 table-responsive">
+            <table class="table table-bordered">
+                <thread>
+                    <tr>
+                        <td>ID</td>
+                        <td>DESCRIÇÃO</td>
+                        <td>UF</td>
+                        <td colspan="2" align="center">Açã0o</td>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr ng-repeat="estado in Estados | orderBy:'nome'" scope="col-2">
+                        <td>{{estado.id}}</td>
+                        <td>{{estado.nome}}</td>
+                        <td>{{estado.sigla}}</td>
+                        <td align="center">
+                            <button ng-click="atualizar(estado)" value="editar" title="Editar" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                        </td>
+                        <td align="center">
+                            <button ng-click="deletar(estado)" value="deletar" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
