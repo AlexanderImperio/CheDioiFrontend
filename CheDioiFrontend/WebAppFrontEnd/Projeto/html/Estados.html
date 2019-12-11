@@ -10,15 +10,13 @@
             <table class="table table-bordered">
                 <thread>
                     <tr>
-                        <td>ID</td>
                         <td>DESCRIÇÃO</td>
                         <td>UF</td>
-                        <td colspan="2" align="center">Açã0o</td>
+                        <td colspan="2" align="center">Ação</td>
                     </tr>
                 </thread>
                 <tbody>
                     <tr ng-repeat="estado in Estados | orderBy:'nome'" scope="col-2">
-                        <td>{{estado.id}}</td>
                         <td>{{estado.nome}}</td>
                         <td>{{estado.sigla}}</td>
                         <td align="center">
@@ -31,6 +29,7 @@
                     </tr>
                 </tbody>
             </table>
+            <button ng-click="voltar()" type="button" class="btn btn-warning">Voltar</button>
         </div>
     </div>
 </div>

@@ -37,6 +37,10 @@ myControllers.controller('estadoController', ['$rootScope', '$scope', '$http', '
         $scope.criar = function () {
             $location.path('/criar');
         };
+
+        $scope.voltar = function () {
+            $location.path('/menu');
+        }; 
     }
 ]);
 
@@ -82,6 +86,8 @@ myControllers.controller('deletarController', ['$rootScope', '$scope', '$http', 
         };        
     }
 ]);
+
+
 
 myControllers.controller('criarController', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
