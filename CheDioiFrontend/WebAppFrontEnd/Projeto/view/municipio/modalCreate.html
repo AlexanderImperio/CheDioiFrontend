@@ -5,22 +5,25 @@
                 <h5 style="font-weight: normal;">Criação de municipio</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>                
             </div>
-            <form>
+            <form id="createSubmit" >
                 <div class="modal-body">
 
                     <p>Nomo do municipio</p>
-                    <input id="nomeMunicipio" class="form-control" type="text" value="" required>
-                    <p>Estado em que municipio esta inserido</p>
-                    <input class="form-control" type="text" required>
-                    <p>Sigla do estado</p>
-                    <input id="estadoSigla" class="form-control" type="text" required>                    
+                    <input id="nomeMunicipio" class="form-control" type="text" value="" />
+                    <br />
+                    <select id="estadoNome" class="btn dropdown-toggle text-center"
+                            ng-options="estado.nome for estado in estados | orderBy:'nome' "
+                            ng-model="selecaoEstado" ng-change="$scope.selecionado = selecaoEstado">
+                        <option value="">Selecione um estado</option>
+
+                    </select>                    
 
                 </div>
                 <div class="modal-footer">
                     <table class="col-12 text-center">
                         <tr>
                             <td>
-                                <button type="submit" ng-click="removeInput()" class="btn btn-success">Cadastrar</button>
+                                <input type="submit" ng-click="removeInput(selecaoEstado)" value="Cadastrar" class="btn btn-success" />
                             </td>
 
                             <td>

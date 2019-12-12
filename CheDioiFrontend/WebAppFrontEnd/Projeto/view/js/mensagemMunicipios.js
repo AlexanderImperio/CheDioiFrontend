@@ -17,8 +17,9 @@
                     enter: 'animated bounceInDown',
                     exit: 'animated fadeOutUp'
                 },
+                z_index: 9999
 
-            });
+        });
     } else {
         $.notify({
             //options
@@ -38,6 +39,7 @@
                 },
                 delay: 3000,
                 timer: 2000,
+                z_index: 9999
 
             });
 
@@ -66,6 +68,7 @@ function showUpdateMessage(validator, municipio) {
                 },
                 delay: 3000,
                 timer: 2000,
+                z_index: 9999
 
             });
     } else {
@@ -86,6 +89,7 @@ function showUpdateMessage(validator, municipio) {
                 },
                 delay: 3000,
                 timer: 2000,
+                z_index: 9999
 
             });
 
@@ -99,23 +103,24 @@ function showDeleteMessage(validator,  municipio) {
     if (validator == false) {
         $.notify({
             //options
-            message: "Municipio "+municipio+" deletado com sucesso!"
+            message: "Municipio " + municipio + " deletado com sucesso!"
         }, {
-                //settings
-                type: "success",
-                allow_dismiss: false,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-                delay: 3000,
-                timer: 2000,
+            //settings
+            type: "success",
+            allow_dismiss: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            animate: {
+                enter: 'animated bounceInDown',
+                exit: 'animated fadeOutUp'
+            },
+            delay: 3000,
+            timer: 2000,
+            z_index: 9999
 
-            });
+        });
     } else {
         $.notify({
             //options
@@ -134,6 +139,7 @@ function showDeleteMessage(validator,  municipio) {
                 },
                 delay: 3000,
                 timer: 2000,
+                z_index: 9999
 
             });
 
@@ -157,6 +163,7 @@ function siglaErrada() {
                 enter: 'animated bounceInDown',
                 exit: 'animated fadeOutUp'
             },
+            z_index: 9999
 
         });
 }
@@ -178,6 +185,7 @@ function nomeErrado() {
                 enter: 'animated bounceInDown',
                 exit: 'animated fadeOutUp'
             },
+            z_index: 9999
 
         });
 }
@@ -199,6 +207,7 @@ function estadoESiglaErrados() {
                 enter: 'animated bounceInDown',
                 exit: 'animated fadeOutUp'
             },
+            z_index: 9999
 
         });
 }

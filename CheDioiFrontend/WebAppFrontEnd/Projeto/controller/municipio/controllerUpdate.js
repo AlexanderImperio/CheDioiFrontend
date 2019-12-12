@@ -13,8 +13,7 @@ myControllersUpdate.controller('municipioControllerUpdate', ['$rootScope', '$sco
         }
 
         $scope.mensagelUpdate= function(){
-            showUpdateMessage(false, $rootScope.municipioAtual.nome)
-            
+            showUpdateMessage(false, $rootScope.municipioAtual.nome);            
         }
     }
 ]);

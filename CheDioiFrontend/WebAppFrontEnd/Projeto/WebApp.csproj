@@ -72,6 +72,7 @@
     <Content Include="model\municipio\moduleMunicipio.js" />
     <Content Include="view\css\animate.min.css" />
     <Content Include="view\css\paginator.css" />
+    <Content Include="view\css\styleMunicipio.css" />
     <Content Include="view\estado\Estados.html" />
     <Content Include="view\estado\PaginaAtualizar.html" />
     <Content Include="view\estado\PaginaCriar.html" />
@@ -80,8 +81,8 @@
     <Content Include="view\home\Menu.html" />
     <Content Include="view\js\bootstrap-notify.min.js" />
     <Content Include="view\js\constantes.js" />
-    <Content Include="view\js\functions.js" />
-    <Content Include="view\js\Mensagem.js" />
+    <Content Include="view\js\mensagemMunicipios.js" />
+    <Content Include="view\js\mensagemEstados.js" />
     <Content Include="view\js\paginate.js" />
     <Content Include="view\municipio\dirPagination.tpl.html" />
     <Content Include="view\municipio\index.html" />
