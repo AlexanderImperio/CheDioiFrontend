@@ -4,3 +4,16 @@
 
 /CheDioiFrontend/WebAppFrontEnd/Projeto/obj/Debug
 /.vs
+/CheDioiFrontend/WebAppFrontEnd/.vs/WebAppFrontEnd/config
+/CheDioiFrontend/WebAppFrontEnd/.vs/WebAppFrontEnd/v16/Server/sqlite3
+*.suo
+*.props
+*.xdt
+*.xml
+*.dll
+*.ps1
+/CheDioiFrontend/WebAppFrontEnd/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0/tools/Roslyn45
+/CheDioiFrontend/WebAppFrontEnd/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0/tools/RoslynLatest
+*.p7s
+/CheDioiFrontend/WebAppFrontEnd/Projeto/bin
+*.nupkg
