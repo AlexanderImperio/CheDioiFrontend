@@ -1,17 +1,17 @@
-﻿
-
-var myApp = angular.module('myApp', ['ngRoute', 'myControllers']);
+﻿var myApp = angular.module('myApp', ['ngRoute', 'myControllers']);
 var myControllers = angular.module("myControllers", []);
+
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
-        when('/estado', { templateUrl: 'Estados.html', controller: 'estadoController' }).
-        when('/atualizar', { templateUrl: 'PaginaAtualizar.html', controller: 'atualizarController' }).
-        when('/deletar', { templateUrl: 'PaginaDeletar.html', controller: 'deletarController' }).
-        when('/criar', { templateUrl: 'PaginaCriar.html', controller: 'criarController' }).
-        when('/menu', { templateUrl: 'Menu.html' }).
+        when('/estado', { templateUrl: endereco + 'estado/Estados.html', controller: 'estadoController' }).
+        when('/atualizar', { templateUrl: endereco + 'estado/PaginaAtualizar.html', controller: 'atualizarController' }).
+        when('/deletar', { templateUrl: endereco + 'estado/PaginaDeletar.html', controller: 'deletarController' }).
+        when('/criar', { templateUrl: endereco + 'estado/PaginaCriar.html', controller: 'criarController' }).
+        when('/menu', { templateUrl: endereco + 'home/Menu.html' }).
         otherwise({ redirectTo: '/menu' });
 }]);
+
 
 myControllers.controller('estadoController', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {

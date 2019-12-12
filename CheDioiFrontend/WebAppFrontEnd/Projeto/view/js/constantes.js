@@ -1,0 +1,1 @@
+﻿const endereco = "https://localhost:44311/view/";

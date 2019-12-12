@@ -1,0 +1,36 @@
+<div class="modal fade" id="modal-create">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 style="font-weight: normal;">Criação de municipio</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>                
+            </div>
+            <form>
+                <div class="modal-body">
+
+                    <p>Nomo do municipio</p>
+                    <input id="nomeMunicipio" class="form-control" type="text" value="" required>
+                    <p>Estado em que municipio esta inserido</p>
+                    <input class="form-control" type="text" required>
+                    <p>Sigla do estado</p>
+                    <input id="estadoSigla" class="form-control" type="text" required>                    
+
+                </div>
+                <div class="modal-footer">
+                    <table class="col-12 text-center">
+                        <tr>
+                            <td>
+                                <button type="submit" ng-click="removeInput()" class="btn btn-success">Cadastrar</button>
+                            </td>
+
+                            <td>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">cancelar
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

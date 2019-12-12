@@ -64,17 +64,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="html\css\animate.min.css" />
-    <Content Include="html\Estados.html" />
-    <Content Include="html\htmlpage.html" />
-    <Content Include="html\index.html" />
-    <Content Include="html\js\bootstrap-notify.min.js" />
-    <Content Include="html\js\Mensagem.js" />
-    <Content Include="html\Menu.html" />
-    <Content Include="html\js\Modulo.js" />
-    <Content Include="html\PaginaAtualizar.html" />
-    <Content Include="html\PaginaCriar.html" />
-    <Content Include="html\PaginaDeletar.html" />
+    <Content Include="controller\municipio\controllerCreate.js" />
+    <Content Include="controller\municipio\controllerDelete.js" />
+    <Content Include="controller\municipio\controllerRead.js" />
+    <Content Include="controller\municipio\controllerUpdate.js" />
+    <Content Include="model\estado\Modulo.js" />
+    <Content Include="model\municipio\moduleMunicipio.js" />
+    <Content Include="view\css\animate.min.css" />
+    <Content Include="view\css\paginator.css" />
+    <Content Include="view\estado\Estados.html" />
+    <Content Include="view\estado\PaginaAtualizar.html" />
+    <Content Include="view\estado\PaginaCriar.html" />
+    <Content Include="view\estado\PaginaDeletar.html" />
+    <Content Include="view\home\index.html" />
+    <Content Include="view\home\Menu.html" />
+    <Content Include="view\js\bootstrap-notify.min.js" />
+    <Content Include="view\js\constantes.js" />
+    <Content Include="view\js\functions.js" />
+    <Content Include="view\js\Mensagem.js" />
+    <Content Include="view\js\paginate.js" />
+    <Content Include="view\municipio\dirPagination.tpl.html" />
+    <Content Include="view\municipio\index.html" />
+    <Content Include="view\municipio\modalCreate.html" />
+    <Content Include="view\municipio\modalDelete.html" />
+    <Content Include="view\municipio\modalUpdate.html" />
+    <Content Include="view\municipio\municipio.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +104,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="html\municipio\" />
+    <Folder Include="controller\estado\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
