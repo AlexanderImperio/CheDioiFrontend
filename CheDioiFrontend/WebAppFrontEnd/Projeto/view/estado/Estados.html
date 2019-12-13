@@ -1,35 +1,53 @@
-﻿
-<div ng-controller="estadoController">
-    <div class="row">
-        <div class="col-12">
-            <button ng-click="criar()" class="btn btn-success">Criar</button>
-        </div>
-    </div><br />
-    <div class="row">
-        <div class="col-12 table-responsive">
-            <table class="table table-bordered">
-                <thread>
-                    <tr>
-                        <td>DESCRIÇÃO</td>
-                        <td>UF</td>
-                        <td colspan="2" align="center">Ação</td>
-                    </tr>
-                </thread>
-                <tbody>
-                    <tr ng-repeat="estado in Estados | orderBy:'nome'" scope="col-2">
-                        <td>{{estado.nome}}</td>
-                        <td>{{estado.sigla}}</td>
-                        <td align="center">
-                            <button ng-click="atualizar(estado)" value="editar" title="Editar" class="btn btn-primary"><i class="fas fa-edit"></i></button>
-                        </td>
-                        <td align="center">
-                            <button ng-click="deletar(estado)" value="deletar" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+﻿<div ng-controller="estadoController">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card-body">
+                    <button ng-click="criar()" class="btn btn-success btn-sm">Adicionar</button>
+                    <br />
+                    <br />
+                    <div class="form-group input-group">
+                        <div class="input-group-append">
+                            <span class="input-group-text"> <i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" ng-model="search" class="form-control" placeholder="Pesquisar">
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <button ng-click="voltar()" type="button" class="btn btn-warning">Voltar</button>
+                    </div>
+                    <br />
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thread style="background-color: rgba(0,0,0,.03); text-align: center;">
+                                <tr>
+                                    <th ng-click="sort('nome')">
+                                        DESCRIÇÃO
+                                        <i class="fas fa-sort" ng-show="sortKey=='nome'"></i>
+                                    </th>
+                                    <th ng-click="sort('sigla')">
+                                        UF
+                                        <i class="fas fa-sort" ng-show="sortKey=='sigla'"></i>
+                                    </th>
+                                    <th colspan="2" align="center" width="2%">AÇÃO</th>
+                                </tr>
+                            </thread>
+                            <tbody>
+                                <tr ng-repeat="estado in Estados | orderBy:'nome' : reverse | filter:search" scope="col-2">
+                                    <td>{{estado.nome}}</td>
+                                    <td>{{estado.sigla}}</td>
+                                    <td align="center">
+                                        <button ng-click="atualizar(estado)" value="editar" title="Editar" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                    <td align="center">
+                                        <button ng-click="deletar(estado)" value="deletar" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></button>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+

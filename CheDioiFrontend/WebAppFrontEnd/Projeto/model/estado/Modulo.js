@@ -41,6 +41,11 @@ myControllers.controller('estadoController', ['$rootScope', '$scope', '$http', '
         $scope.voltar = function () {
             $location.path('/menu');
         }; 
+
+        $scope.sort = function (keyname) {
+            $scope.sortKey = keyname;
+            $scope.reverse = !$scope.reverse;
+        }
     }
 ]);
 
