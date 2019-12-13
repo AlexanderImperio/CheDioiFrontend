@@ -1,26 +1,30 @@
-<div ng-controller="municipioControllerRead">    
+<div ng-controller="municipioControllerRead">
 
     <h2 class="text-center">Lista de municípios</h2>
     <button class="btn btn-success" ng-click="create()">Criar</button>
     <br /><br />
 
-    <form>        
-        <input 
-            type="text" class="form-control" 
-            placeholder="Digite um município ..." ng-model="busca.nome" 
-        />        
+    <form>
+        <input type="text" class="form-control"
+               placeholder="Digite um município ..." ng-model="busca.nome" />
         <br><br>
-        
-        <select
-                class="btn dropdown-toggle text-center"                
+
+        <select class="btn dropdown-toggle text-center"
                 ng-options="estado.nome for estado in estados | orderBy:'nome' "
-                ng-model="buscaPorEstado"                
-                >
-                <option value="">Selecione um estado</option>                
-            
-        </select>        
-        
+                ng-model="buscaPorEstado">
+            <option value="">Selecione um estado</option>
+        </select>
     </form>
+    <br /><br />
+    <form>
+        <select class="btn dropdown-toggle text-center"
+                ng-model="itemPorPagina" ng-init='itemPorPagina = "10"'>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+    </form>
+
     <br /><br />
     <p class="este">{{estarosa}}</p>
     <div class="table-responsive">
@@ -33,7 +37,7 @@
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="municipio in municipios | orderBy:'nome' | filter:busca| filter:change | itemsPerPage:20"
+                <tr dir-paginate="municipio in municipios | orderBy:'nome' | filter:busca| filter:change | itemsPerPage:itemPorPagina"
                     scope="col-2" id="remove-{{municipio.id}}">
                     <td>{{municipio.nome}}</td>
                     <td>{{municipio.microrregiao.mesorregiao.UF.sigla}}</td>
@@ -44,15 +48,15 @@
                         </button>
                     </td>
                     <td align="center">
-                        <button class="btn btn-danger" ng-click ="confirDelete(municipio); testandoFuncao()"><i class="far fa-trash-alt"></i></button>
+                        <button class="btn btn-danger" ng-click="confirDelete(municipio); testandoFuncao()"><i class="far fa-trash-alt"></i></button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    
-    <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
-        template-url="dirPagination.tpl.html" max-size="12" ></dir-pagination-controls>        
+
+    <dir-pagination-controls class="d-flex flex-row-reverse" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+                             template-url="dirPagination.tpl.html" max-size="12"></dir-pagination-controls>
 </div>
 <div class="insert-modal">
     <div ng-controller="municipioControllerDelete" ng-include="modalDelete.template"></div>
