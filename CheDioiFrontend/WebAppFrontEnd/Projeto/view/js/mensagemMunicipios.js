@@ -23,7 +23,7 @@
     } else {
         $.notify({
             //options
-            message: "Erro ao cadastrar estado"
+            message: "Erro ao cadastrar municipio"
         }, {
                 //settings
                 type: "danger",
@@ -74,7 +74,7 @@ function showUpdateMessage(validator, municipio) {
     } else {
         $.notify({
             //options
-            message: "Erro ao alterar o estado"
+            message: "Erro ao alterar o municipio"
         }, {
                 //settings
                 type: "danger",
@@ -168,11 +168,11 @@ function siglaErrada() {
         });
 }
 
-function nomeErrado() {
+function nomeIgual() {
 
     $.notify({
         //options
-        message: "Esse nome de estado já foi cadastrado."
+        message: "Faça alguma alteração!"
     }, {
             //settings
             type: "danger",
@@ -190,11 +190,33 @@ function nomeErrado() {
         });
 }
 
-function estadoESiglaErrados() {
+function nomeCreateIgual() {
 
     $.notify({
         //options
-        message: "O Estado e o UF já foram cadastrados."
+        message: "Este municipio já está cadastrado!"
+    }, {
+        //settings
+        type: "danger",
+        allow_dismiss: true,
+        placement: {
+            from: "top",
+            align: "right"
+        },
+        animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated fadeOutUp'
+        },
+        z_index: 9999
+
+    });
+}
+
+function nomeVazil() {
+
+    $.notify({
+        //options
+        message: "Preencha todos os campos"
     }, {
             //settings
             type: "danger",
@@ -210,5 +232,27 @@ function estadoESiglaErrados() {
             z_index: 9999
 
         });
+}
+
+function seletorVazil() {
+
+    $.notify({
+        //options
+        message: "Selecione um estado!"
+    }, {
+        //settings
+        type: "danger",
+        allow_dismiss: true,
+        placement: {
+            from: "top",
+            align: "right"
+        },
+        animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated fadeOutUp'
+        },
+        z_index: 9999
+
+    });
 }
 
