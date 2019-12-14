@@ -1,33 +1,43 @@
 <div ng-controller="municipioControllerRead">
 
     <h2 class="text-center">Lista de municípios</h2>
-    <div class="d-flex flex-row-reverse">
-        <button class="btn btn-success btn-lg btn-circle" type="button" ng-click="create()"><i class="fa fa-plus"></i></button>
+
+    <br /><br />
+
+    <div class="row">
+        <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Digite um município ..." ng-model="busca.nome" />
+        </div>
+
+        <div class="col-sm">
+            <select class="btn dropdown-toggle text-center"
+                    ng-options="estado.nome for estado in estados | orderBy:'nome' "
+                    ng-model="buscaPorEstado">
+                <option value="">Selecione um estado</option>
+            </select>
+        </div>
     </div>
-    <br /><br />
-
-    <form>
-        <input type="text" class="form-control"
-               placeholder="Digite um município ..." ng-model="busca.nome" />
-        <br><br>
-
-        <select class="btn dropdown-toggle text-center"
-                ng-options="estado.nome for estado in estados | orderBy:'nome' "
-                ng-model="buscaPorEstado">
-            <option value="">Selecione um estado</option>
-        </select>
-    </form>
-    <br /><br />
-    <form>
-        <select class="btn dropdown-toggle text-center"
-                ng-model="itemPorPagina" ng-init='itemPorPagina = "10"'>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-        </select>
-    </form>
 
     <br /><br />
+
+    <div class="row">
+
+        <div class="col-sm">
+            <label>Mostrar</label>
+            <select class="btn dropdown-toggle text-center"
+                    ng-model="itemPorPagina" ng-init='itemPorPagina = "10"'>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+            <label>registros</label>
+        </div>
+
+        <div class="d-flex flex-row-reverse col-sm">
+            <button class="btn btn-success btn-lg btn-circle" type="button" ng-click="create()"><i class="fa fa-plus"></i></button>
+        </div>
+    </div>
+
     <p class="este">{{estarosa}}</p>
     <div class="table-responsive">
         <table class="table table-bordered">
