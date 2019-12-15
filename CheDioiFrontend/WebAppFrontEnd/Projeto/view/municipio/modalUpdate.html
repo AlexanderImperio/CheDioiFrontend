@@ -2,13 +2,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 style="font-weight: normal;">Alterar municipio <strong>{{municipioAtual.nome}}</strong></h5>
+                <h5 style="font-weight: normal;">Alterar Município <strong>{{municipioAtual.nome}}</strong></h5>
                 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>                
             </div>
             <form>
                 <div class="modal-body">
 
-                    <p>Nomo do municipio</p>
+                    <p>Nome do Município</p>
                     <input id="nomeMunicipioUpdate" class="form-control" type="text" required value="{{municipioAtual.nome}}">
                     <br />
                     <select id="estadoNome" class="btn dropdown-toggle text-center"
@@ -16,7 +16,7 @@
                             ng-model="selecaoEstadoUpdate" 
                             ng-options="estado.nome for estado in estados | orderBy:'nome' "
                             >
-                        <option value="">Selecione um estado</option>
+                        <option value="">Selecione um Estado</option>
 
                     </select>
 
@@ -29,7 +29,7 @@
                             </td>
 
                             <td>
-                                <button type="button" class="btn btn-warning" data-dismiss="modal">cancelar
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar
                                 </button>
                             </td>
                         </tr>
