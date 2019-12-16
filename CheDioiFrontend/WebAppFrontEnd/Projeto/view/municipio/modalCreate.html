@@ -2,19 +2,19 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 style="font-weight: normal;">Criação de municipio</h5>
+                <h5 style="font-weight: normal;">Criação de Município</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>                
             </div>
             <form id="createSubmit" >
                 <div class="modal-body">
 
-                    <p>Nomo do municipio</p>
+                    <p>Nome do Município</p>
                     <input id="nomeMunicipio" class="form-control" type="text" value="" />
                     <br />
                     <select id="estadoNome" class="btn dropdown-toggle text-center"
                             ng-options="estado.nome for estado in estados | orderBy:'nome' "
                             ng-model="selecaoEstado">
-                        <option value="">Selecione um estado</option>
+                        <option value="">Selecione um Estado</option>
 
                     </select>                    
 
@@ -27,7 +27,7 @@
                             </td>
 
                             <td>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">cancelar
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar
                                 </button>
                             </td>
                         </tr>
