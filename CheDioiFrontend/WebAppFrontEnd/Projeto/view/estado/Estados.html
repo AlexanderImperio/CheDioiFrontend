@@ -7,19 +7,20 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="card-body">
-                    <div class="d-flex flex-row-reverse col-sm">
-                        <button class="btn btn-success" type="button" ng-click="criar()" >Cadastrar</button>
-                    </div>                    
+                <div class="card-body"> 
+                    
                     <br />
-                    <div class="form-group input-group">
+
+                    <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
                             <span class="input-group-text"> <i class="fas fa-search"></i></span>
+                            <input type="text" ng-model="search" class="form-control" placeholder="Pesquisar">&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="criar()">Cadastrar</button>
                         </div>
-                        <input type="text" ng-model="search" class="form-control" placeholder="Pesquisar">
-
                     </div>
+
                     <br />
+
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thread style="background-color: rgba(0,0,0,.03); text-align: center;">
