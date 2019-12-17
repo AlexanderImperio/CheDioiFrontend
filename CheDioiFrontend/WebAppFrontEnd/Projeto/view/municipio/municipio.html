@@ -3,22 +3,25 @@
     <h2 class="text-center">Lista de Municípios</h2>
 
     <br /><br />
+    
+          <div class="d-flex flex-row-reverse">
+              <div class="row">
+                  <div class="input-group-append ">
+                      <span class="input-group-text"><i class="fas fa-search"></i></span>
+                      <input type="text" class="form-control" placeholder="Digite um município ..." ng-model="busca.nome" />
+                  </div>
 
-    <div class="row">
-        <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Digite um município ..." ng-model="busca.nome" />
-        </div>
+                  <div class="col-sm">
+                      <select class="btn dropdown-toggle text-center"
+                              ng-options="estado.nome for estado in estados | orderBy:'nome' "
+                              ng-model="buscaPorEstado">
+                          <option value="">Selecione um estado</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
 
-        <div class="col-sm">
-            <select class="btn dropdown-toggle text-center"
-                    ng-options="estado.nome for estado in estados | orderBy:'nome' "
-                    ng-model="buscaPorEstado">
-                <option value="">Selecione um estado</option>
-            </select>
-        </div>
-    </div>
-
-    <br /><br />
+    <br />
 
     <div class="row">
 

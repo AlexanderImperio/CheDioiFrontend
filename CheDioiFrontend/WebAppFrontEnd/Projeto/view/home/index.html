@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/home.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" type="text/javascript"></script>
@@ -20,22 +21,19 @@
     <script src="../js/mensagemEstados.js"></script>
     <script src="../../model/estado/Modulo.js"></script>
 
-
-
 </head>
-<body ng-app="myApp">   
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#!/menu" title="menu">CheDioi <span class="sr-only">(current)</span></a>
-            </div>
-        </div>
+<body ng-app="myApp">
+    <nav class="nav">
+        <a class="nav-item nav-links" href="#!/menu" title="menu"><h1 class="retroshadow"><i class="fas fa-home"></i>CheDioi</h1></a>
     </nav>
+    <hr class="styleHr">
     <br />
-   
+
     <div class="main container" ng-view></div>
+
+    <footer>
+        <hr class="styleFooter">
+    </footer>
+    
 </body>
 </html>
