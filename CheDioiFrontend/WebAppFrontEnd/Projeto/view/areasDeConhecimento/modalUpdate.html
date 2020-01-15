@@ -9,7 +9,7 @@
                 <div class="modal-body">
 
                     <p>Nome do Município</p>
-                    <input id="nomeMunicipioUpdate" class="form-control" type="text" required value="{{municipioAtual.nome}}">
+                    <input id="descricao" class="form-control" type="text" ng-model="descricao" required >
                     <br />
 
                 </div>
@@ -17,7 +17,7 @@
                     <table class="col-12 text-center">
                         <tr>
                             <td>
-                                <input type="submit" ng-click="update(selecaoEstadoUpdate)" class="btn btn-success" value="Alterar">                                
+                                <input type="submit" ng-click="update(descricao)" class="btn btn-success" value="Alterar">                                
                             </td>
 
                             <td>
