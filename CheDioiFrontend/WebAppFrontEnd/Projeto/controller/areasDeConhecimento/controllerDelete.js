@@ -3,23 +3,32 @@
 myControllerDelete.controller('controllerDelete', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        console.log('asdasdasdasd');
-
         $scope.modalDelete = {
-            template: "modalDelete.html"            
+            template: "modalDelete.html"
         };
 
-        $rootScope.confirDelete = function (areaDeConhecimento){            
+        $rootScope.openModalDelete = function (areaDeConhecimento) {
             $rootScope.areaDeConhecimentoAtual = areaDeConhecimento;
             $('#modal-delete').modal('show');
-            $scope.nomeMunicipio = $rootScope.areaDeConhecimentoAtual.descricao;            
+            $scope.conhecimentoDescricao = $rootScope.areaDeConhecimentoAtual.descricao;
         }
 
-        
 
-        $scope.fakeDelete = (areaDeConhecimentoAtual)=>{           
-            $('#remove-' + areaDeConhecimentoAtual.idArea).hide();
-            showDeleteMessage(false, areaDeConhecimentoAtual.descricao);
+        $scope.Delete = () => {
+            let validar = false;
+            $rootScope.areasDeConhecimento.forEach((element, index) => {
+                if (element.idArea == $rootScope.areaDeConhecimentoAtual.idArea) {
+                    $rootScope.areasDeConhecimento.splice(index);
+                    validar = true;
+                }
+            });
+
+            if (validar) {
+                alert('Deletado com sucesso!');
+            } else {
+                alert(`Erro tente novamente. Se o problema persistir entre em contato com a equipe de suporte!`);
+            }
+
         }
-        
-}]);
+
+    }]);
