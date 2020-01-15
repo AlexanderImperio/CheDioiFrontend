@@ -1,4 +1,4 @@
-var myControllerDelete = angular.module("myControllerDelete", []);
+﻿var myControllerDelete = angular.module("myControllerDelete", []);
 
 myControllerDelete.controller('controllerDelete', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {

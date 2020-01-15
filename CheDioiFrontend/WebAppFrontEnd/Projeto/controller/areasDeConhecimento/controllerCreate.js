@@ -1,4 +1,4 @@
-var myControllerCreate = angular.module("myControllerCreate", []);
+ï»¿var myControllerCreate = angular.module("myControllerCreate", []);
 
 myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
@@ -8,7 +8,7 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
             template: "modalCreate.html"
         };
 
-        //funcação para abrir o modal com bootstrap.
+        //funcaÃ§Ã£o para abrir o modal com bootstrap.
         $rootScope.create = function () {
             $('#modal-create').modal('show');
         }
@@ -16,7 +16,7 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
         //variavel para criar novos Id's para municipio.
         let idMunicipio = 1;
 
-        //funcação para criar novo municipio.
+        //funcaÃ§Ã£o para criar novo municipio.
         $scope.removeInput = function (selecaoEstado) {
             let contMunicipios = $rootScope.municipios.length;
             let Municipio = document.getElementById("nomeMunicipio").value;            
@@ -25,7 +25,7 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
             let keepGoing = true;
             let igual = false;
 
-            //validação para ver se o campo esta vazil.
+            //validaÃ§Ã£o para ver se o campo esta vazil.
             if (selecaoEstado == null || Municipio == "") {
                 if (selecaoEstado == null) {
                     seletorVazil();
