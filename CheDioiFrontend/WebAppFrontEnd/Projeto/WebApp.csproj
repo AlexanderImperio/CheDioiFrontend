@@ -68,8 +68,13 @@
     <Content Include="controller\municipio\controllerDelete.js" />
     <Content Include="controller\municipio\controllerRead.js" />
     <Content Include="controller\municipio\controllerUpdate.js" />
+    <Content Include="controller\profissoes\controllerCreate.js" />
+    <Content Include="controller\profissoes\controllerDelete.js" />
+    <Content Include="controller\profissoes\controllerRead.js" />
+    <Content Include="controller\profissoes\controllerUpdate.js" />
     <Content Include="model\estado\Modulo.js" />
     <Content Include="model\municipio\moduleMunicipio.js" />
+    <Content Include="model\profissoes\moduloProfissoes.js" />
     <Content Include="view\css\animate.min.css" />
     <Content Include="view\css\paginator.css" />
     <Content Include="view\css\styleMunicipio.css" />
@@ -84,13 +89,18 @@
     <Content Include="view\js\mensagemMunicipios.js" />
     <Content Include="view\js\mensagemEstados.js" />
     <Content Include="view\js\paginate.js" />
-    <Content Include="view\js\teste.js" />
     <Content Include="view\municipio\dirPagination.tpl.html" />
     <Content Include="view\municipio\index.html" />
     <Content Include="view\municipio\modalCreate.html" />
     <Content Include="view\municipio\modalDelete.html" />
     <Content Include="view\municipio\modalUpdate.html" />
     <Content Include="view\municipio\municipio.html" />
+    <Content Include="view\profissoes\dirPagination.tpl.html" />
+    <Content Include="view\profissoes\index.html" />
+    <Content Include="view\profissoes\modalCreate.html" />
+    <Content Include="view\profissoes\modalDelete.html" />
+    <Content Include="view\profissoes\modalUpdate.html" />
+    <Content Include="view\profissoes\profissoes.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
