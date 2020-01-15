@@ -9,25 +9,19 @@
                 <div class="modal-body">
 
                     <p>Nome do Município</p>
-                    <input id="nomeMunicipio" class="form-control" type="text" value="" />
-                    <br />
-                    <select id="estadoNome" class="btn dropdown-toggle text-center"
-                            ng-options="estado.nome for estado in estados | orderBy:'nome' "
-                            ng-model="selecaoEstado">
-                        <option value="">Selecione um Estado</option>
-
-                    </select>                    
+                    <input id="nomeMunicipio" class="form-control" ng-model="descricao" type="text" value="" />
+                    <br />                   
 
                 </div>
                 <div class="modal-footer">
                     <table class="col-12 text-center">
                         <tr>
                             <td>
-                                <input type="submit" ng-click="removeInput(selecaoEstado)" value="Cadastrar" class="btn btn-success" />
+                                <input type="submit" ng-click="create(descricao)" value="Cadastrar" class="btn btn-success" />
                             </td>
 
                             <td>
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar
+                                <button type="button" class="btn btn-danger"  data-dismiss="modal">Cancelar
                                 </button>
                             </td>
                         </tr>
