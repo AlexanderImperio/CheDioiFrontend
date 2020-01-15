@@ -2,18 +2,24 @@
 
 myControllersProfissoesUpdate.controller('profissaoControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
+        $scope.descricao;
+
         $scope.modalUpdate = {
             template: "modalUpdate.html"
         };
 
         $rootScope.modalUpdate = function (profissao) {
             $rootScope.profissaoAtual = profissao;
-            console.log(profissao + ' Teste');
-           //$('#modal-update').modal('show');
+            $scope.descricao = profissao.Descricao;
+           $('#modal-update').modal('show');
         }
 
-        $rootScope.teste = function () {
-            console.log("Teste");
+        $rootScope.alterar = function (profissaoDescricao) {
+            $rootScope.profissoes.forEach(function (element) {
+                if ($rootScope.profissaoAtual.IdProfissao == element.IdProfissao) {
+                    element.Descricao = profissaoDescricao;
+                }
+            });
         }
     }
 ]);

@@ -9,20 +9,15 @@
                 <div class="modal-body">
 
                     <p>Nome da Profissão</p>
-                    <input id="descricaoProfissoesUpdate" class="form-control" type="text" required value="{{profissaoAtual.Descricao}}">
+                    <input id="descricaoProfissoesUpdate" ng-model="descricao" class="form-control" type="text" required value="{{profissaoAtual.Descricao}}">
                     <br />
-                    <select id="profissaoDescricao" class="btn dropdown-toggle text-center"
-                            ng-options="profissoes.Descricao for profissoes in profissao | orderBy:'Descricao' ">
-                        <option value="">Selecione uma Profissao</option>
-
-                    </select>
 
                 </div>
                 <div class="modal-footer">
                     <table class="col-12 text-center">
                         <tr>
                             <td>
-                                <input type="submit" ng-click="modalUpdate(profissao)" class="btn btn-success" value="Alterar">
+                                <input type="submit" ng-click="alterar(descricao)" class="btn btn-success" value="Alterar">
                             </td>
 
                             <td>
