@@ -8,7 +8,7 @@
         <div class="row">
             <div class="input-group-append ">
                 <span class="input-group-text"><i class="fas fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Digite uma área de conhecimento ..." ng-model="busca.descricao" />
+                <input type="text" class="form-control" placeholder="Digite uma Área de conhecimento ..." size="28" ng-model="busca.descricao" />
             </div>
         </div>
     </div>
@@ -38,15 +38,15 @@
         <table class="table table-bordered">
             <thread>
                 <tr>
-                    <td>IdArea</td>
-                    <td>Descricao</td>
-                    <td colspan="2" align="center" width="2%">Ação</td>
+                    <!--<td>IdArea</td>-->
+                    <td><b>DESCRIÇÃO</b></td>
+                    <td colspan="2" align="center" width="2%"><b>AÇÃO</b></td>
                 </tr>
             </thread>
             <tbody>
                 <tr dir-paginate="areaDeConhecimento in areasDeConhecimento | orderBy:'descricao' | filter:busca | itemsPerPage:itemPorPagina"
-                    scope="col-2" id="remove-{{areaDeConhecimento.idArea}}" >
-                    <td>{{areaDeConhecimento.idArea}}</td>
+                    scope="col-2" id="remove-{{areaDeConhecimento.idArea}}">
+                    <!--<td>{{areaDeConhecimento.idArea}}</td>-->
                     <td>{{areaDeConhecimento.descricao}}</td>
 
                     <td align="center">
