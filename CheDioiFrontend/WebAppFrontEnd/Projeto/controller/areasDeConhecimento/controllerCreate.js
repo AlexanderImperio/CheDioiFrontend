@@ -35,7 +35,7 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
             let areaConhecimento = $('#createDescricao').prop('value');
             if (areaConhecimento) {
                 const areaConhecimentoArr = areaConhecimento.split(' ');
-                let removeSpaço;
+                let removerEspaco;
 
                 areaConhecimentoArr.forEach(element => {
                     if (element) {
@@ -43,15 +43,15 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
                             element = element.charAt(0).toUpperCase() + element.slice(1);
                         }
 
-                        if (removeSpaço == null) {
-                            removeSpaço = element;
+                        if (removerEspaco == null) {
+                            removerEspaco = element;
                         } else {
-                            removeSpaço += ' ' + element;
+                            removerEspaco += ' ' + element;
                         }
                     }
 
                 });
-                areaConhecimento = removeSpaço;
+                areaConhecimento = removerEspaco;
 
                 //Se o input só tiver espaços em branco.
                 if (areaConhecimento) {

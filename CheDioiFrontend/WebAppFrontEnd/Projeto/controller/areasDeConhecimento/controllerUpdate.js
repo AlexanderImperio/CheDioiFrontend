@@ -44,7 +44,7 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
             let areaConhecimento = $('#updateDescricao').prop('value');
             if (areaConhecimento) {
                 const areaConhecimentoArr = areaConhecimento.split(' ');
-                let removeSpaço;
+                let removerEspaco;
 
                 areaConhecimentoArr.forEach(element => {
                     if (element) {
@@ -52,15 +52,15 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                             element = element.charAt(0).toUpperCase() + element.slice(1);
                         }
 
-                        if (removeSpaço == null) {
-                            removeSpaço = element;
+                        if (removerEspaco == null) {
+                            removerEspaco = element;
                         } else {
-                            removeSpaço += ' ' + element;
+                            removerEspaco += ' ' + element;
                         }
                     }
 
                 });
-                areaConhecimento = removeSpaço;
+                areaConhecimento = removerEspaco;
 
                 //Se o input só tiver espaços em branco.
                 if (areaConhecimento) {
