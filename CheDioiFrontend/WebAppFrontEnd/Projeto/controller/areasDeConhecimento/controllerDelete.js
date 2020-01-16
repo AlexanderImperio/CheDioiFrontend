@@ -14,21 +14,14 @@ myControllerDelete.controller('controllerDelete', ['$rootScope', '$scope', '$htt
         }
 
 
-        $scope.Delete = () => {
-            let validar = false;
+        $scope.Delete = () => {            
             $rootScope.areasDeConhecimento.forEach((element, index) => {
                 if (element == $rootScope.areaDeConhecimentoAtual.idArea) {
                     $rootScope.areasDeConhecimento.splice(index);
                     validar = true;
                 }
             });
-
-            if (validar) {
-                alert('Deletado com sucesso!');
-            } else {
-                alert(`Erro tente novamente. Se o problema persistir entre em contato com a equipe de suporte!`);
-            }
-
+            messageDelete(false, $rootScope.areaDeConhecimentoAtual.descricao);
         }
 
     }]);

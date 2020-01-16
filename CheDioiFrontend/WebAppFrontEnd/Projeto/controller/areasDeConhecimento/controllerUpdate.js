@@ -2,7 +2,7 @@
 
 myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        
+
 
         $scope.limparDescricao = function () {
             console.log('chamada com sucesso!');
@@ -16,63 +16,81 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
         $rootScope.modalUpdate = function (atual) {
             $rootScope.areaConhecimentoAtual = atual;
             $('#updateDescricao').prop('value', atual.descricao);
-            
+
             $('#modal-update').modal('show');
         }
 
-        $scope.update = function () {
-            let areaConhecimento = $('#updateDescricao').prop('value'); 
-            
-            //validando para ver se esta vazil!.
-            if (areaConhecimento) {
-                const areaConhecimentoArr = areaConhecimento.split(' ').map(a => a.trim());
+        $scope.update = function () {            
+            areaConhecimento = $scope.validacao();
 
+            if (areaConhecimento) {
+                $rootScope.areasDeConhecimento.forEach(element => {
+                    if (element.idArea == $rootScope.areaConhecimentoAtual.idArea) {
+                        element.descricao = areaConhecimento;
+                    }
+                });
+                $('#updateDescricao').prop('value', areaConhecimento);
+                messageUpdate(true);
+
+            } else if (areaConhecimento == false) {
+                duplicidate();
+            } else {
+                campoVazil()
+                $('#updateDescricao').prop('value', $rootScope.areaConhecimentoAtual.descricao);
+            }
+        }
+
+        $scope.validacao = function () {
+            let areaConhecimento = $('#updateDescricao').prop('value');
+            if (areaConhecimento) {
+                const areaConhecimentoArr = areaConhecimento.split(' ');
                 let removeSpaço;
 
                 areaConhecimentoArr.forEach(element => {
-                    if (element.length > 3) {
-                        element = element.charAt(0).toUpperCase() + element.slice(1);
-                    }
+                    if (element) {
+                        if (element.length > 3) {
+                            element = element.charAt(0).toUpperCase() + element.slice(1);
+                        }
 
-                    if (removeSpaço == null) {
-                        removeSpaço = element;
-                    } else {
-                        removeSpaço += ' ' + element;
+                        if (removeSpaço == null) {
+                            removeSpaço = element;
+                        } else {
+                            removeSpaço += ' ' + element;
+                        }
                     }
 
                 });
                 areaConhecimento = removeSpaço;
 
-                /* Função "validacao()" para verificar se ja existe 
-                *  um registro igual ao que esta sendo cadastrado.
-                **/
-                let validacao = () => {
-                    let retorno = true;
-                    $rootScope.areasDeConhecimento.forEach(element => {
-                        if (areaConhecimento.toLowerCase() == element.descricao.toLowerCase()) {
-                            alert('Já existe uma area de conhecimento cadastrada com esta descrição');
-                            retorno = false;
-                        }
-                    });
+                //Se o input só tiver espaços em branco.
+                if (areaConhecimento) {
+                    /* Função "validacao()" para verificar se ja existe 
+                    *  um registro igual ao que esta sendo cadastrado.
+                    **/
+                    let validacao = () => {
+                        let retorno = true;
+                        $rootScope.areasDeConhecimento.forEach(element => {
+                            if (areaConhecimento.toLowerCase() == element.descricao.toLowerCase()) {
+                                retorno = false;
+                            }
+                        });
 
-                    return retorno
+                        return retorno
+                    }
+
+                    //Se tiver tudo serto inserir novo registro no array.
+                    if (validacao()) {
+                        return areaConhecimento;
+                    } else {
+                        return false;
+                    }
+
+                } else {
+                    return null;
                 }
-
-                //Se tiver tudo serto inserir novo registro no array.
-                if (validacao()) {
-                    $rootScope.areasDeConhecimento.forEach((element, index) => {
-
-                        if (element.idArea == $rootScope.areaConhecimentoAtual.idArea) {
-                            $rootScope.areasDeConhecimento[index].descricao = areaConhecimento;
-                        }
-                    });                    
-                    
-                    alert('Alteração realizada com sucesso!');                    
-                }     
-
             } else {
-                alert('Campo descrição obrigadorio!');                
-            }            
+                return null;
+            }
         }
     }
 ]);
