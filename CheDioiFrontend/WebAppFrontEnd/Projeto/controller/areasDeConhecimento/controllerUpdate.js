@@ -2,7 +2,12 @@
 
 myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.descricao;
+        
+
+        $scope.limparDescricao = function () {
+            console.log('chamada com sucesso!');
+            $scope.descricao = "teste";
+        }
 
         $scope.modalUpdate = {
             template: "modalUpdate.html"
@@ -10,12 +15,14 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
 
         $rootScope.modalUpdate = function (atual) {
             $rootScope.areaConhecimentoAtual = atual;
-            $scope.descricao = atual.descricao;
+            $('#updateDescricao').prop('value', atual.descricao);
+            
             $('#modal-update').modal('show');
         }
 
-        $scope.update = function (areaConhecimento) {
-
+        $scope.update = function () {
+            let areaConhecimento = $('#updateDescricao').prop('value'); 
+            
             //validando para ver se esta vazil!.
             if (areaConhecimento) {
                 const areaConhecimentoArr = areaConhecimento.split(' ').map(a => a.trim());
@@ -58,13 +65,14 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                         if (element.idArea == $rootScope.areaConhecimentoAtual.idArea) {
                             $rootScope.areasDeConhecimento[index].descricao = areaConhecimento;
                         }
-                    });
-                    alert('Alteração realizada com sucesso!');
-                }
+                    });                    
+                    
+                    alert('Alteração realizada com sucesso!');                    
+                }     
 
             } else {
-                alert('Campo descrição obrigadorio!');
-            }
+                alert('Campo descrição obrigadorio!');                
+            }            
         }
     }
 ]);

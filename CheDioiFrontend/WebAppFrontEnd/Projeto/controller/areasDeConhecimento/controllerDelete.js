@@ -17,7 +17,7 @@ myControllerDelete.controller('controllerDelete', ['$rootScope', '$scope', '$htt
         $scope.Delete = () => {
             let validar = false;
             $rootScope.areasDeConhecimento.forEach((element, index) => {
-                if (element.idArea == $rootScope.areaDeConhecimentoAtual.idArea) {
+                if (element == $rootScope.areaDeConhecimentoAtual.idArea) {
                     $rootScope.areasDeConhecimento.splice(index);
                     validar = true;
                 }

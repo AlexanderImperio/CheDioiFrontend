@@ -2,7 +2,7 @@
 
 myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.descricao = "";
+
         //para incluir a pagina modalCreate na tela de lista de municipios
         $scope.modalCreate = {
             template: "modalCreate.html"
@@ -14,13 +14,15 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
         }
 
 
-        $scope.create = function (areaConhecimento) {
+        $scope.create = function () {
+            let areaConhecimento = $('#createDescricao').prop('value');
             //validando para ver se esta vazil!.
             if (areaConhecimento) {
                 const areaConhecimentoArr = areaConhecimento.split(' ').map(a => a.trim());
 
                 let removeSpaço;
 
+                //Removendo os espaços em branco.
                 areaConhecimentoArr.forEach(element => {
                     if (element.length > 3) {
                         element = element.charAt(0).toUpperCase() + element.slice(1);
@@ -57,8 +59,10 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
                         descricao: areaConhecimento
                     }
                     $rootScope.areasDeConhecimento.push(cad);
+
                 }
-                $scope.descricao = "";
+                alert(areaConhecimento + ' cadastrado com sucesso');
+                $('#createDescricao').prop('value', '');
 
             } else {
                 //caso teja vazil.
