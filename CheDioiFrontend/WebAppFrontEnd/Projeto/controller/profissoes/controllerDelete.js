@@ -10,12 +10,13 @@ myControllersProfissoesDelete.controller('profissaoControllerDelete', ['$rootSco
             $rootScope.profissaoAtual = profissao;
             $('#modal-delete').modal('show');
             $scope.descricaoProfissao = $rootScope.profissaoAtual.Descricao;
+            
         }
 
 
 
         $scope.fakeDelete = (profissaoAtual) => {
-            $('#remove-' + profissaoAtual.id).hide();
+            $('#remove-' + profissaoAtual.IdProfissao).hide();
             showDeleteMessage(false, profissaoAtual.Descricao);
         }
 

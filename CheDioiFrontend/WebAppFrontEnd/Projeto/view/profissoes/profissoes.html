@@ -45,9 +45,9 @@
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="profissao in profissoes | orderBy:'descricao' | filter:busca| filter:change | itemsPerPage:itemPorPagina">
+                <tr dir-paginate="profissao in profissoes | orderBy:'descricao' | filter:busca| filter:change | itemsPerPage:itemPorPagina"
+                    scope="col-2" id="remove-{{profissao.IdProfissao}}">
                     <td>{{profissao.Descricao}}</td>
-
                     <td align="center">
                         <button value="editar" title="Editar" ng-click="modalUpdate(profissao)" class="btn btn-primary">
                             <i class="fas fa-edit"></i>
