@@ -6,7 +6,7 @@ myControllersProfissoesDelete.controller('profissaoControllerDelete', ['$rootSco
             template: "modalDelete.html"
         };
 
-        $rootScope.confirDelete = function (profissao) {
+        $rootScope.modalDelete = function (profissao) {
             $rootScope.profissaoAtual = profissao;
             $('#modal-delete').modal('show');
             $scope.descricaoProfissao = $rootScope.profissaoAtual.Descricao;

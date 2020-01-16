@@ -5,13 +5,13 @@
                 <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
             </div>
             <div class="modal-body">
-                <p>Deseja realmente deletar o município? <strong>{{municipioAtual.nome}}</strong></p>
+                <p>Deseja realmente deletar a profissão <strong>{{profissaoAtual.Descricao}}</strong>?</p>
             </div>
             <div class="modal-footer">
                 <table class="col-12 text-center">
                     <tr>
                         <td>
-                            <button type="button" class="btn btn-danger" ng-click="fakeDelete(municipioAtual)"
+                            <button type="button" class="btn btn-danger" ng-click="fakeDelete(profissaoAtual.Descricao)"
                                     data-dismiss="modal">
                                 Deletar
                             </button>

@@ -54,7 +54,9 @@
                         </button>
                     </td>
                     <td align="center">
-                        <button class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                        <button value="editar" title="Editar" ng-click="modalDelete(profissao)" class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </td>
                 </tr>
             </tbody>
@@ -67,4 +69,5 @@
 <div class="insert-modal">
     <div ng-controller="profissoesControllersCreate" ng-include="modalCreate.template"></div>
     <div ng-controller="profissaoControllerUpdate" ng-include="modalUpdate.template"></div>
+    <div ng-controller="profissaoControllerDelete" ng-include="modalDelete.template"></div>
 </div>
