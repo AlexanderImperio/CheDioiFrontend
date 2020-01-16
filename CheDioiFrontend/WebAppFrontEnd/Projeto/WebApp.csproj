@@ -88,6 +88,7 @@
     <Content Include="view\js\constantes.js" />
     <Content Include="view\js\mensagemMunicipios.js" />
     <Content Include="view\js\mensagemEstados.js" />
+    <Content Include="view\js\mensagemProfiçoes.js" />
     <Content Include="view\js\paginate.js" />
     <Content Include="view\municipio\dirPagination.tpl.html" />
     <Content Include="view\municipio\index.html" />

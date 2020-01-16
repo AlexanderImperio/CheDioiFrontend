@@ -1,156 +1,12 @@
-﻿
-function showInputMessage(validator) {
-    //Funcao de mensagens para a criação de estado.
-
-    if (validator == false) {
+﻿function messageCreate(validator, profissao) {
+    if (!validator) {
         $.notify({
             //options
-            message: "Estado cadastrado com sucesso!"
+            message: "Profissão " + profissao + " cadastrado com sucesso!"
         }, {
-                //settings
-                type: "success",
-                allow_dismiss: false,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-
-        });        
-    } else {
-        $.notify({
-            //options
-            message: "Erro ao cadastrar estado"
-        }, {
-                //settings
-                type: "danger",
-
-                allow_dismiss: true,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-                delay: 3000,
-                timer: 2000,
-
-            });
-
-    }
-}
-
-
-function showUpdateMessage(validator) {
-    //Funcao de mensagens para a alteração de estados.
-
-    if (validator == false) {
-        $.notify({
-            //options
-            message: "Estado alterado com sucesso!"
-        }, {
-                //settings
-                type: "success",
-                allow_dismiss: false,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-                delay: 3000,
-                timer: 2000,
-
-        });
-        
-    } else {
-        $.notify({
-            //options
-            message: "Erro ao alterar o estado"
-        }, {
-                //settings
-                type: "danger",
-                allow_dismiss: true,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-                delay: 3000,
-                timer: 2000,
-
-            });
-
-    }
-}
-
-
-function showDeleteMessage(validator) {
-    //Funcao de mensagens para a exclusão de estados.
-
-    if (validator == false) {
-        $.notify({
-            //options
-            message: "Estado deletado com sucesso!"
-        }, {
-                //settings
-                type: "success",
-                allow_dismiss: false,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-                delay: 3000,
-                timer: 2000,
-
-            });
-    } else {
-        $.notify({
-            //options
-            message: "Erro ao deletar estado"
-        }, {
-                //settings
-                type: "danger",
-                allow_dismiss: false,
-                placement: {
-                    from: "top",
-                    align: "right"
-                },
-                animate: {
-                    enter: 'animated bounceInDown',
-                    exit: 'animated fadeOutUp'
-                },
-                delay: 3000,
-                timer: 2000,
-
-            });
-
-    }
-}
-
-function siglaErrada() {
-
-    $.notify({
-        //options
-        message: "Essa UF já foi cadastrada."
-    }, {
             //settings
-            type: "danger",
-            allow_dismiss: true,
+            type: "success",
+            allow_dismiss: false,
             placement: {
                 from: "top",
                 align: "right"
@@ -159,19 +15,17 @@ function siglaErrada() {
                 enter: 'animated bounceInDown',
                 exit: 'animated fadeOutUp'
             },
+            z_index: 9999
 
         });
-}
-
-function nomeErrado() {
-
-    $.notify({
-        //options
-        message: "Esse estado já foi cadastrado."
-    }, {
+    } else {
+        $.notify({
+            //options
+            message: "Erro ao criar profissão " + profissao
+        }, {
             //settings
             type: "danger",
-            allow_dismiss: true,
+            allow_dismiss: false,
             placement: {
                 from: "top",
                 align: "right"
@@ -180,19 +34,20 @@ function nomeErrado() {
                 enter: 'animated bounceInDown',
                 exit: 'animated fadeOutUp'
             },
-
+            z_index: 9999
         });
+    }
 }
 
-function estadoESiglaErrados() {
-
-    $.notify({
-        //options
-        message: "O Estado e o UF já foram cadastrados."
-    }, {
+function messageUpdate(validator, profissao) {
+    if (!validator) {
+        $.notify({
+            //options
+            message: "Profissão " + profissao + " modificada com sucesso!"
+        }, {
             //settings
-            type: "danger",
-            allow_dismiss: true,
+            type: "success",
+            allow_dismiss: false,
             placement: {
                 from: "top",
                 align: "right"
@@ -201,7 +56,67 @@ function estadoESiglaErrados() {
                 enter: 'animated bounceInDown',
                 exit: 'animated fadeOutUp'
             },
+            z_index: 9999
 
         });
+    } else {
+        $.notify({
+            //options
+            message: "Erro ao modificar profissão " + profissao
+        }, {
+            //settings
+            type: "danger",
+            allow_dismiss: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            animate: {
+                enter: 'animated bounceInDown',
+                exit: 'animated fadeOutUp'
+            },
+            z_index: 9999
+        });
+    }
 }
 
+function messageDelete(validator, profissao) {
+    if (!validator) {
+        $.notify({
+            //options
+            message: "Profissão " + profissao + " deletada com sucesso!"
+        }, {
+            //settings
+            type: "success",
+            allow_dismiss: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            animate: {
+                enter: 'animated bounceInDown',
+                exit: 'animated fadeOutUp'
+            },
+            z_index: 9999
+
+        });
+    } else {
+        $.notify({
+            //options
+            message: "Erro ao deletar profissão " + profissao
+        }, {
+            //settings
+            type: "danger",
+            allow_dismiss: false,
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            animate: {
+                enter: 'animated bounceInDown',
+                exit: 'animated fadeOutUp'
+            },
+            z_index: 9999
+        });
+    }
+}

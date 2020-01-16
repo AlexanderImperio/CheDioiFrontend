@@ -20,6 +20,7 @@ myControllersProfissoesUpdate.controller('profissaoControllerUpdate', ['$rootSco
                     element.Descricao = profissaoDescricao;
                 }
             });
+            messageUpdate(false, $rootScope.profissaoAtual.Descricao);
         }
     }
 ]);

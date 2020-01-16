@@ -17,7 +17,7 @@ myControllersProfissoesDelete.controller('profissaoControllerDelete', ['$rootSco
 
         $scope.fakeDelete = (profissaoAtual) => {
             $('#remove-' + profissaoAtual.IdProfissao).hide();
-            showDeleteMessage(false, profissaoAtual.Descricao);
+            messageDelete(false, $rootScope.profissaoAtual.Descricao);
         }
 
     }]);

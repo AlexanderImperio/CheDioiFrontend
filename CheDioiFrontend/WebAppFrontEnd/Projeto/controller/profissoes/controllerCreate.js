@@ -20,6 +20,7 @@ myControllersProfissoesCreate.controller('profissoesControllersCreate', ['$rootS
                 Descricao: profissaoDescricao
             }
             $rootScope.profissoes.push(cad)
+            messageCreate(false, profissaoDescricao);
         }
 
     }
