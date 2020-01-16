@@ -39,11 +39,11 @@
     }
 }
 
-function messageUpdate(validator, profissao) {
+function messageUpdate(validator) {
     if (!validator) {
         $.notify({
             //options
-            message: "Profissão " + profissao + " modificada com sucesso!"
+            message: "Profissão alterada com sucesso!"
         }, {
             //settings
             type: "success",
@@ -62,7 +62,7 @@ function messageUpdate(validator, profissao) {
     } else {
         $.notify({
             //options
-            message: "Erro ao modificar profissão " + profissao
+            message: "Erro ao alterar profissão "
         }, {
             //settings
             type: "danger",
@@ -119,4 +119,50 @@ function messageDelete(validator, profissao) {
             z_index: 9999
         });
     }
+}
+
+function campoVazil() {
+    $.notify({
+        //options
+        message: "Preencha todos os campos"
+    }, {
+        //settings
+        type: "warning",
+        allow_dismiss: false,
+        placement: {
+            from: "top",
+            align: "right"
+        },
+        animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated fadeOutUp'
+        },
+        delay: 3000,
+        timer: 2000,
+        z_index: 9999
+
+    });
+}
+
+function duplicidate() {
+    $.notify({
+        //options
+        message: "Este registro já foi cadastrado anteriormente!"
+    }, {
+        //settings
+        type: "warning",
+        allow_dismiss: false,
+        placement: {
+            from: "top",
+            align: "right"
+        },
+        animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated fadeOutUp'
+        },
+        delay: 3000,
+        timer: 2000,
+        z_index: 9999
+
+    });
 }
