@@ -30,9 +30,8 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                     }
                 });
                 $('#updateDescricao').prop('value', areaConhecimento);
-                messageUpdate(true);
-
-            } else if (areaConhecimento == false) {
+                messageUpdate(false);
+            } else if (areaConhecimento == false) {                
                 duplicidate();
             } else {
                 campoVazil()

@@ -1,5 +1,5 @@
 function messageCreate(validator, areaConhecimento) {
-    if (!validator) {
+    if (validator == false) {
         $.notify({
             //options
             message: "Area de conhecimento " + areaConhecimento + " criado com sucesso!"
@@ -45,7 +45,8 @@ function messageCreate(validator, areaConhecimento) {
 }
 
 function messageUpdate(validator) {
-    if (!validator) {
+    console.log(validator);
+    if (validator == false) {
         $.notify({
             //options
             message: "Area de conhecimento alterado com sucesso!"
