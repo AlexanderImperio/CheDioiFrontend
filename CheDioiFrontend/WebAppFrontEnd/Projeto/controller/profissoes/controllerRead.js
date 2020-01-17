@@ -57,9 +57,3 @@ myControllers.controller('profissoesControllersRead', ['$rootScope', '$scope', '
             { idArea: 20, descricao: "Topologia das Variedades" }];
     }
 ]);
-
-
-
-
-
-

@@ -10,7 +10,7 @@ myControllersProfissoesDelete.controller('profissaoControllerDelete', ['$rootSco
             $rootScope.profissaoAtual = profissao;
             $('#modal-delete').modal('show');
             $scope.descricaoProfissao = $rootScope.profissaoAtual.Descricao;
-            
+
         }
 
 

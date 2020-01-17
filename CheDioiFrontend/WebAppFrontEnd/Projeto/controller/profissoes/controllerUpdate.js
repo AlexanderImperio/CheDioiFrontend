@@ -9,7 +9,7 @@ myControllersProfissoesUpdate.controller('profissaoControllerUpdate', ['$rootSco
         };
 
         $rootScope.modalUpdate = function (profissao) {
-            $rootScope.profissaoAtual = profissao;            
+            $rootScope.profissaoAtual = profissao;
             $('#updateDescricao').prop('value', profissao.Descricao);
             $('#modal-update').modal('show');
         }
@@ -27,7 +27,7 @@ myControllersProfissoesUpdate.controller('profissaoControllerUpdate', ['$rootSco
                 alterarDescricao(profissaoDescricao);
             } else if (profissaoDescricao == false) {
                 duplicidate();
-            }else{
+            } else {
                 campoVazil();
                 alterarDescricao('');
             }
@@ -73,7 +73,7 @@ myControllersProfissoesUpdate.controller('profissaoControllerUpdate', ['$rootSco
                     }
 
                     //Se tiver tudo serto inserir novo registro no array.
-                    if (validacao()) {                        
+                    if (validacao()) {
                         return profissao;
                     } else {
                         return false;

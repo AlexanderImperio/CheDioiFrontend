@@ -64,6 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="controller\areasDeConhecimento\controllerCreate.js" />
+    <Content Include="controller\areasDeConhecimento\controllerDelete.js" />
+    <Content Include="controller\areasDeConhecimento\controllerRead.js" />
+    <Content Include="controller\areasDeConhecimento\controllerUpdate.js" />
     <Content Include="controller\municipio\controllerCreate.js" />
     <Content Include="controller\municipio\controllerDelete.js" />
     <Content Include="controller\municipio\controllerRead.js" />
@@ -72,9 +76,16 @@
     <Content Include="controller\profissoes\controllerDelete.js" />
     <Content Include="controller\profissoes\controllerRead.js" />
     <Content Include="controller\profissoes\controllerUpdate.js" />
+    <Content Include="model\areasDeConhecimento\moduleAreasDeConhecimento.js" />
     <Content Include="model\estado\Modulo.js" />
     <Content Include="model\municipio\moduleMunicipio.js" />
     <Content Include="model\profissoes\moduloProfissoes.js" />
+    <Content Include="view\areasDeConhecimento\areasDeConhecimento.html" />
+    <Content Include="view\areasDeConhecimento\dirPagination.tpl.html" />
+    <Content Include="view\areasDeConhecimento\index.html" />
+    <Content Include="view\areasDeConhecimento\modalCreate.html" />
+    <Content Include="view\areasDeConhecimento\modalDelete.html" />
+    <Content Include="view\areasDeConhecimento\modalUpdate.html" />
     <Content Include="view\css\animate.min.css" />
     <Content Include="view\css\paginator.css" />
     <Content Include="view\css\styleMunicipio.css" />
@@ -88,7 +99,8 @@
     <Content Include="view\js\constantes.js" />
     <Content Include="view\js\mensagemMunicipios.js" />
     <Content Include="view\js\mensagemEstados.js" />
-    <Content Include="view\js\mensagemProfiçoes.js" />
+    <Content Include="view\js\mensagemProfissoes.js" />
+    <Content Include="view\js\messageAreaConhecimento.js" />
     <Content Include="view\js\paginate.js" />
     <Content Include="view\municipio\dirPagination.tpl.html" />
     <Content Include="view\municipio\index.html" />
