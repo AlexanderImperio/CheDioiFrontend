@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="../css/paginator.css" />
+    <link rel="stylesheet" href="../css/styleMunicipio.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/41571fea33.js" crossorigin="anonymous"></script>
+    <script src="../js/constantes.js"></script>
+    <script src="../js/bootstrap-notify.min.js"></script>
+    <script src="../js/paginate.js"></script>
+    <script src="../js/mensagemProfissoes.js"></script>
+    <script src="../../model/profissoes/moduloProfissoes.js" charset="utf-8"></script>
+    <script src="../../controller/profissoes/controllerRead.js"></script>
+    <script src="../../controller/profissoes/controllerCreate.js"></script>
+    <script src="../../controller/profissoes/controllerUpdate.js"></script>
+    <script src="../../controller/profissoes/controllerDelete.js"></script>
+
+
+</head>
+
+<body ng-app="myApp">
+
+    <nav class="nav">
+        <a class="nav-item nav-links" href="../home" title="menu"><h1 class="retroshadow"><i class="fas fa-home"></i>CheDioi</h1></a>
+    </nav>
+    <hr class="styleHr">
+
+    <br />
+
+    <div class="main container" ng-view></div>
+</body>
+
+</html>
