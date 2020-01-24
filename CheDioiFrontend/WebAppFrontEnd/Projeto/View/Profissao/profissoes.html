@@ -1,0 +1,73 @@
+﻿<div ng-controller="profissoesControllersRead">
+
+    <h2 class="text-center">Lista de Profissões</h2>
+
+    <br /><br />
+
+    <div class="d-flex flex-row-reverse">
+        <div class="row">
+            <div class="input-group-append ">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Digite uma Profissão ..." ng-model="busca.Descricao" />
+            </div>
+
+
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+
+        <div class="col-sm">
+            <label>Mostrar</label>
+            <select class="btn dropdown-toggle text-center"
+                    ng-model="itemPorPagina" ng-init='itemPorPagina = "10"'>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+            <label>registros</label>
+        </div>
+
+        <div class="d-flex flex-row-reverse col-sm">
+            <button class="btn btn-success" type="button" ng-click="create()">Cadastrar</button>
+        </div>
+    </div>
+    <br />
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thread>
+                <tr>
+                    <td><b>DESCRIÇÃO</b></td>
+                    <td colspan="2" align="center" width="2%"><b>AÇÃO</b></td>
+                </tr>
+            </thread>
+            <tbody>
+                <tr dir-paginate="profissao in profissoes | orderBy:'descricao' | filter:busca| filter:change | itemsPerPage:itemPorPagina"
+                    scope="col-2" id="remove-{{profissao.IdProfissao}}">
+                    <td>{{profissao.Descricao}}</td>
+                    <td align="center">
+                        <button value="editar" title="Editar" ng-click="modalUpdate(profissao)" class="btn btn-primary">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </td>
+                    <td align="center">
+                        <button value="editar" title="Editar" ng-click="modalDelete(profissao)" class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <dir-pagination-controls class="d-flex flex-row-reverse" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
+                             template-url="dirPagination.tpl.html" max-size="12"></dir-pagination-controls>
+</div>
+<div class="insert-modal">
+    <div ng-controller="profissoesControllersCreate" ng-include="modalCreate.template"></div>
+    <div ng-controller="profissaoControllerUpdate" ng-include="modalUpdate.template"></div>
+    <div ng-controller="profissaoControllerDelete" ng-include="modalDelete.template"></div>
+</div>

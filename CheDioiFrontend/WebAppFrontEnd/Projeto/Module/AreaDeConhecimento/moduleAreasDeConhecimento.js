@@ -3,6 +3,6 @@
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
-        when('/areasDeConhecimento', { templateUrl: endereco +'areasDeConhecimento/areasDeConhecimento.html'}).
-        otherwise({ redirectTo: '/areasDeConhecimento', controller: 'controllerRead'});
+        when('/AreaDeConhecimento', { templateUrl: endereco +'AreaDeConhecimento/AreaDeConhecimento.html'}).
+        otherwise({ redirectTo: '/AreaDeConhecimento', controller: 'controllerRead'});
 }]);

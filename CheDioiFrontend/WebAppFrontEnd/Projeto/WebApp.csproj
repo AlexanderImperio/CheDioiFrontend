@@ -64,56 +64,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="controller\areasDeConhecimento\controllerCreate.js" />
-    <Content Include="controller\areasDeConhecimento\controllerDelete.js" />
-    <Content Include="controller\areasDeConhecimento\controllerRead.js" />
-    <Content Include="controller\areasDeConhecimento\controllerUpdate.js" />
-    <Content Include="controller\municipio\controllerCreate.js" />
-    <Content Include="controller\municipio\controllerDelete.js" />
-    <Content Include="controller\municipio\controllerRead.js" />
-    <Content Include="controller\municipio\controllerUpdate.js" />
-    <Content Include="controller\profissoes\controllerCreate.js" />
-    <Content Include="controller\profissoes\controllerDelete.js" />
-    <Content Include="controller\profissoes\controllerRead.js" />
-    <Content Include="controller\profissoes\controllerUpdate.js" />
-    <Content Include="model\areasDeConhecimento\moduleAreasDeConhecimento.js" />
-    <Content Include="model\estado\Modulo.js" />
-    <Content Include="model\municipio\moduleMunicipio.js" />
-    <Content Include="model\profissoes\moduloProfissoes.js" />
-    <Content Include="view\areasDeConhecimento\areasDeConhecimento.html" />
-    <Content Include="view\areasDeConhecimento\dirPagination.tpl.html" />
-    <Content Include="view\areasDeConhecimento\index.html" />
-    <Content Include="view\areasDeConhecimento\modalCreate.html" />
-    <Content Include="view\areasDeConhecimento\modalDelete.html" />
-    <Content Include="view\areasDeConhecimento\modalUpdate.html" />
-    <Content Include="view\css\animate.min.css" />
-    <Content Include="view\css\paginator.css" />
-    <Content Include="view\css\styleMunicipio.css" />
-    <Content Include="view\estado\Estados.html" />
-    <Content Include="view\estado\PaginaAtualizar.html" />
-    <Content Include="view\estado\PaginaCriar.html" />
-    <Content Include="view\estado\PaginaDeletar.html" />
-    <Content Include="view\home\index.html" />
-    <Content Include="view\home\Menu.html" />
-    <Content Include="view\js\bootstrap-notify.min.js" />
-    <Content Include="view\js\constantes.js" />
-    <Content Include="view\js\mensagemMunicipios.js" />
-    <Content Include="view\js\mensagemEstados.js" />
-    <Content Include="view\js\mensagemProfissoes.js" />
-    <Content Include="view\js\messageAreaConhecimento.js" />
-    <Content Include="view\js\paginate.js" />
-    <Content Include="view\municipio\dirPagination.tpl.html" />
-    <Content Include="view\municipio\index.html" />
-    <Content Include="view\municipio\modalCreate.html" />
-    <Content Include="view\municipio\modalDelete.html" />
-    <Content Include="view\municipio\modalUpdate.html" />
-    <Content Include="view\municipio\municipio.html" />
-    <Content Include="view\profissoes\dirPagination.tpl.html" />
-    <Content Include="view\profissoes\index.html" />
-    <Content Include="view\profissoes\modalCreate.html" />
-    <Content Include="view\profissoes\modalDelete.html" />
-    <Content Include="view\profissoes\modalUpdate.html" />
-    <Content Include="view\profissoes\profissoes.html" />
+    <Content Include="Controller\AreaDeConhecimento\controllerCreate.js" />
+    <Content Include="Controller\AreaDeConhecimento\controllerDelete.js" />
+    <Content Include="Controller\AreaDeConhecimento\controllerRead.js" />
+    <Content Include="Controller\AreaDeConhecimento\controllerUpdate.js" />
+    <Content Include="Controller\Municipio\controllerCreate.js" />
+    <Content Include="Controller\Municipio\controllerDelete.js" />
+    <Content Include="Controller\Municipio\controllerRead.js" />
+    <Content Include="Controller\Municipio\controllerUpdate.js" />
+    <Content Include="Controller\Profissao\controllerCreate.js" />
+    <Content Include="Controller\Profissao\controllerDelete.js" />
+    <Content Include="Controller\Profissao\controllerRead.js" />
+    <Content Include="Controller\Profissao\controllerUpdate.js" />
+    <Content Include="Module\AreaDeConhecimento\moduleAreasDeConhecimento.js" />
+    <Content Include="Module\Estado\Modulo.js" />
+    <Content Include="Module\Municipio\moduleMunicipio.js" />
+    <Content Include="Module\Profissao\moduloProfissoes.js" />
+    <Content Include="View\AreaDeConhecimento\AreaDeConhecimento.html" />
+    <Content Include="View\AreaDeConhecimento\DirPagination.tpl.html" />
+    <Content Include="View\AreaDeConhecimento\Index.html" />
+    <Content Include="View\AreaDeConhecimento\Create.html" />
+    <Content Include="View\AreaDeConhecimento\Delete.html" />
+    <Content Include="View\AreaDeConhecimento\Update.html" />
+    <Content Include="View\Css\animate.min.css" />
+    <Content Include="View\Css\paginator.css" />
+    <Content Include="View\Css\styleMunicipio.css" />
+    <Content Include="View\Estado\Estados.html" />
+    <Content Include="View\Estado\PaginaAtualizar.html" />
+    <Content Include="View\Estado\PaginaCriar.html" />
+    <Content Include="View\Estado\PaginaDeletar.html" />
+    <Content Include="View\Home\index.html" />
+    <Content Include="View\Home\Menu.html" />
+    <Content Include="View\Js\bootstrap-notify.min.js" />
+    <Content Include="View\Js\constantes.js" />
+    <Content Include="View\Js\mensagemMunicipios.js" />
+    <Content Include="View\Js\mensagemEstados.js" />
+    <Content Include="View\Js\mensagemProfissoes.js" />
+    <Content Include="View\Js\messageAreaConhecimento.js" />
+    <Content Include="View\Js\paginate.js" />
+    <Content Include="View\Municipio\dirPagination.tpl.html" />
+    <Content Include="View\Municipio\index.html" />
+    <Content Include="View\Municipio\modalCreate.html" />
+    <Content Include="View\Municipio\modalDelete.html" />
+    <Content Include="View\Municipio\modalUpdate.html" />
+    <Content Include="View\Municipio\municipio.html" />
+    <Content Include="View\Profissao\dirPagination.tpl.html" />
+    <Content Include="View\Profissao\index.html" />
+    <Content Include="View\Profissao\modalCreate.html" />
+    <Content Include="View\Profissao\modalDelete.html" />
+    <Content Include="View\Profissao\modalUpdate.html" />
+    <Content Include="View\Profissao\profissoes.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +129,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="controller\estado\" />
+    <Folder Include="Controller\estado\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
