@@ -8,8 +8,7 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         when('/atualizar', { templateUrl: endereco + 'estado/PaginaAtualizar.html', controller: 'atualizarController' }).
         when('/deletar', { templateUrl: endereco + 'estado/PaginaDeletar.html', controller: 'deletarController' }).
         when('/criar', { templateUrl: endereco + 'estado/PaginaCriar.html', controller: 'criarController' }).
-        when('/menu', { templateUrl: endereco + 'home/Menu.html' }).
-        otherwise({ redirectTo: '/menu' });
+        otherwise({ redirectTo: '/estado' });
 }]);
 
 

@@ -78,6 +78,7 @@
     <Content Include="Controller\Profissao\controllerUpdate.js" />
     <Content Include="Module\AreaDeConhecimento\moduleAreasDeConhecimento.js" />
     <Content Include="Module\Estado\Modulo.js" />
+    <Content Include="Module\Home\ModuleHome.js" />
     <Content Include="Module\Municipio\moduleMunicipio.js" />
     <Content Include="Module\Profissao\moduloProfissoes.js" />
     <Content Include="View\AreaDeConhecimento\AreaDeConhecimento.html" />
@@ -87,13 +88,15 @@
     <Content Include="View\AreaDeConhecimento\Delete.html" />
     <Content Include="View\AreaDeConhecimento\Update.html" />
     <Content Include="View\Css\animate.min.css" />
+    <Content Include="View\Css\home.css" />
     <Content Include="View\Css\paginator.css" />
     <Content Include="View\Css\styleMunicipio.css" />
     <Content Include="View\Estado\Estados.html" />
+    <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\PaginaAtualizar.html" />
     <Content Include="View\Estado\PaginaCriar.html" />
     <Content Include="View\Estado\PaginaDeletar.html" />
-    <Content Include="View\Home\index.html" />
+    <Content Include="View\Home\Index.html" />
     <Content Include="View\Home\Menu.html" />
     <Content Include="View\Js\bootstrap-notify.min.js" />
     <Content Include="View\Js\constantes.js" />
