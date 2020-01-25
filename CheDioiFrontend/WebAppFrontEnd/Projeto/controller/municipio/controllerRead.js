@@ -16,8 +16,6 @@ myControllers.controller('municipioControllerRead', ['$rootScope', '$scope', '$h
         $http.get(urlMunicipios).then(function (retorno) {
             $rootScope.municipios = retorno.data;            
         });
-        
-        
 
         $scope.change = function(pesquisa){
             if($scope.buscaPorEstado == undefined){
