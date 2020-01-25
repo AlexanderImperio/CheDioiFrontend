@@ -76,7 +76,7 @@
     <Content Include="Controller\Profissao\controllerDelete.js" />
     <Content Include="Controller\Profissao\controllerRead.js" />
     <Content Include="Controller\Profissao\controllerUpdate.js" />
-    <Content Include="Module\AreaDeConhecimento\moduleAreasDeConhecimento.js" />
+    <Content Include="Module\AreaDeConhecimento\ModuleAreaDeConhecimento.js" />
     <Content Include="Module\Estado\Modulo.js" />
     <Content Include="Module\Home\ModuleHome.js" />
     <Content Include="Module\Municipio\moduleMunicipio.js" />

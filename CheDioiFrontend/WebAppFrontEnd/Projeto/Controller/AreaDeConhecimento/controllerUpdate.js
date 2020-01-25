@@ -2,41 +2,18 @@
 
 myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
+        $scope.Descricao = $rootScope.AreaConhecimentoAtual.descricao;
+        $scope.atualizar = function () {
 
+        
 
-        $scope.limparDescricao = function () {
-            console.log('chamada com sucesso!');
-            $scope.descricao = "teste";
-        }
-
-        $scope.modalUpdate = {
-            template: "modalUpdate.html"
-        };
-
-        $rootScope.modalUpdate = function (atual) {
-            $rootScope.areaConhecimentoAtual = atual;
-            $('#updateDescricao').prop('value', atual.descricao);
-
-            $('#modal-update').modal('show');
-        }
-
-        $scope.update = function () {            
-            areaConhecimento = $scope.validacao();
-
-            if (areaConhecimento) {
+            if ($scope.validacao()) {
                 $rootScope.areasDeConhecimento.forEach(element => {
-                    if (element.idArea == $rootScope.areaConhecimentoAtual.idArea) {
+                    if (element.idArea == $rootScope.AreaConhecimentoAtual.idArea) {
                         element.descricao = areaConhecimento;
                     }
                 });
-                $('#updateDescricao').prop('value', areaConhecimento);
-                messageUpdate(false);
-            } else if (areaConhecimento == false) {                
-                duplicidate();
-            } else {
-                campoVazil()
-                $('#updateDescricao').prop('value', $rootScope.areaConhecimentoAtual.descricao);
-            }
+            } 
         }
 
         $scope.validacao = function () {
@@ -77,7 +54,7 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                         return retorno
                     }
 
-                    //Se tiver tudo serto inserir novo registro no array.
+                    //Se tiver tudo certo inserir novo registro no array.
                     if (validacao()) {
                         return areaConhecimento;
                     } else {

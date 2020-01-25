@@ -50,7 +50,7 @@
                     <td>{{areaDeConhecimento.descricao}}</td>
 
                     <td align="center">
-                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="modalUpdate(areaDeConhecimento)">
+                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="DefineAreaDeConhecimentoAtual(areaDeConhecimento)"  onclick=location.href='#!/Atualizar'>
                             <i class="fas fa-edit"></i>
                         </button>
                     </td>
@@ -67,6 +67,6 @@
 </div>
 <div class="insert-modal">
     <div ng-controller="controllerDelete" ng-include="modalDelete.template"></div>
-    <div ng-controller="controllerUpdate" ng-include="modalUpdate.template"></div>
+    <div ng-controller="controllerUpdate" ng-include="Update.template"></div>
     <div ng-controller="controllerCreate" ng-include="modalCreate.template"></div>
 </div>
