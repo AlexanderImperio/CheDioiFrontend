@@ -33,7 +33,6 @@ myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$l
         
         $rootScope.DefineAreaDeConhecimentoAtual = function (AreaDeConhecimentoAtual) {
             $rootScope.AreaDeConhecimentoAtual = AreaDeConhecimentoAtual;
-            console.log($rootScope.AreaDeConhecimentoAtual);
         }
     }
 ]);

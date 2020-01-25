@@ -2,14 +2,15 @@
 
 myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.Descricao = $rootScope.AreaConhecimentoAtual.descricao;
-        $scope.atualizar = function () {
 
-        
+        $scope.Descricao = $rootScope.AreaDeConhecimentoAtual.descricao;
+
+        $scope.atualizar = function (Descricao) {
+            console.log(Descricao);
 
             if ($scope.validacao()) {
                 $rootScope.areasDeConhecimento.forEach(element => {
-                    if (element.idArea == $rootScope.AreaConhecimentoAtual.idArea) {
+                    if (element.idArea == $rootScope.AreaDeConhecimentoAtual.idArea) {
                         element.descricao = areaConhecimento;
                     }
                 });
@@ -17,7 +18,6 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
         }
 
         $scope.validacao = function () {
-            let areaConhecimento = $('#updateDescricao').prop('value');
             if (areaConhecimento) {
                 const areaConhecimentoArr = areaConhecimento.split(' ');
                 let removerEspaco;
