@@ -50,12 +50,12 @@
                     <td>{{areaDeConhecimento.descricao}}</td>
 
                     <td align="center">
-                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="DefineAreaDeConhecimentoAtual(areaDeConhecimento)"  onclick=location.href='#!/Atualizar'>
+                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="DefineAreaDeConhecimentoAtual(areaDeConhecimento)" onclick=location.href='#!/Atualizar'>
                             <i class="fas fa-edit"></i>
                         </button>
                     </td>
                     <td align="center">
-                        <button class="btn btn-danger" ng-click="openModalDelete(areaDeConhecimento)"><i class="far fa-trash-alt"></i></button>
+                        <button class="btn btn-danger" ng-click="DefineAreaDeConhecimentoAtual(areaDeConhecimento)" onclick=location.href='#!/Deletar'><i class="far fa-trash-alt"></i></button>
                     </td>
                 </tr>
             </tbody>
@@ -66,7 +66,7 @@
                              template-url="dirPagination.tpl.html" max-size="12"></dir-pagination-controls>
 </div>
 <div class="insert-modal">
-    <div ng-controller="controllerDelete" ng-include="modalDelete.template"></div>
+    <div ng-controller="controllerDelete" ng-include="Delete.template"></div>
     <div ng-controller="controllerUpdate" ng-include="Update.template"></div>
-    <div ng-controller="controllerCreate" ng-include="modalCreate.template"></div>
+    <div ng-controller="controllerCreate" ng-include="Create.template"></div>
 </div>

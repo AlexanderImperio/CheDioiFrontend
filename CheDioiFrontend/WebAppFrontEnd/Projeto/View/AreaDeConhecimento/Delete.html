@@ -1,30 +1,16 @@
-<div class="modal fade" id="modal-delete">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-            </div>
-            <div class="modal-body">
-                <p>Deseja realmente deletar a área de conhecimento <strong>{{conhecimentoDescricao}}</strong>?</p>
-            </div>
-            <div class="modal-footer">
-                <table class="col-12 text-center">
-                    <tr>                        
-                        <td>
-                            <button type="button" class="btn btn-danger" ng-click="Delete(areaDeConhecimentoAtual)"
-                             data-dismiss="modal">Deletar</button>
-                        </td>
-
-                        <td>
-                            <button
-                                type="button" class="btn btn-warning" 
-                                data-dismiss="modal">Cancelar
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-
-            </div>
-        </div>
-    </div>
+<div ng-controller="controllerDelete" class="row">
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <td>
+                    <label ng-model="Descricao">Deseja realmente deletar a área de conhecimento <strong>{{Descricao}}</strong>?</label>
+                </td>
+            <tr style="text-align: center">
+                <td>
+                    <button type="button" class="btn btn-danger" ng-click="Delete(areaDeConhecimentoAtual)">Deletar</button>
+                    <button type="button" class="btn btn-warning" ng-click="Cancelar()">Cancelar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

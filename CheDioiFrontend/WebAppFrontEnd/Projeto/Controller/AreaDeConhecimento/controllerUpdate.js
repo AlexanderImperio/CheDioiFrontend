@@ -2,6 +2,7 @@
 
 myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
+        
 
         $scope.Descricao = $rootScope.AreaDeConhecimentoAtual.descricao;
 
@@ -15,6 +16,10 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                     }
                 });
             } 
+        }
+
+        $scope.Cancelar = function () {
+            $location.path('/AreaDeConhecimento');
         }
 
         $scope.validacao = function () {
