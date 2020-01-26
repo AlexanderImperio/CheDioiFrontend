@@ -3,18 +3,9 @@
 myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        //para incluir a pagina modalCreate na tela de lista de municipios
-        $scope.modalCreate = {
-            template: "modalCreate.html"
-        };
+      
 
-        //funcação para abrir o modal com bootstrap.
-        $rootScope.create = function () {
-            $('#modal-create').modal('show');
-        }
-
-
-        $scope.create = function () {            
+        $scope.Criar = function () {            
             areaConhecimento = $scope.validacao();
             const linpaDescricao = $('#createDescricao').prop('value', '');            
 

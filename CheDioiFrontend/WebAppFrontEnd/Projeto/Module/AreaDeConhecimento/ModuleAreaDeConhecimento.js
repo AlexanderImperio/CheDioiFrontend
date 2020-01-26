@@ -6,5 +6,6 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         when('/AreaDeConhecimento', { templateUrl: endereco + 'AreaDeConhecimento/AreaDeConhecimento.html' }).
         when('/Atualizar', { templateUrl: endereco + 'AreaDeConhecimento/Update.html' }).
         when('/Deletar', { templateUrl: endereco + 'AreaDeConhecimento/Delete.html' }).
+        when('/Criar', { templateUrl: endereco + 'AreaDeConhecimento/Create.html' }).
         otherwise({ redirectTo: '/AreaDeConhecimento', controller: 'controllerRead'});
 }]);

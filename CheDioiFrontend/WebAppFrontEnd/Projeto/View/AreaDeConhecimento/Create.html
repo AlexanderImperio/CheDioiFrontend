@@ -1,33 +1,24 @@
-<div class="modal fade" id="modal-create">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 style="font-weight: normal;">Criação da Área de Conhecimento</h5>
-                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>                
-            </div>
-            <form id="createSubmit" >
-                <div class="modal-body">
 
-                    <p>Nome da Área de Conhecimento</p>
-                    <input id="createDescricao" class="form-control"type="text" value="" />
-                    <br />                   
-
-                </div>
-                <div class="modal-footer">
-                    <table class="col-12 text-center">
-                        <tr>
-                            <td>
-                                <input type="submit" ng-click="create()" value="Cadastrar" class="btn btn-success" />
-                            </td>
-
-                            <td>
-                                <button type="button" class="btn btn-danger"  data-dismiss="modal">Cancelar
-                                </button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
-        </div>
+    <div ng-controller="controllerCreate" class="row">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>
+                        <label>Criação da Área de Conhecimento</label>
+                 
+                    </br>
+                    
+                        <label>Nome da Área de Conhecimento</label>
+                 
+                        <input id="createDescricao" class="form-control" type="text" value="" />
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td>
+                        <input type="button" ng-click="Criar()" value="Cadastrar" class="btn btn-success" /> 
+                        <button type="button" ng-click="Cancelar()" class="btn btn-danger">Cancelar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-</div>
