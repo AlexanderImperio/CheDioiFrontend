@@ -1,0 +1,22 @@
+﻿<div ng-controller="Update" class="row">          
+    <form>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>
+                        <label>Nome Da Profissão:</label>
+                        <input class="form-control" ng-model="Nome" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td>
+                        <button type="submit" ng-click="Atualizar(Nome)" class="btn btn-success">Alterar</button>
+                        <button type="button" ng-click="Cancelar()" class="btn btn-warning">Cancelar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</div>
+ 

@@ -1,17 +1,12 @@
 ﻿var myControllersProfissoesUpdate = angular.module("myControllersProfissoesUpdate", []);
 
-myControllersProfissoesUpdate.controller('profissaoControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
+myControllersProfissoesUpdate.controller('Update', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
         $scope.descricao;
 
-        $scope.modalUpdate = {
-            template: "modalUpdate.html"
-        };
 
         $rootScope.modalUpdate = function (profissao) {
-            $rootScope.profissaoAtual = profissao;
-            $('#updateDescricao').prop('value', profissao.Descricao);
-            $('#modal-update').modal('show');
+            $rootScope.profissaoAtual = profissao;          
         }
 
         $rootScope.alterar = function () {
