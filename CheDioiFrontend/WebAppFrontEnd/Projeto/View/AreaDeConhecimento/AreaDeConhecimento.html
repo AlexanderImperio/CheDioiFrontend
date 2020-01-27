@@ -48,12 +48,12 @@
                     <td>{{areaDeConhecimento.descricao}}</td>
 
                     <td align="center">
-                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="DefineAreaDeConhecimentoAtual(areaDeConhecimento)" onclick="location.href='#!/Atualizar'">
+                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="CarregarPagina('/Atualizar'); DefineAreaDeConhecimentoAtual(areaDeConhecimento)">
                             <i class="fas fa-edit"></i>
                         </button>
                     </td>
                     <td align="center">
-                        <button class="btn btn-danger" ng-click="DefineAreaDeConhecimentoAtual(areaDeConhecimento)" onclick="location.href='#!/Deletar'"><i class="far fa-trash-alt"></i></button>
+                        <button class="btn btn-danger" ng-click="Deletar(areaDeConhecimento.idArea)"><i class="far fa-trash-alt"></i></button>
                     </td>
                 </tr>
             </tbody>

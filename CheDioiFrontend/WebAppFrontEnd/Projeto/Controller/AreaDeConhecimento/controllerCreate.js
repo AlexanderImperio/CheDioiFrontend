@@ -2,7 +2,7 @@
 
 myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $rootScope.AddAreaConhecimento = [];      
+        $rootScope.AddAreaConhecimento = [];
 
         $scope.Criar = function () {
             const Novo = {
@@ -10,7 +10,8 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
                 descricao: $scope.NovaAreaConhecimento
             }
 
-            $rootScope.AddAreaConhecimento.push(Novo);
+            $rootScope.areasDeConhecimento.push(Novo);
+            $scope.NovaAreaConhecimento = '';
             alert('Area de conhecimento criado com sucesso!');
         }
 

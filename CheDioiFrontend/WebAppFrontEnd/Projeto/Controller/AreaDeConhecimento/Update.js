@@ -5,12 +5,6 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
         
         $scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.descricao;
         
-        if(!$scope.AreaConhecimento == $rootScope.AreaDeConhecimentoAtual.descricao){
-            console.log('teste');
-            $scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.descricao;
-        }
-        
-        
         $scope.Atualizar = function () {
             $rootScope.areasDeConhecimento.map(element => {
 
@@ -20,7 +14,6 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                     } else {
                         if (confirm('Deseja realmente alterar este registro?')) {
                             element.descricao = $scope.AreaConhecimento;
-                            $scope.AreaConhecimento = '';
                             alert('Area de conhecimento alterada com sucesso!');
                         }
 
@@ -28,13 +21,8 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                 }
             
             });
-
         }
-
-        $scope.Cancelar = function () {
-            $location.path('/AreaDeConhecimento');
-        }
-
+        
         $scope.validacao = function () {
             if (areaConhecimento) {
                 const areaConhecimentoArr = areaConhecimento.split(' ');

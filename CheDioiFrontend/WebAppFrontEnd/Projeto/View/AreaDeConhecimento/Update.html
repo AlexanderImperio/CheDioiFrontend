@@ -4,13 +4,15 @@
             <tr>
                 <td>
                     <label>Descrição Da Área De Conhecimento:</label>
-                    <input class="form-control" ng-model="AreaConhecimento" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+                    <input class="form-control" ng-model="AreaConhecimento" type="text" required="required" name="text"
+                        pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
                 </td>
             </tr>
             <tr style="text-align: center">
                 <td>
                     <button type="button" class="btn btn-primary" ng-click="Atualizar()">Atualizar</button>
-                    <button onclick="location.href='#!/AreaDeConhecimento'" type="button" class="btn btn-warning">Cancelar</button>
+                    <button ng-click="CarregarPagina('/AreaDeConhecimento')" type="button"
+                        class="btn btn-warning">Voltar</button>
                 </td>
             </tr>
         </tbody>

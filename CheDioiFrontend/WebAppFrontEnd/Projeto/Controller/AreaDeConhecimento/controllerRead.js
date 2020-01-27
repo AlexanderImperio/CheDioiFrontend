@@ -1,9 +1,9 @@
 ﻿var myControllers = angular.module("myControllers", []);
 
 myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$location',
-    function ($rootScope, $scope, $http, $location) {
+    async function ($rootScope, $scope, $http, $location) {
         $rootScope.areasDeConhecimento;
-
+        
         if (!$rootScope.areasDeConhecimento) {
             $rootScope.areasDeConhecimento = [
                 { idArea: 1, descricao: "Ciências Exatas e da Terra" },
@@ -28,19 +28,26 @@ myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$l
                 { idArea: 20, descricao: "Topologia das Variedades" },
             ];
         }
-        
-        $rootScope.DefineAreaDeConhecimentoAtual = function (AreaDeConhecimentoAtual) {
-            console.log(AreaDeConhecimentoAtual);
-            $rootScope.AreaDeConhecimentoAtual = AreaDeConhecimentoAtual;
-        }   
-        
-        
 
-        if ($rootScope.AddAreaConhecimento) {
-            $rootScope.AddAreaConhecimento.map(value => {
-                $rootScope.areasDeConhecimento.push(value);
-            });
+        $rootScope.DefineAreaDeConhecimentoAtual = function (AreaDeConhecimentoAtual) {
+            $rootScope.AreaDeConhecimentoAtual = AreaDeConhecimentoAtual;
         }
+
+        $rootScope.CarregarPagina = function (url) {
+            $location.path(url);
+        }
+
+
+        $scope.Deletar = function (id) {
+            if (confirm('Deseja realmente deletar este registro?')) {
+                $rootScope.areasDeConhecimento.forEach((value, index) => {                    
+                    if (value.idArea == id) {                        
+                        $rootScope.areasDeConhecimento.splice(index);
+                    }
+                });
+            }
+        }
+
     }
 ]);
 
