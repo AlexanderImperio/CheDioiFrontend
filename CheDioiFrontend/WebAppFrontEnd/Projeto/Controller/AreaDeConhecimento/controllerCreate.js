@@ -2,24 +2,16 @@
 
 myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
+        $rootScope.AddAreaConhecimento = [];      
 
-      
-
-        $scope.Criar = function () {            
-            areaConhecimento = $scope.validacao();
-            const linpaDescricao = $('#createDescricao').prop('value', '');            
-
-            if (areaConhecimento) {
-                $rootScope.areasDeConhecimento.push(areaConhecimento);
-                linpaDescricao;
-                messageCreate(false, areaConhecimento.descricao);
-
-            } else if (areaConhecimento == false) {
-                duplicidate();
-            } else {
-                campoVazil();
-                linpaDescricao;
+        $scope.Criar = function () {
+            const Novo = {
+                idArea: $rootScope.areasDeConhecimento.length + 1,
+                descricao: $scope.NovaAreaConhecimento
             }
+
+            $rootScope.AddAreaConhecimento.push(Novo);
+            alert('Area de conhecimento criado com sucesso!');
         }
 
         $scope.validacao = function () {

@@ -6,17 +6,17 @@
                     <td>
                         <label>Criação da Área de Conhecimento</label>
                  
-                    </br>
+                    <br>
                     
                         <label>Nome da Área de Conhecimento</label>
                  
-                        <input id="createDescricao" class="form-control" type="text" value="" />
+                        <input id="createDescricao" class="form-control" type="text" ng-model="NovaAreaConhecimento" />
                     </td>
                 </tr>
                 <tr style="text-align: center">
                     <td>
                         <input type="button" ng-click="Criar()" value="Cadastrar" class="btn btn-success" /> 
-                        <button type="button" ng-click="Cancelar()" class="btn btn-danger">Cancelar</button>
+                        <button type="button" onclick="location.href='#!/AreaDeConhecimento'" class="btn btn-danger">Cancelar</button>
                     </td>
                 </tr>
             </tbody>

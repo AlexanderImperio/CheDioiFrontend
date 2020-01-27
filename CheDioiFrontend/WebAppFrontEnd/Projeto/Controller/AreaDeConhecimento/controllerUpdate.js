@@ -3,19 +3,32 @@
 myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
         
+        $scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.descricao;
+        
+        if(!$scope.AreaConhecimento == $rootScope.AreaDeConhecimentoAtual.descricao){
+            console.log('teste');
+            $scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.descricao;
+        }
+        
+        
+        $scope.Atualizar = function () {
+            $rootScope.areasDeConhecimento.map(element => {
 
-        $scope.Descricao = $rootScope.AreaDeConhecimentoAtual.descricao;
+                if (element.idArea == $rootScope.AreaDeConhecimentoAtual.idArea) {
+                    if ($scope.AreaConhecimento.toLowerCase() == $rootScope.AreaDeConhecimentoAtual.descricao.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração');
+                    } else {
+                        if (confirm('Deseja realmente alterar este registro?')) {
+                            element.descricao = $scope.AreaConhecimento;
+                            $scope.AreaConhecimento = '';
+                            alert('Area de conhecimento alterada com sucesso!');
+                        }
 
-        $scope.atualizar = function (Descricao) {
-            console.log(Descricao);
-
-            if ($scope.validacao()) {
-                $rootScope.areasDeConhecimento.forEach(element => {
-                    if (element.idArea == $rootScope.AreaDeConhecimentoAtual.idArea) {
-                        element.descricao = areaConhecimento;
                     }
-                });
-            } 
+                }
+            
+            });
+
         }
 
         $scope.Cancelar = function () {
