@@ -3,7 +3,7 @@
 myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$location',
     async function ($rootScope, $scope, $http, $location) {
         $rootScope.areasDeConhecimento;
-        
+
         if (!$rootScope.areasDeConhecimento) {
             $rootScope.areasDeConhecimento = [
                 { idArea: 1, descricao: "Ciências Exatas e da Terra" },
@@ -38,11 +38,12 @@ myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$l
         }
 
 
-        $scope.Deletar = function (id) {
-            if (confirm('Deseja realmente deletar este registro?')) {
-                $rootScope.areasDeConhecimento.forEach((value, index) => {                    
-                    if (value.idArea == id) {                        
-                        $rootScope.areasDeConhecimento.splice(index);
+        $scope.Deletar = function (AreaConhecimento) {
+            if (confirm('Deseja realmente deletar ' + AreaConhecimento.descricao + '?')) {
+                $rootScope.areasDeConhecimento.map((value, index) => {
+                    if (value.idArea == AreaConhecimento.idArea) {
+                        $rootScope.areasDeConhecimento.splice(index, 1);
+                        alert(AreaConhecimento.descricao + ' deletado com sucesso!');
                     }
                 });
             }

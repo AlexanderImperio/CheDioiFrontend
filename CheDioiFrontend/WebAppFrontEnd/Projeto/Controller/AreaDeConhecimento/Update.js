@@ -14,7 +14,7 @@ myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$ht
                     } else {
                         if (confirm('Deseja realmente alterar este registro?')) {
                             element.descricao = $scope.AreaConhecimento;
-                            alert('Area de conhecimento alterada com sucesso!');
+                            alert('Registro alterado com sucesso!');
                         }
 
                     }

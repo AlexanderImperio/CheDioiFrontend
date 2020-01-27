@@ -5,11 +5,13 @@ myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$htt
         $rootScope.AddAreaConhecimento = [];
 
         $scope.Criar = function () {
-            const Novo = {
-                idArea: $rootScope.areasDeConhecimento.length + 1,
-                descricao: $scope.NovaAreaConhecimento
-            }
+            const IndexId = $rootScope.areasDeConhecimento.length -1;
+            const Id = $rootScope.areasDeConhecimento[IndexId].idArea + 1;
 
+            const Novo = {
+                idArea: Id,
+                descricao: $scope.NovaAreaConhecimento
+            }            
             $rootScope.areasDeConhecimento.push(Novo);
             $scope.NovaAreaConhecimento = '';
             alert('Area de conhecimento criado com sucesso!');
