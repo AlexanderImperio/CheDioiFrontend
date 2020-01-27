@@ -67,7 +67,7 @@
     <Content Include="Controller\AreaDeConhecimento\controllerCreate.js" />
     <Content Include="Controller\AreaDeConhecimento\controllerDelete.js" />
     <Content Include="Controller\AreaDeConhecimento\controllerRead.js" />
-    <Content Include="Controller\AreaDeConhecimento\controllerUpdate.js" />
+    <Content Include="Controller\AreaDeConhecimento\Update.js" />
     <Content Include="Controller\Estado\controllerDelete.js" />
     <Content Include="Controller\Estado\controllerRead.js" />
     <Content Include="Controller\Estado\controllerUpdate .js" />
@@ -79,12 +79,12 @@
     <Content Include="Controller\Profissao\controllerCreate.js" />
     <Content Include="Controller\Profissao\controllerDelete.js" />
     <Content Include="Controller\Profissao\controllerRead.js" />
-    <Content Include="Controller\Profissao\controllerUpdate.js" />
+    <Content Include="Controller\Profissao\Update.js" />
     <Content Include="Module\AreaDeConhecimento\ModuleAreaDeConhecimento.js" />
     <Content Include="Module\Estado\Modulo.js" />
     <Content Include="Module\Home\ModuleHome.js" />
     <Content Include="Module\Municipio\moduleMunicipio.js" />
-    <Content Include="Module\Profissao\moduloProfissoes.js" />
+    <Content Include="Module\Profissao\ModuleProfissao.js" />
     <Content Include="View\AreaDeConhecimento\AreaDeConhecimento.html" />
     <Content Include="View\AreaDeConhecimento\DirPagination.tpl.html" />
     <Content Include="View\AreaDeConhecimento\Index.html" />
@@ -117,10 +117,10 @@
     <Content Include="View\Municipio\municipio.html" />
     <Content Include="View\Profissao\dirPagination.tpl.html" />
     <Content Include="View\Profissao\index.html" />
-    <Content Include="View\Profissao\modalCreate.html" />
-    <Content Include="View\Profissao\modalDelete.html" />
-    <Content Include="View\Profissao\modalUpdate.html" />
-    <Content Include="View\Profissao\profissoes.html" />
+    <Content Include="View\Profissao\Create.html" />
+    <Content Include="View\Profissao\Delete.html" />
+    <Content Include="View\Profissao\Update.html" />
+    <Content Include="View\Profissao\Profissao.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
