@@ -70,7 +70,7 @@
     <Content Include="Controller\AreaDeConhecimento\Update.js" />
     <Content Include="Controller\Estado\controllerDelete.js" />
     <Content Include="Controller\Estado\controllerRead.js" />
-    <Content Include="Controller\Estado\controllerUpdate .js" />
+    <Content Include="Controller\Estado\controllerUpdate.js" />
     <Content Include="Controller\Estado\controllerCreate.js" />
     <Content Include="Controller\Municipio\controllerCreate.js" />
     <Content Include="Controller\Municipio\controllerDelete.js" />

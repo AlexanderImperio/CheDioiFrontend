@@ -1,4 +1,4 @@
-﻿var myControllers = angular.module("myControllers", []);
+﻿var myControllers = angular.module("myControllerRead", []);
 
 myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
