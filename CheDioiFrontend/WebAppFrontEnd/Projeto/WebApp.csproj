@@ -108,11 +108,11 @@
     <Content Include="View\Js\messageAreaConhecimento.js" />
     <Content Include="View\Js\paginate.js" />
     <Content Include="View\Municipio\dirPagination.tpl.html" />
-    <Content Include="View\Municipio\index.html" />
-    <Content Include="View\Municipio\modalCreate.html" />
-    <Content Include="View\Municipio\modalDelete.html" />
-    <Content Include="View\Municipio\modalUpdate.html" />
-    <Content Include="View\Municipio\municipio.html" />
+    <Content Include="View\Municipio\Index.html" />
+    <Content Include="View\Municipio\Create.html" />
+    <Content Include="View\Municipio\Delete.html" />
+    <Content Include="View\Municipio\Update.html" />
+    <Content Include="View\Municipio\Municipio.html" />
     <Content Include="View\Profissao\dirPagination.tpl.html" />
     <Content Include="View\Profissao\Index.html" />
     <Content Include="View\Profissao\Create.html" />

@@ -1,22 +1,21 @@
-var myControllers = angular.module("myControllers", []);
+var myControllers = angular.module("Read", []);
 
-myControllers.controller('municipioControllerRead', ['$rootScope', '$scope', '$http', '$location',
+myControllers.controller('Read', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
         var urlMunicipios = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios";
         var urlEstados = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
 
-        $scope.modalDelete = {
-            template:"modalDelete.html"
+        $scope.CarregarPagina = function (url) {
+            $location.path(url);
         };
-        
+
          $http.get(urlEstados).then(function (retorno) {
             $rootScope.estados = retorno.data;            
         });
         
         $http.get(urlMunicipios).then(function (retorno) {
             $rootScope.municipios = retorno.data;            
-        });
-        
+        });  
         
 
         $scope.change = function(pesquisa){
