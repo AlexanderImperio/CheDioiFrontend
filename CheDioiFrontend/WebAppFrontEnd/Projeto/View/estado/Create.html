@@ -2,14 +2,14 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="card-body">
-                <form>
-                    <div ng-controller="controllerCreate" class="row">
+                
+                    <div ng-controller="ControllerCreate" class="row">
                         <table class="table table-bordered">
                             <thread>
                                 <tr>
                                     <td>
                                         <label>Nome do Estado:</label>
-                                        <input class="form-control" ng-model="nomeEstado" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+                                        <input class="form-control" ng-model="NomeEstado" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
                                     </td>
                                 </tr>
                             </thread>
@@ -17,7 +17,7 @@
                                 <tr>
                                     <td>
                                         <label>UF:</label>
-                                        <input class="form-control" ng-model="ufEstado" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
+                                        <input class="form-control" ng-model="SiglaEstado" type="text" required="required" name="text" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" />
 
                                     </td>
                                 </tr>
@@ -25,14 +25,14 @@
                             <thread>
                                 <tr>
                                     <td>
-                                        <button title="Criar" class="btn btn-success" ng-click="criar(nomeEstado, ufEstado)">Criar</button>
-                                        <button ng-click="voltar()" title="Voltar" class="btn btn-danger">Voltar</button>
+                                        <button title="Criar" class="btn btn-success" ng-click="Criar()">Criar</button>
+                                        <button ng-click="CarregarPagina('/Estado')" title="Voltar" class="btn btn-warning">Voltar</button>
                                     </td>
                                 </tr>
                             </thread>
                         </table>
                     </div>
-                </form>
+                
             </div>
         </div>
     </div>

@@ -68,10 +68,9 @@
     <Content Include="Controller\AreaDeConhecimento\controllerDelete.js" />
     <Content Include="Controller\AreaDeConhecimento\controllerRead.js" />
     <Content Include="Controller\AreaDeConhecimento\Update.js" />
-    <Content Include="Controller\Estado\controllerDelete.js" />
-    <Content Include="Controller\Estado\controllerRead.js" />
-    <Content Include="Controller\Estado\controllerUpdate.js" />
-    <Content Include="Controller\Estado\controllerCreate.js" />
+    <Content Include="Controller\Estado\Read.js" />
+    <Content Include="Controller\Estado\Update.js" />
+    <Content Include="Controller\Estado\Create.js" />
     <Content Include="Controller\Municipio\controllerCreate.js" />
     <Content Include="Controller\Municipio\controllerDelete.js" />
     <Content Include="Controller\Municipio\controllerRead.js" />
@@ -81,7 +80,7 @@
     <Content Include="Controller\Profissao\Read.js" />
     <Content Include="Controller\Profissao\Update.js" />
     <Content Include="Module\AreaDeConhecimento\ModuleAreaDeConhecimento.js" />
-    <Content Include="Module\Estado\Modulo.js" />
+    <Content Include="Module\Estado\Module.js" />
     <Content Include="Module\Home\ModuleHome.js" />
     <Content Include="Module\Municipio\moduleMunicipio.js" />
     <Content Include="Module\Profissao\ModuleProfissao.js" />
@@ -95,11 +94,10 @@
     <Content Include="View\Css\home.css" />
     <Content Include="View\Css\paginator.css" />
     <Content Include="View\Css\styleMunicipio.css" />
-    <Content Include="View\Estado\Estado.html" />
+    <Content Include="View\Estado\Read.html" />
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
-    <Content Include="View\Estado\Delete.html" />
     <Content Include="View\Home\Index.html" />
     <Content Include="View\Home\Menu.html" />
     <Content Include="View\Js\bootstrap-notify.min.js" />

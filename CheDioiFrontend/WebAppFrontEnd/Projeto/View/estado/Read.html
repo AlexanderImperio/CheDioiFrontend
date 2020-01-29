@@ -1,4 +1,4 @@
-﻿<div ng-controller="controllerRead">
+﻿<div ng-controller="ControllerRead">
 
     <h2 class="text-center">Lista de Estados</h2>
 
@@ -14,8 +14,8 @@
                     <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
                             <span class="input-group-text"> <i class="fas fa-search"></i></span>
-                            <input type="text" ng-model="search" class="form-control" placeholder="Pesquisar">&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="criar()">Cadastrar</button>
+                            <input type="text" ng-model="Search" class="form-control" placeholder="Pesquisar">&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="CarregarPagina('/Criar')">Cadastrar</button>
                         </div>
                     </div>
 
@@ -25,26 +25,26 @@
                         <table class="table table-bordered">
                             <thread style="background-color: rgba(0,0,0,.03); text-align: center;">
                                 <tr>
-                                    <th ng-click="sort('nome')">
+                                    <th ng-click="Sort('nome')">
                                         DESCRIÇÃO
-                                        <i class="fas fa-sort" ng-show="sortKey=='nome'"></i>
+                                        <i class="fas fa-sort" ng-show="SortKey=='nome'"></i>
                                     </th>
-                                    <th ng-click="sort('sigla')">
+                                    <th ng-click="Sort('sigla')">
                                         UF
-                                        <i class="fas fa-sort" ng-show="sortKey=='sigla'"></i>
+                                        <i class="fas fa-sort" ng-show="SortKey=='sigla'"></i>
                                     </th>
                                     <th colspan="2" align="center" width="2%">AÇÃO</th>
                                 </tr>
                             </thread>
                             <tbody>
-                                <tr ng-repeat="estado in Estados | orderBy:'nome' : reverse | filter:search" scope="col-2">
-                                    <td>{{estado.nome}}</td>
-                                    <td>{{estado.sigla}}</td>
+                                <tr ng-repeat="Estado in Estados | orderBy:'nome' : Reverse | filter:Search" scope="col-2">
+                                    <td>{{Estado.nome}}</td>
+                                    <td>{{Estado.sigla}}</td>
                                     <td align="center">
-                                        <button ng-click="atualizar(estado)" value="editar" title="Editar" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                                        <button ng-click="CarregarPagina('/Atualizar'); DefineEstadoAtual(Estado)" value="editar" title="Editar" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
                                     </td>
                                     <td align="center">
-                                        <button ng-click="deletar(estado)" value="deletar" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></button>
+                                        <button ng-click="Deletar(Estado)" value="deletar" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></button>
 
                                     </td>
                                 </tr>
