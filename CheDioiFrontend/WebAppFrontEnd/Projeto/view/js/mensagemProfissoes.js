@@ -121,7 +121,7 @@ function messageDelete(validator, profissao) {
     }
 }
 
-function campoVazil() {
+function campoVazio() {
     $.notify({
         //options
         message: "Preencha todos os campos"
@@ -144,7 +144,7 @@ function campoVazil() {
     });
 }
 
-function duplicidate() {
+function duplicidade() {
     $.notify({
         //options
         message: "Este registro já foi cadastrado anteriormente!"

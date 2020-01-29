@@ -1,6 +1,6 @@
-﻿<div ng-controller="profissoesControllersRead">
+﻿<div ng-controller="Read">
 
-    <h2 class="text-center">Lista de Profissões</h2>
+    <h2 class="text-center">LISTA DE PROFISSÕES</h2>
 
     <br /><br />
 
@@ -48,10 +48,10 @@
                 <tr dir-paginate="profissao in profissoes | orderBy:'descricao' | filter:busca| filter:change | itemsPerPage:itemPorPagina">
                     <td>{{profissao.Descricao}}</td>
                     <td align="center">
-                        <button ng-click="DefineProfissaoAtual(profissao)" onclick="location.href='#!/Atualizar'" class="btn btn-primary"><i class="fas fa-edit"></i></button>
+                        <button ng-click="CarregarPagina('/Atualizar'); DefineProfissaoAtual(profissao)" class="btn btn-primary"><i class="fas fa-edit"></i></button>
                     </td>
                     <td align="center">
-                        <button ng-click="DefineProfissaoAtual(profissao)" onclick="location.href='#!/Deletar'" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                        <button ng-click="Deletar(profissao)" onclick="location.href='#!/Deletar'" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
                     </td>
                 </tr>
             </tbody>
@@ -60,9 +60,4 @@
 
     <dir-pagination-controls class="d-flex flex-row-reverse" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
                              template-url="dirPagination.tpl.html" max-size="12"></dir-pagination-controls>
-</div>
-<div class="insert-modal">
-    <div ng-controller="profissoesControllersCreate" ng-include="Create.template"></div>
-    <div ng-controller="Update" ng-include="Update.template"></div>
-    <div ng-controller="profissaoControllerDelete" ng-include="Delete.template"></div>
 </div>

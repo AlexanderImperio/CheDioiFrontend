@@ -1,39 +1,27 @@
-﻿var myControllersProfissoesCreate = angular.module("myControllersProfissoesCreate", []);
+﻿var myControllerProfissaoCreate = angular.module("myControllerProfissaoCreate", []);
 
-myControllersProfissoesCreate.controller('profissoesControllersCreate', ['$rootScope', '$scope', '$http', '$location',
+myControllerProfissaoCreate.controller('Create', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
+        $rootScope.AddProfissao = [];
 
+        $scope.Criar = function () {
+            const IndexId = $rootScope.profissoes.length - 1;
+            const Id = $rootScope.profissoes[IndexId].IdProfissao + 1;
 
-        //para incluir a pagina modalCreate na tela de lista de municipios
-        $scope.modalCreate = {
-            template: "modalCreate.html"
-        };
-
-        // função global
-        $rootScope.create = function () {
-            $('#modal-create').modal('show');
-        }
-
-        $scope.cadastrar = function () {
-            const profissaoDescricao = $scope.validacao();
-            const linpaDescricao = () => $('#createDescricao').prop('value', '');
-
-            if (profissaoDescricao) {
-                $rootScope.profissoes.push(profissaoDescricao)
-                messageCreate(false, profissaoDescricao.Descricao);
-                linpaDescricao()
-            } else if (profissaoDescricao == false) {
-                duplicidate();
-            } else {
-                campoVazil()
+            const Novo = {
+                IdProfissao: Id,
+                Descricao: $scope.NovaProfissao
             }
+            $rootScope.profissoes.push(Novo);
+            $scope.NovaProfissao = '';
+            alert('Profissão Criada Com Sucesso!');
         }
 
         $scope.validacao = function () {
             let profissao = $('#createDescricao').prop('value');
             if (profissao) {
                 const profissaoArr = profissao.split(' ');
-                let removeEspaco;
+                let removerEspaco;
 
                 profissaoArr.forEach(element => {
                     if (element) {
@@ -41,16 +29,15 @@ myControllersProfissoesCreate.controller('profissoesControllersCreate', ['$rootS
                             element = element.charAt(0).toUpperCase() + element.slice(1);
                         }
 
-                        if (removeEspaco == null) {
-                            removeEspaco = element;
+                        if (removerEspaco == null) {
+                            removerEspaco = element;
                         } else {
-                            removeEspaco += ' ' + element;
+                            removerEspaco += ' ' + element;
                         }
                     }
-
                 });
-                profissao = removeEspaco;
-
+                profissao = removerEspaco;
+          
                 //Se o input só tiver espaços em branco.
                 if (profissao) {
                     /* Função "validacao()" para verificar se ja existe 
@@ -59,7 +46,7 @@ myControllersProfissoesCreate.controller('profissoesControllersCreate', ['$rootS
                     let validacao = () => {
                         let retorno = true;
                         $rootScope.profissoes.forEach(element => {
-                            if (profissao.toLowerCase() == element.Descricao.toLowerCase()) {
+                            if (profissao.toLowerCase() == element.descricao.toLowerCase()) {
                                 retorno = false;
                             }
                         });
@@ -67,7 +54,7 @@ myControllersProfissoesCreate.controller('profissoesControllersCreate', ['$rootS
                         return retorno
                     }
 
-                    //Se tiver tudo serto inserir novo registro no array.
+                    //Se Estiver tudo Certo inserir novo registro no array.
                     if (validacao()) {
                         let cad = {
                             IdProfissao: $rootScope.profissoes.length + 1,

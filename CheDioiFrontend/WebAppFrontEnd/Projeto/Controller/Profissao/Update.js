@@ -1,39 +1,28 @@
-﻿var myControllersProfissoesUpdate = angular.module("myControllersProfissoesUpdate", []);
+﻿var myControllerProfissaoUpdate = angular.module("myControllerProfissaoUpdate", []);
 
-myControllersProfissoesUpdate.controller('Update', ['$rootScope', '$scope', '$http', '$location',
+myControllerProfissaoUpdate.controller('Update', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.descricao;
+        $scope.Profissao = $rootScope.ProfissaoAtual.Descricao;
 
+        $scope.Atualizar = function () {
+            $rootScope.profissoes.map(element => {
+                if (element.IdProfissao == $rootScope.ProfissaoAtual.IdProfissao) {
+                    if ($scope.Profissao.toLowerCase() == $rootScope.ProfissaoAtual.Descricao.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração.');
+                    } else {
+                        if (confirm('Deseja realmente alterar este registro?')) {
+                            element.Descricao = $scope.Profissao;
+                            alert('Registro alterado com sucesso!');
+                        }
 
-        $rootScope.modalUpdate = function (profissao) {
-            $rootScope.profissaoAtual = profissao;          
-        }
-
-        $rootScope.alterar = function () {
-            const profissaoDescricao = $scope.validacao();
-            const alterarDescricao = newValue => $('#updateDescricao').prop('value', newValue);
-            if (profissaoDescricao) {
-                $rootScope.profissoes.forEach(function (element) {
-                    if ($rootScope.profissaoAtual.IdProfissao == element.IdProfissao) {
-                        element.Descricao = profissaoDescricao;
                     }
-                });
-                messageUpdate(false);
-                alterarDescricao(profissaoDescricao);
-            } else if (profissaoDescricao == false) {
-                duplicidate();
-            } else {
-                campoVazil();
-                alterarDescricao('');
-            }
-
+                }
+            });
         }
-
         $scope.validacao = function () {
-            let profissao = $('#updateDescricao').prop('value');
             if (profissao) {
                 const profissaoArr = profissao.split(' ');
-                let removeEspaco;
+                let removerEspaco;
 
                 profissaoArr.forEach(element => {
                     if (element) {
@@ -41,10 +30,10 @@ myControllersProfissoesUpdate.controller('Update', ['$rootScope', '$scope', '$ht
                             element = element.charAt(0).toUpperCase() + element.slice(1);
                         }
 
-                        if (removeEspaco == null) {
-                            removeEspaco = element;
+                        if (removerEspaco == null) {
+                            removerEspaco = element;
                         } else {
-                            removeEspaco += ' ' + element;
+                            removerEspaco += ' ' + element;
                         }
                     }
 
@@ -67,7 +56,7 @@ myControllersProfissoesUpdate.controller('Update', ['$rootScope', '$scope', '$ht
                         return retorno
                     }
 
-                    //Se tiver tudo serto inserir novo registro no array.
+                    //Se Estiver tudo Certo inserir novo registro no array.
                     if (validacao()) {
                         return profissao;
                     } else {

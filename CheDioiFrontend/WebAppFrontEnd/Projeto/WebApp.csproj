@@ -76,9 +76,9 @@
     <Content Include="Controller\Municipio\controllerDelete.js" />
     <Content Include="Controller\Municipio\controllerRead.js" />
     <Content Include="Controller\Municipio\controllerUpdate.js" />
-    <Content Include="Controller\Profissao\controllerCreate.js" />
-    <Content Include="Controller\Profissao\controllerDelete.js" />
-    <Content Include="Controller\Profissao\controllerRead.js" />
+    <Content Include="Controller\Profissao\Create.js" />
+    <Content Include="Controller\Profissao\Delete.js" />
+    <Content Include="Controller\Profissao\Read.js" />
     <Content Include="Controller\Profissao\Update.js" />
     <Content Include="Module\AreaDeConhecimento\ModuleAreaDeConhecimento.js" />
     <Content Include="Module\Estado\Modulo.js" />
@@ -116,7 +116,7 @@
     <Content Include="View\Municipio\modalUpdate.html" />
     <Content Include="View\Municipio\municipio.html" />
     <Content Include="View\Profissao\dirPagination.tpl.html" />
-    <Content Include="View\Profissao\index.html" />
+    <Content Include="View\Profissao\Index.html" />
     <Content Include="View\Profissao\Create.html" />
     <Content Include="View\Profissao\Delete.html" />
     <Content Include="View\Profissao\Update.html" />

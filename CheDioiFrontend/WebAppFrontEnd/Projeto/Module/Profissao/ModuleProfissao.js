@@ -1,4 +1,4 @@
-﻿var myApp = angular.module('myApp', ['ngRoute', 'myControllersProfissoesRead', 'myControllersProfissoesCreate', 'myControllersProfissoesUpdate', "myControllersProfissoesDelete", 'angularUtils.directives.dirPagination']);
+﻿var myApp = angular.module('myApp', ['ngRoute', 'myControllerProfissaoRead', 'myControllerProfissaoCreate', 'myControllerProfissaoUpdate', "myControllerProfissaoDelete", 'angularUtils.directives.dirPagination']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
@@ -6,5 +6,5 @@ myApp.config(['$routeProvider', function ($routeProvider) {
         when('/Atualizar', { templateUrl: endereco + 'Profissao/Update.html' }).
         when('/Deletar', { templateUrl: endereco + 'Profissao/Delete.html' }).
         when('/Criar', { templateUrl: endereco + 'Profissao/Create.html' }).
-        otherwise({ redirectTo: '/Profissao', controller: 'profissoesControllerRead' });
+        otherwise({ redirectTo: '/Profissao', controller: 'Read' });
 }]);
