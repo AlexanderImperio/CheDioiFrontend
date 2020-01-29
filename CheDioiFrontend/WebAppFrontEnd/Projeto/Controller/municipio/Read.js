@@ -5,9 +5,9 @@ myControllers.controller('Read', ['$rootScope', '$scope', '$http', '$location',
         var urlMunicipios = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios";
         var urlEstados = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
 
-        $scope.CarregarPagina = function (url) {
+        $rootScope.CarregarPagina = function (url) {
             $location.path(url);
-        };
+        }
 
          $http.get(urlEstados).then(function (retorno) {
             $rootScope.estados = retorno.data;            
@@ -16,6 +16,18 @@ myControllers.controller('Read', ['$rootScope', '$scope', '$http', '$location',
         $http.get(urlMunicipios).then(function (retorno) {
             $rootScope.municipios = retorno.data;            
         });  
+
+        $scope.Deletar = function (MunicipioAtual) {
+            console.log(MunicipioAtual);
+            if (confirm('Deseja realmente deletar ' + MunicipioAtual.nome + '?')) {
+                $rootScope.municipios.map((value, index) => {
+                    if (value.id == MunicipioAtual.id) {
+                        $rootScope.municipios.splice(index, 1);
+                        alert(MunicipioAtual.nome + ' deletado com sucesso!');
+                    }
+                });
+            }
+        }
         
 
         $scope.change = function(pesquisa){

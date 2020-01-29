@@ -71,10 +71,10 @@
     <Content Include="Controller\Estado\Read.js" />
     <Content Include="Controller\Estado\Update.js" />
     <Content Include="Controller\Estado\Create.js" />
-    <Content Include="Controller\Municipio\controllerCreate.js" />
-    <Content Include="Controller\Municipio\controllerDelete.js" />
-    <Content Include="Controller\Municipio\controllerRead.js" />
-    <Content Include="Controller\Municipio\controllerUpdate.js" />
+    <Content Include="Controller\Municipio\Create.js" />
+    <Content Include="Controller\Municipio\Delete.js" />
+    <Content Include="Controller\Municipio\Read.js" />
+    <Content Include="Controller\Municipio\Update.js" />
     <Content Include="Controller\Profissao\Create.js" />
     <Content Include="Controller\Profissao\Delete.js" />
     <Content Include="Controller\Profissao\Read.js" />
@@ -98,6 +98,11 @@
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
+    <Content Include="View\Home\imagem\areaDeConhecimento.jpeg" />
+    <Content Include="View\Home\imagem\lista.svg" />
+    <Content Include="View\Home\imagem\mapaa.png" />
+    <Content Include="View\Home\imagem\municipio.png" />
+    <Content Include="View\Home\imagem\profissao.png" />
     <Content Include="View\Home\Index.html" />
     <Content Include="View\Home\Menu.html" />
     <Content Include="View\Js\bootstrap-notify.min.js" />
