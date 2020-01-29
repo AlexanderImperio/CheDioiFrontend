@@ -1,17 +1,8 @@
-var myControllerCreate = angular.module("myControllerCreate", []);
+var myControllerCreate = angular.module("Create", []);
 
-myControllerCreate.controller('municipioControllerCreate', ['$rootScope', '$scope', '$http', '$location',
+myControllerCreate.controller('Create', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        //para incluir a pagina modalCreate na tela de lista de municipios
-        $scope.modalCreate = {
-            template: "modalCreate.html"
-        };
-
-        //funcação para abrir o modal com bootstrap.
-        $rootScope.create = function () {
-            $('#modal-create').modal('show');
-        }
 
         //variavel para criar novos Id's para municipio.
         let idMunicipio = 1;

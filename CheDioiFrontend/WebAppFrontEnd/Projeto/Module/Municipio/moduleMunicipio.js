@@ -1,8 +1,10 @@
-var myApp = angular.module('myApp', ['ngRoute', 'myControllers', 'myControllerDelete',
-    'myControllersUpdate','myControllerCreate', 'angularUtils.directives.dirPagination']);
+var myApp = angular.module('myApp', ['ngRoute', 'Read',
+    'Update','Create', 'angularUtils.directives.dirPagination']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
-        when('/municipio', { templateUrl: endereco+'municipio/municipio.html'}).
-        otherwise({ redirectTo: '/municipio', controller: 'municipioControllerRead'});
+        when('/Municipio', { templateUrl: endereco + 'Municipio/Municipio.html' }).
+        when('/Atualizar', { templateUrl: endereco + 'Municipio/Update.html' }).
+        when('/Criar', { templateUrl: endereco + 'Municipio/Create.html' }).
+        otherwise({ redirectTo: '/Municipio', controller: 'Read'});
 }]);

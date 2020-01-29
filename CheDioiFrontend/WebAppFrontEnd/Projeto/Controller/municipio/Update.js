@@ -1,10 +1,8 @@
-var myControllersUpdate = angular.module("myControllersUpdate", []);
+var myControllersUpdate = angular.module("Update", []);
 
-myControllersUpdate.controller('municipioControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
+myControllersUpdate.controller('Update', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.modalUpdate = {
-            template:"modalUpdate.html"
-        };
+       
 
         $rootScope.modalUpdate = function (municipio){            
             $rootScope.municipioAtual = municipio;                        

@@ -1,10 +1,8 @@
-var myControllerDelete = angular.module("myControllerDelete", []);
+var myControllerDelete = angular.module("Delete", []);
 
-myControllerDelete.controller('municipioControllerDelete', ['$rootScope', '$scope', '$http', '$location',
+myControllerDelete.controller('Delete', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.modalDelete = {
-            template:"modalDelete.html"
-        };
+       
 
         $rootScope.confirDelete = function (municipio){            
             $rootScope.municipioAtual = municipio;
