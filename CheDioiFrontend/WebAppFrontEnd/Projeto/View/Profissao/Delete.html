@@ -3,13 +3,13 @@
         <tbody>
             <tr>
                 <td>
-                    <label ng-model="Descricao">Deseja realmente deletar a Profissão <strong>{{Descricao}}</strong>?</label>
+                    <label ng-model="DescricaoD">Deseja realmente deletar a Profissão <strong>{{DescricaoD}}</strong>?</label>
                 </td>
             </tr>
             <tr style="text-align: center">
                 <td>
                     <button type="button" class="btn btn-danger" ng-click="Delete(ProfissaoAtual)">Deletar</button>
-                    <button type="button" class="btn btn-warning" ng-click="CarregarPagina('/Profissao')">Voltar</button>
+                    <button type="button" class="btn btn-warning" ng-click="Cancelar()">Voltar</button>
                 </td>
             </tr>
         </tbody>

@@ -2,7 +2,7 @@
 
 myControllerProfissaoDelete.controller('Delete', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-        $scope.Descricao = $rootScope.ProfissaoAtual.Descricao;
+        $scope.DescricaoD = $rootScope.ProfissaoAtual.Descricao;
 
         $scope.Delete = function () {
             console.log($rootScope.ProfissaoAtual.IdDescricao);
