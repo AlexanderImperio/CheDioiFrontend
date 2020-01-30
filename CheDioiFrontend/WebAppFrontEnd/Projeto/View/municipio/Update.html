@@ -1,8 +1,9 @@
-<
+
 <div ng-controller="Update" class="row">
         <select class="btn dropdown-toggle text-center"
-                ng-options="estado.nome for estado in estados | orderBy:'nome' "
-                ng-model="EstadoAtual">
+                ng-init="EstadoAtual"
+                ng-model="EstadoAtual"
+                ng-options="Estado.nome for Estado in Estados | orderBy:'nome' ">
             <option>Selecione um Estado</option>
 
         </select>
@@ -13,12 +14,12 @@
                         <label>Atualização de Município</label>
                         <br>
                         <label>Nome do Município</label>
-                        <input class="form-control" type="text" value="" ng-model="MunicipioAtual" />
+                        <input class="form-control" type="text" ng-model="Municipio.nome" />
                     </td>
                 </tr>
                 <tr style="text-align: center">
                     <td>
-                        <input type="submit" ng-click="Cadastrar()" value="Atualizar" class="btn btn-primary" />
+                        <input type="submit" ng-click="Atualizar(MunicipioAtual)" class="btn btn-primary" />
                         <button type="button" ng-click="CarregarPagina('/Municipio')" class="btn btn-warning">Voltar</button>
                     </td>
                 </tr>

@@ -6,7 +6,6 @@ myControllerDelete.controller('controllerDelete', ['$rootScope', '$scope', '$htt
         $scope.Descricao = $rootScope.AreaDeConhecimentoAtual.descricao;
 
         $scope.Delete = function () { 
-            console.log($rootScope.AreaDeConhecimentoAtual.idArea);
             messageDelete(false, $rootScope.areaDeConhecimentoAtual.descricao);
         }
 

@@ -10,19 +10,22 @@ myControllers.controller('Read', ['$rootScope', '$scope', '$http', '$location',
         }
 
          $http.get(urlEstados).then(function (retorno) {
-            $rootScope.estados = retorno.data;            
+             $rootScope.Estados = retorno.data;
         });
         
         $http.get(urlMunicipios).then(function (retorno) {
-            $rootScope.municipios = retorno.data;            
+            $rootScope.Municipios = retorno.data;
         });  
 
+        $rootScope.DefineMunicipioAtual = function (MunicipioAtual) {
+            $rootScope.MunicipioAtual = MunicipioAtual;
+        }
+
         $scope.Deletar = function (MunicipioAtual) {
-            console.log(MunicipioAtual);
             if (confirm('Deseja realmente deletar ' + MunicipioAtual.nome + '?')) {
-                $rootScope.municipios.map((value, index) => {
+                $rootScope.Municipios.map((value, index) => {
                     if (value.id == MunicipioAtual.id) {
-                        $rootScope.municipios.splice(index, 1);
+                        $rootScope.Municipios.splice(index, 1);
                         alert(MunicipioAtual.nome + ' deletado com sucesso!');
                     }
                 });
