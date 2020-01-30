@@ -64,9 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Controller\AreaDeConhecimento\controllerCreate.js" />
-    <Content Include="Controller\AreaDeConhecimento\controllerDelete.js" />
-    <Content Include="Controller\AreaDeConhecimento\controllerRead.js" />
+    <Content Include="Controller\AreaDeConhecimento\Create.js" />
+    <Content Include="Controller\AreaDeConhecimento\Read.js" />
     <Content Include="Controller\AreaDeConhecimento\Update.js" />
     <Content Include="Controller\Estado\Read.js" />
     <Content Include="Controller\Estado\Update.js" />
@@ -88,7 +87,6 @@
     <Content Include="View\AreaDeConhecimento\DirPagination.tpl.html" />
     <Content Include="View\AreaDeConhecimento\Index.html" />
     <Content Include="View\AreaDeConhecimento\Create.html" />
-    <Content Include="View\AreaDeConhecimento\Delete.html" />
     <Content Include="View\AreaDeConhecimento\Update.html" />
     <Content Include="View\Css\animate.min.css" />
     <Content Include="View\Css\home.css" />
