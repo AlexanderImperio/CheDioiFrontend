@@ -1,22 +1,30 @@
-﻿<div ng-controller="Create" class="row">
-    <form>
-        <table class="table table-bordered">
-            <tbody>
-                <tr>
-                    <td>
-                        <label>Criação de Profissão</label>
-                        <br>
-                        <label>Nome da Profissão</label>
-                        <input class="form-control" type="text" ng-model="NovaProfissao" />
-                    </td>
-                </tr>
-                <tr style="text-align: center">
-                    <td>
-                        <input type="submit" ng-click="Criar()" value="Cadastrar" class="btn btn-success" />
-                        <button type="button" ng-click="CarregarPagina('/Profissao')" class="btn btn-warning">Voltar</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
+﻿<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card-body">
+                <div ng-controller="Create" class="row">
+                    <form>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label>Criação de Profissão</label>
+                                        <br>
+                                        <label>Nome da Profissão</label>
+                                        <input class="form-control" type="text" ng-model="NovaProfissao" />
+                                    </td>
+                                </tr>
+                                <tr style="text-align: center">
+                                    <td>
+                                        <input type="submit" ng-click="Criar()" value="Cadastrar" class="btn btn-success" />
+                                        <button type="button" ng-click="CarregarPagina('/Profissao')" class="btn btn-warning">Voltar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
