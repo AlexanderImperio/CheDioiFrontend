@@ -3,7 +3,7 @@
 myControllers.controller('ControllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        $scope.Criar = function () {
+        $scope.Cadastrar = function () {
             const Index = $rootScope.Estados.length -1;
             const NovaId = $rootScope.Estados[Index].id + 1;
                         

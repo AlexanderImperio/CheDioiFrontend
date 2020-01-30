@@ -2,15 +2,20 @@ var myControllersUpdate = angular.module("Update", []);
 
 myControllersUpdate.controller('Update', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
-       
-
-        $rootScope.modalUpdate = function (municipio){            
-            $rootScope.municipioAtual = municipio;                        
-            $('#modal-update').modal('show'); }
+        var urlEstados = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
+                 
+        $scope.Municipio = $rootScope.MunicipioAtual;
+        $http.get(urlEstados).then(function (retorno) {
+            $rootScope.Estados = retorno.data;
+            $rootScope.Estados.forEach(value => {
+                if (value.nome == $scope.Municipio.microrregiao.mesorregiao.UF.nome) {
+                    $scope.EstadoAtual = $scope.Municipio.microrregiao.mesorregiao.UF.nome;                    
+                }
+            })
+        });
         
         $scope.update = function (estado) {
-            let municipioAtual = $rootScope.municipioAtual.nome;
-            let municipio = document.getElementById("nomeMunicipioUpdate").value;            
+            let municipioAtual = $rootScope.municipioAtual.nome;           
             let error = false;            
             let keepGoing = true;
 

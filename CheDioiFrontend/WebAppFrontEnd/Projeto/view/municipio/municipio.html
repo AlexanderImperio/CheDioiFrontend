@@ -13,7 +13,7 @@
 
                   <div class="col-sm">
                       <select class="btn dropdown-toggle text-center"
-                              ng-options="estado.nome for estado in estados | orderBy:'nome' "
+                              ng-options="Estado.nome for Estado in Estados | orderBy:'nome' "
                               ng-model="buscaPorEstado">
                           <option value="">Selecione um estado</option>
                       </select>
@@ -52,18 +52,18 @@
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="municipio in municipios | orderBy:'nome' | filter:busca| filter:change | itemsPerPage:itemPorPagina"
+                <tr dir-paginate="Municipio in Municipios | orderBy:'nome' | filter:busca| filter:change | itemsPerPage:itemPorPagina"
                     scope="col-2" id="remove-{{municipio.id}}">
-                    <td>{{municipio.nome}}</td>
-                    <td>{{municipio.microrregiao.mesorregiao.UF.sigla}}</td>
+                    <td>{{Municipio.nome}}</td>
+                    <td>{{Municipio.microrregiao.mesorregiao.UF.sigla}}</td>
 
                     <td align="center">
-                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="CarregarPagina('/Atualizar')">
+                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="CarregarPagina('/Atualizar'); DefineMunicipioAtual(Municipio)">
                             <i class="fas fa-edit"></i>
                         </button>
                     </td>
                     <td align="center">
-                        <button class="btn btn-danger" ng-click="Deletar(municipio);"><i class="far fa-trash-alt"></i></button>
+                        <button class="btn btn-danger" ng-click="Deletar(Municipio);"><i class="far fa-trash-alt"></i></button>
                     </td>
                 </tr>
             </tbody>
