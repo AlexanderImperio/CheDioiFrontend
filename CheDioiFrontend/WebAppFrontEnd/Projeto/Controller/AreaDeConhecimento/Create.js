@@ -1,6 +1,6 @@
-﻿var myControllerCreate = angular.module("myControllerCreate", []);
+﻿var myControllerCreate = angular.module("ControllerCreate", []);
 
-myControllerCreate.controller('controllerCreate', ['$rootScope', '$scope', '$http', '$location',
+myControllerCreate.controller('ControllerCreate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
         $rootScope.AddAreaConhecimento = [];
 

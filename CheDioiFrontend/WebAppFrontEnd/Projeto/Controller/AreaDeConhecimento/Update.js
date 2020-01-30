@@ -1,6 +1,6 @@
-﻿var myControllersUpdate = angular.module("myControllersUpdate", []);
+﻿var myControllersUpdate = angular.module("ControllerUpdate", []);
 
-myControllersUpdate.controller('controllerUpdate', ['$rootScope', '$scope', '$http', '$location',
+myControllersUpdate.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
         
         $scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.descricao;

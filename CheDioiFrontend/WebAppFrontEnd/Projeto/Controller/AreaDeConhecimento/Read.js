@@ -1,6 +1,6 @@
-﻿var myControllers = angular.module("myControllers", []);
+﻿var myControllers = angular.module("ControllerRead", []);
 
-myControllers.controller('controllerRead', ['$rootScope', '$scope', '$http', '$location',
+myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$location',
     async function ($rootScope, $scope, $http, $location) {
         $rootScope.areasDeConhecimento;
 
