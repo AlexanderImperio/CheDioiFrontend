@@ -105,7 +105,6 @@
     <Content Include="View\Municipio\dirPagination.tpl.html" />
     <Content Include="View\Municipio\Index.html" />
     <Content Include="View\Municipio\Create.html" />
-    <Content Include="View\Municipio\Delete.html" />
     <Content Include="View\Municipio\Update.html" />
     <Content Include="View\Municipio\Municipio.html" />
     <Content Include="View\Profissao\dirPagination.tpl.html" />
