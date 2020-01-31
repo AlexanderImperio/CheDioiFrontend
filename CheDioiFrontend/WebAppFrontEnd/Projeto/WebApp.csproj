@@ -102,12 +102,12 @@
     <Content Include="View\Home\Menu.html" />
     <Content Include="View\Js\constantes.js" />
     <Content Include="View\Js\paginate.js" />
-    <Content Include="View\Municipio\dirPagination.tpl.html" />
+    <Content Include="View\Municipio\DirPagination.tpl.html" />
     <Content Include="View\Municipio\Index.html" />
     <Content Include="View\Municipio\Create.html" />
     <Content Include="View\Municipio\Update.html" />
     <Content Include="View\Municipio\Municipio.html" />
-    <Content Include="View\Profissao\dirPagination.tpl.html" />
+    <Content Include="View\Profissao\DirPagination.tpl.html" />
     <Content Include="View\Profissao\Index.html" />
     <Content Include="View\Profissao\Create.html" />
     <Content Include="View\Profissao\Delete.html" />
