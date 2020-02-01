@@ -10,7 +10,7 @@ myControllerProfissaoUpdate.controller('Update', ['$rootScope', '$scope', '$http
                     if ($scope.Profissao.toLowerCase() == $rootScope.ProfissaoAtual.Descricao.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração.');
                     } else {
-                        if (confirm('Deseja realmente alterar este registro?')) {
+                        if (confirm(`Deseja realmente alterar ${$rootScope.ProfissaoAtual.Descricao}?`)) {
                             element.Descricao = $scope.Profissao;
                             alert('Registro alterado com sucesso!');
                         }
