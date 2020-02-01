@@ -38,14 +38,17 @@
 
     <div class="table-responsive">
         <table class="table table-bordered">
-            <thread>
+            <thread style="background-color: rgba(0,0,0,.03); text-align: center;">
                 <tr>
-                    <td><b>DESCRIÇÃO</b></td>
-                    <td colspan="2" align="center" width="2%"><b>AÇÃO</b></td>
+                    <th ng-click="Sort('Descricao')">
+                        DESCRIÇÃO
+                        <i class="fas fa-sort" ng-show="SortKey=='Descricao'"></i>
+                    </th>
+                    <th colspan="2" align="center" width="2%">AÇÃO</th>
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="profissao in profissoes | orderBy:'descricao' | filter:busca| filter:change | itemsPerPage:itemPorPagina">
+                <tr ng-repeat="profissao in profissoes | orderBy:'Descricao' : Reverse | filter:Search" scope="col-2">
                     <td>{{profissao.Descricao}}</td>
                     <td align="center">
                         <button ng-click="CarregarPagina('/Atualizar'); DefineProfissaoAtual(profissao)" class="btn btn-primary"><i class="fas fa-edit"></i></button>
