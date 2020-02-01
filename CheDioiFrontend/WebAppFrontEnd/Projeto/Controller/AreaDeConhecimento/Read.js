@@ -2,30 +2,30 @@
 
 myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$location',
     async function ($rootScope, $scope, $http, $location) {
-        $rootScope.areasDeConhecimento;
+        $rootScope.AreasDeConhecimento;
 
-        if (!$rootScope.areasDeConhecimento) {
-            $rootScope.areasDeConhecimento = [
-                { idArea: 1, descricao: "Ciências Exatas e da Terra" },
-                { idArea: 2, descricao: "Matemática" },
-                { idArea: 3, descricao: "Álgebra" },
-                { idArea: 4, descricao: "Conjuntos" },
-                { idArea: 5, descricao: "Lógica Matemática" },
-                { idArea: 6, descricao: "Teoria dos Números" },
-                { idArea: 7, descricao: "Grupos de Álgebra Não - Comutaviva" },
-                { idArea: 8, descricao: "Álgebra Comutativa" },
-                { idArea: 9, descricao: "Geometria Algébrica" },
-                { idArea: 10, descricao: "Análise" },
-                { idArea: 11, descricao: "Análise Complexa" },
-                { idArea: 12, descricao: "Análise Funcional" },
-                { idArea: 13, descricao: "Análise Funcional Não - Linear" },
-                { idArea: 14, descricao: "Equações Diferenciais Ordinárias" },
-                { idArea: 15, descricao: "Equações Diferenciais Parciais" },
-                { idArea: 16, descricao: "Equações Diferenciais Funcionais" },
-                { idArea: 17, descricao: "Geometria e Topologia" },
-                { idArea: 18, descricao: "Geometria Diferencial" },
-                { idArea: 19, descricao: "Topologia Algébrica" },
-                { idArea: 20, descricao: "Topologia das Variedades" },
+        if (!$rootScope.AreasDeConhecimento) {
+            $rootScope.AreasDeConhecimento = [
+                { IdArea: 1, Descricao: "Ciências Exatas e da Terra" },
+                { IdArea: 2, Descricao: "Matemática" },
+                { IdArea: 3, Descricao: "Álgebra" },
+                { IdArea: 4, Descricao: "Conjuntos" },
+                { IdArea: 5, Descricao: "Lógica Matemática" },
+                { IdArea: 6, Descricao: "Teoria dos Números" },
+                { IdArea: 7, Descricao: "Grupos de Álgebra Não - Comutaviva" },
+                { IdArea: 8, Descricao: "Álgebra Comutativa" },
+                { IdArea: 9, Descricao: "Geometria Algébrica" },
+                { IdArea: 10, Descricao: "Análise" },
+                { IdArea: 11, Descricao: "Análise Complexa" },
+                { IdArea: 12, Descricao: "Análise Funcional" },
+                { IdArea: 13, Descricao: "Análise Funcional Não - Linear" },
+                { IdArea: 14, Descricao: "Equações Diferenciais Ordinárias" },
+                { IdArea: 15, Descricao: "Equações Diferenciais Parciais" },
+                { IdArea: 16, Descricao: "Equações Diferenciais Funcionais" },
+                { IdArea: 17, Descricao: "Geometria e Topologia" },
+                { IdArea: 18, Descricao: "Geometria Diferencial" },
+                { IdArea: 19, Descricao: "Topologia Algébrica" },
+                { IdArea: 20, Descricao: "Topologia das Variedades" },
             ];
         }
 
@@ -39,11 +39,11 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
 
 
         $scope.Deletar = function (AreaConhecimento) {
-            if (confirm('Deseja realmente deletar ' + AreaConhecimento.descricao + '?')) {
-                $rootScope.areasDeConhecimento.map((value, index) => {
-                    if (value.idArea == AreaConhecimento.idArea) {
-                        $rootScope.areasDeConhecimento.splice(index, 1);
-                        alert(AreaConhecimento.descricao + ' deletado com sucesso!');
+            if (confirm('Deseja realmente deletar ' + AreaConhecimento.Descricao + '?')) {
+                $rootScope.AreasDeConhecimento.map((value, index) => {
+                    if (value.IdArea == AreaConhecimento.IdArea) {
+                        $rootScope.AreasDeConhecimento.splice(index, 1);
+                        alert(AreaConhecimento.Descricao + ' deletado com sucesso!');
                     }
                 });
             }

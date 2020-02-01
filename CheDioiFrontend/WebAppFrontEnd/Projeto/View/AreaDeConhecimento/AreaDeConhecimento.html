@@ -8,7 +8,7 @@
         <div class="row">
             <div class="input-group-append ">
                 <span class="input-group-text"><i class="fas fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Digite uma Área de conhecimento ..." size="28" ng-model="busca.descricao" />
+                <input type="text" class="form-control" placeholder="Digite uma Área de conhecimento ..." size="28" ng-model="busca.Descricao" />
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
         <div class="col-sm">
             <label>Mostrar</label>
             <select class="btn dropdown-toggle text-center"
-                    ng-model="itemPorPagina" ng-init='itemPorPagina = "10"'>
+                    ng-model="ItemPorPagina" ng-init='ItemPorPagina = "10"'>
                 <option value="10">10</option>
                 <option value="20">20</option>
                 <option value="30">30</option>
@@ -43,17 +43,17 @@
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="areaDeConhecimento in areasDeConhecimento | orderBy:'descricao' | filter:busca | itemsPerPage:itemPorPagina"
+                <tr dir-paginate="AreaDeConhecimento in AreasDeConhecimento | orderBy:'Descricao' | filter:busca | itemsPerPage:ItemPorPagina"
                     scope="col-2">
-                    <td>{{areaDeConhecimento.descricao}}</td>
+                    <td>{{AreaDeConhecimento.Descricao}}</td>
 
                     <td align="center">
-                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="CarregarPagina('/Atualizar'); DefineAreaDeConhecimentoAtual(areaDeConhecimento)">
+                        <button value="editar" title="Editar" class="btn btn-primary" ng-click="CarregarPagina('/Atualizar'); DefineAreaDeConhecimentoAtual(AreaDeConhecimento)">
                             <i class="fas fa-edit"></i>
                         </button>
                     </td>
                     <td align="center">
-                        <button class="btn btn-danger" ng-click="Deletar(areaDeConhecimento)"><i class="far fa-trash-alt"></i></button>
+                        <button class="btn btn-danger" ng-click="Deletar(AreaDeConhecimento)"><i class="far fa-trash-alt"></i></button>
                     </td>
                 </tr>
             </tbody>
