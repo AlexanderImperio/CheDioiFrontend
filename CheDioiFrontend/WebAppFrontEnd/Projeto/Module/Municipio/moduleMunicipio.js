@@ -1,5 +1,5 @@
 var myApp = angular.module('myApp', ['ngRoute', 'Read',
-    'Update','Create', 'angularUtils.directives.dirPagination']);
+    'Update','Create','ControllerHeader', 'angularUtils.directives.dirPagination']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.

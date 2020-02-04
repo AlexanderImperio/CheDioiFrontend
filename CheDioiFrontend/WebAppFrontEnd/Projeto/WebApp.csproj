@@ -70,6 +70,7 @@
     <Content Include="Controller\Estado\Read.js" />
     <Content Include="Controller\Estado\Update.js" />
     <Content Include="Controller\Estado\Create.js" />
+    <Content Include="Controller\Header\HeaderController.js" />
     <Content Include="Controller\Municipio\Create.js" />
     <Content Include="Controller\Municipio\Read.js" />
     <Content Include="Controller\Municipio\Update.js" />
@@ -93,14 +94,13 @@
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
-    <Content Include="View\Home\imagem\areaDeConhecimento.jpeg" />
-    <Content Include="View\Home\imagem\lista.svg" />
-    <Content Include="View\Home\imagem\mapaa.png" />
-    <Content Include="View\Home\imagem\municipio.png" />
-    <Content Include="View\Home\imagem\profissao.png" />
+    <Content Include="View\Home\header.html" />
     <Content Include="View\Home\Index.html" />
     <Content Include="View\Home\Menu.html" />
+    <Content Include="View\imagem\logo.png" />
+    <Content Include="View\imagem\logo.svg" />
     <Content Include="View\Js\constantes.js" />
+    <Content Include="View\Js\functions.js" />
     <Content Include="View\Js\paginate.js" />
     <Content Include="View\Municipio\dirPagination.tpl.html" />
     <Content Include="View\Municipio\Index.html" />

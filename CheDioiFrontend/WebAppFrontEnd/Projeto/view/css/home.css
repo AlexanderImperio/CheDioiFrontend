@@ -1,53 +1,177 @@
-h1 {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-size: 45px;
-  padding: 10px 10px;
+html,
+body {
+  min-height: 100%;
+}
+
+section.main {
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+/*Estilo do header*/
+nav.navbar {
+  background: #19181a;
   text-align: center;
+}
+
+nav.navbar a {
+  font-size: 32px;
+  font-weight: normal;
+  color: #97caef;
+}
+
+nav.navbar a img {
+  margin-top: -10px;
+  width: 48px;
+}
+
+.side-bar-icone {
+  margin-left: 2%;
+  font-size: 32px;
+  color: #97caef;
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  padding: 10px 20px;
+}
+
+
+nav.side-bar-itens ul {
+  display: none;
+  z-index: 999;
+  text-align: center;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  padding-left: 0;
+  top: 74px;
+  list-style-type: none;
+}
+
+nav.side-bar-itens ul li {
+  background-color: #2a333a;
+  color: white;
+  font-size: 18px;
   text-transform: uppercase;
-  text-rendering: optimizeLegibility; 
+  padding: 10px 0;
+  border-bottom: 2px solid #222629;
+  cursor: pointer;
+  position: relative;
 }
 
-.retroshadow {
-    color: #2c2c2c;
-    letter-spacing: .05em;
-    text-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+nav.side-bar-itens ul li:hover {
+  background-color: #382f3b;
 }
 
-hr.styleHr {
-    border-top: 1px solid #8c8b8b;
-    margin: 0px 40px 0px 40px;
-    box-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
+nav.side-bar-itens .side-bar-sub-itens{
+  left: 300px;
+  top: 0px;
+  border-left: 2px solid #222629;
 }
 
-hr.styleFooter {
-    border-top: 1px solid #8c8b8b;
-    box-shadow: 2px 2px 0px #d5d5d5, 4px 4px 0px rgba(0, 0, 0, 0.2);
-    position: relative;
-    background-color:darkgrey;
-    bottom: 0;
-    width: 100%;
+nav.side-bar-itens .side-bar-sub-itens li{
+  background: #1d262c;
+}
+
+/*-------------------*/
+
+/*Estilo do menu*/
+section.menu {
+  height: 100%;
+  background: #222629;
+  width: 100%;
+  padding: 40px 0;
+}
+
+section.menu > .container {
+  margin-bottom: 40px;
+  position: relative;
+  top: 50%;
 }
 
 .fieldset-border {
-    border: 1px groove #ddd !important;
-    padding: 0 1.4em 1.4em 1.4em !important;
-    margin: 0 0 1.5em 0 !important;
-    -webkit-box-shadow: 0px 0px 0px 0px #000;
-    box-shadow: 0px 0px 0px 0px #000;
+  border: 1px solid #5680e9;
+  padding: 0.2em;
 }
 
 .fieldset-border .legend-border {
-    font-size: 1.2em !important;
-    text-align: left !important;
-    width: auto;
-    padding: 0 10px;
-    border-bottom: none;
-    color: #ffffff;
+  margin: 0;
+  font-size: 28px;
+  width: auto;
+  padding: 0 10px;
+  color: white;
+}
+
+.card-wraper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-wraper .card {
+  background: none;
+  border: 1px solid #97caef;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5px 15px 15px 15px;
 }
 
 .card-icon {
-    font-size: 250px;
-    text-align: center;
-    line-height: 250px;
+  font-size: 150px;
+  color: #97caef;
+  padding: 20px 10px;
+  text-align: center;
 }
 
+.btn-home {
+  color: white;
+  background: #382f3b;
+  border: 2px solid #352b3a;
+  border-radius: 4px;
+  width: 90%;
+  min-height: 40px;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+.btn-home:hover {
+  filter: brightness(90%);
+}
+/*-------------------*/
+
+/*Estilo do footer*/
+footer {
+  text-align: center;
+  height: 39px;
+  background: #19181a;
+}
+footer p {
+  line-height: 39px;
+  font-size: 18px;
+  margin: 0;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .card-wraper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  section.menu > .container {
+    padding-top: 0;
+  }
+}
