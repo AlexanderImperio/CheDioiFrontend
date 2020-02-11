@@ -100,7 +100,6 @@
     <Content Include="View\imagem\logo.png" />
     <Content Include="View\imagem\logo.svg" />
     <Content Include="View\Js\constantes.js" />
-    <Content Include="View\Js\functions.js" />
     <Content Include="View\Js\paginate.js" />
     <Content Include="View\Municipio\dirPagination.tpl.html" />
     <Content Include="View\Municipio\Index.html" />
