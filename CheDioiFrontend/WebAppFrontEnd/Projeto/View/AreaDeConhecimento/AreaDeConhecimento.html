@@ -38,12 +38,15 @@
         <table class="table table-bordered">
             <thread>
                 <tr>
-                    <td><b>DESCRIÇÃO</b></td>
-                    <td colspan="2" align="center" width="2%"><b>AÇÃO</b></td>
+                    <th ng-click="Sort('Descricao')">
+                        DESCRIÇÃO
+                        <i class="fas fa-sort" ng-show="SortKey=='Descricao'"></i>
+                    </th>
+                    <th colspan="2" align="center" width="2%"><b>AÇÃO</b></th>
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="AreaDeConhecimento in AreasDeConhecimento | orderBy:'Descricao' | filter:busca | itemsPerPage:ItemPorPagina"
+                <tr dir-paginate="AreaDeConhecimento in AreasDeConhecimento | orderBy:'Descricao': Reverse | filter:busca |filter:change | itemsPerPage:ItemPorPagina"
                     scope="col-2">
                     <td>{{AreaDeConhecimento.Descricao}}</td>
 

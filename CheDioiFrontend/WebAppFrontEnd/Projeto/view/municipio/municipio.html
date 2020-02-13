@@ -46,14 +46,20 @@
         <table class="table table-bordered">
             <thread>
                 <tr>
-                    <td><b>DESCRIÇÃO</b></td>
-                    <td><b>UF</b></td>
-                    <td colspan="2" align="center" width="2%"><b>AÇÃO</b></td>
+                    <th ng-click="Sort('nome')">
+                        DESCRIÇÃO
+                        <i class="fas fa-sort" ng-show="SortKey=='nome'"></i>
+                    </th>
+                    <th ng-click="Sort('Municipio.microrregiao.mesorregiao.UF.sigla')">
+                        UF
+                        <i class="fas fa-sort" ng-show="SortKey=='Municipio.microrregiao.mesorregiao.UF.sigla'"></i>
+                    </th>
+                    <th colspan="2" align="center" width="2%">AÇÃO</th>
                 </tr>
             </thread>
             <tbody>
-                <tr dir-paginate="Municipio in Municipios | orderBy:'nome' | filter:busca| filter:change | itemsPerPage:itemPorPagina"
-                    scope="col-2" id="remove-{{municipio.id}}">
+                <tr dir-paginate="Municipio in Municipios | orderBy:'nome': Reverse | filter:busca| filter:change | itemsPerPage:itemPorPagina"
+                    scope="col-2">
                     <td>{{Municipio.nome}}</td>
                     <td>{{Municipio.microrregiao.mesorregiao.UF.sigla}}</td>
 

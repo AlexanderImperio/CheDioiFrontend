@@ -37,6 +37,11 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
             $location.path(url);
         }
 
+        $scope.Sort = function (KeyName) {
+            $scope.SortKey = KeyName;
+            $scope.Reverse = !$scope.Reverse;
+        }
+
 
         $scope.Deletar = function (AreaConhecimento) {
             if (confirm('Deseja realmente deletar ' + AreaConhecimento.Descricao + '?')) {
