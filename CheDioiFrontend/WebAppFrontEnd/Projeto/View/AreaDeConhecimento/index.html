@@ -18,26 +18,12 @@
     <script src="../../Controller/AreaDeConhecimento/Read.js" charset="utf-8"></script>
     <script src="../../controller/AreaDeConhecimento/Update.js"></script>
     <script src="../../Controller/AreaDeConhecimento/Create.js"></script>
-
-    <style type="text/css">
-        #fundojumbotron {
-            background-image: linear-gradient(to top, #09203f 60%, #537895 100%);
-            height: 1200px;
-        }
-    </style>
+    <script src="../../Controller/Header/HeaderController.js"></script>
+    
 </head>
 <body ng-app="myApp">
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1a1a1d;">
-        <div class="container">
-            <a class="navbar-brand mx-auto" href="../home">
-                <img src="../home/imagem/logo.png" width="30" height="30" alt="Logo">
-                CheDioi
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna Navegar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    
+    <header ng-include="header.url" ng-controller="ControllerHeader"></header>
     </br>
 
     <div class="main container" ng-view></div>

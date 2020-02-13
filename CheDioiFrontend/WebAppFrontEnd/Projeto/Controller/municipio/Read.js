@@ -31,6 +31,12 @@ myControllers.controller('Read', ['$rootScope', '$scope', '$http', '$location',
                 });
             }
         }
+
+        $scope.Sort = function (KeyName) {
+            $scope.SortKey = KeyName;
+            $scope.Reverse = !$scope.Reverse;
+        }
+
         
 
         $scope.change = function(pesquisa){

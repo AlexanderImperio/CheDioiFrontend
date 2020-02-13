@@ -57,5 +57,10 @@ myControllerProfissaoRead.controller('Read', ['$rootScope', '$scope', '$http', '
             }
         }
 
+        $scope.Sort = function (KeyName) {
+            $scope.SortKey = KeyName;
+            $scope.Reverse = !$scope.Reverse;
+        }
+
     }
 ]);
