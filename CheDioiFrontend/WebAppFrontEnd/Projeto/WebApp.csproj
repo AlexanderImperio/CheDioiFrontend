@@ -70,6 +70,7 @@
     <Content Include="Controller\Estado\Read.js" />
     <Content Include="Controller\Estado\Update.js" />
     <Content Include="Controller\Estado\Create.js" />
+    <Content Include="Controller\Funcionario\Read.js" />
     <Content Include="Controller\Header\HeaderController.js" />
     <Content Include="Controller\Municipio\Create.js" />
     <Content Include="Controller\Municipio\Read.js" />
@@ -79,6 +80,7 @@
     <Content Include="Controller\Profissao\Update.js" />
     <Content Include="Module\AreaDeConhecimento\ModuleAreaDeConhecimento.js" />
     <Content Include="Module\Estado\ModuleEstado.js" />
+    <Content Include="Module\Funcionario\ModuleFuncionario.js" />
     <Content Include="Module\Home\ModuleHome.js" />
     <Content Include="Module\Municipio\ModuleMunicipio.js" />
     <Content Include="Module\Profissao\ModuleProfissao.js" />
@@ -94,6 +96,7 @@
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
+    <Content Include="View\Funcionario\Index.html" />
     <Content Include="View\Home\header.html" />
     <Content Include="View\Home\Index.html" />
     <Content Include="View\Home\Menu.html" />
@@ -125,11 +128,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\Funcionario\" />
-    <Folder Include="Module\Funcionario\" />
-    <Folder Include="View\Funcionario\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
