@@ -1,0 +1,52 @@
+﻿<fieldset class="fieldset-border border-secondary pr-2 pl-2" ng-controller="ReadController">
+    <h4 class="text-center">Funcionarios</h4>
+    <span>Mostrar <input type="number" class="pl-2" value="10" style="width: 45px;"> registros</span>
+
+    <div class="searchbar float-right">
+        <input class="search_input" type="text" name="" placeholder="Search...">
+        <button class="search_icon"><i class="fas fa-search"></i></button>
+    </div>
+    <br>
+    <br>
+    <button class="float-right mt-2 mb-3 pl-3 pr-3">Cadastro</button>
+
+    <div class="boxContent table-responsive">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <button class="btn nav-link active">Ativo</button>
+            </li>
+            <li class="nav-item">
+                <button class="btn nav-link">Inativo</button>
+            </li>
+        </ul>
+
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Matrícula</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Profição</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr ng-repeat="funcrionario in funcrionarios">
+                    <td>00001</td>
+                    <td>Funcrionario 1</td>
+                    <td>consultor</td>
+                    <td>Funcrionario1@gmail.com</td>
+                    <td>9999-9999</td>
+                    <td class="text-center"> <button class="pl-2 pr-2 ">detalhes</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <dir-pagination-controls class="d-flex flex-row-reverse" boundary-links="true"
+        on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html" max-size="12">
+    </dir-pagination-controls>
+</fieldset>

@@ -91,11 +91,13 @@
     <Content Include="View\AreaDeConhecimento\Update.html" />
     <Content Include="View\Css\home.css" />
     <Content Include="View\Css\paginator.css" />
+    <Content Include="View\Css\search.css" />
     <Content Include="View\Css\styleMunicipio.css" />
     <Content Include="View\Estado\Estado.html" />
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
+    <Content Include="View\Funcionario\Funcionario.html" />
     <Content Include="View\Funcionario\Index.html" />
     <Content Include="View\Home\header.html" />
     <Content Include="View\Home\Index.html" />
