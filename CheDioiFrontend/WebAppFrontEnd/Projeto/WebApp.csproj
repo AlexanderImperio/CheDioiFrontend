@@ -96,6 +96,7 @@
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
+    <Content Include="View\Funcionario\DadosGerais.html" />
     <Content Include="View\Funcionario\Index.html" />
     <Content Include="View\Home\header.html" />
     <Content Include="View\Home\Index.html" />
