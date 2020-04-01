@@ -96,6 +96,10 @@
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
+    <Content Include="View\Funcionario\AbaCadDependentes.html" />
+    <Content Include="View\Funcionario\AbaCadInfoAdcionais.html" />
+    <Content Include="View\Funcionario\AbaDetDependentes.html" />
+    <Content Include="View\Funcionario\AbaDetInfoAdcionais.html" />
     <Content Include="View\Funcionario\Index.html" />
     <Content Include="View\Home\header.html" />
     <Content Include="View\Home\Index.html" />
