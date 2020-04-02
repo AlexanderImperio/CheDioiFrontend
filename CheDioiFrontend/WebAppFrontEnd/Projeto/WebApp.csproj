@@ -70,7 +70,9 @@
     <Content Include="Controller\Estado\Read.js" />
     <Content Include="Controller\Estado\Update.js" />
     <Content Include="Controller\Estado\Create.js" />
+    <Content Include="Controller\Funcionario\Create.js" />
     <Content Include="Controller\Funcionario\Read.js" />
+    <Content Include="Controller\Funcionario\Update.js" />
     <Content Include="Controller\Header\HeaderController.js" />
     <Content Include="Controller\Municipio\Create.js" />
     <Content Include="Controller\Municipio\Read.js" />
@@ -97,7 +99,7 @@
     <Content Include="View\Estado\Index.html" />
     <Content Include="View\Estado\Update.html" />
     <Content Include="View\Estado\Create.html" />
-    <Content Include="View\Funcionario\DadosGerais.html" />
+    <Content Include="View\Funcionario\Create.html" />
     <Content Include="View\Funcionario\Funcionario.html" />
     <Content Include="View\Funcionario\Index.html" />
     <Content Include="View\Home\header.html" />
