@@ -1,4 +1,4 @@
-﻿<fieldset class="fieldset-border border-secondary pr-2 pl-2" ng-controller="ReadController">
+﻿<fieldset class="fieldset-border border-secondary pr-2 pl-2" ng-controller="ControllerRead">
     <h4 class="text-center">Funcionarios</h4>
     <span>Mostrar <input type="number" class="pl-2" value="10" style="width: 45px;"> registros</span>
 
@@ -35,11 +35,11 @@
             <tbody>
 
                 <tr ng-repeat="funcrionario in funcrionarios">
-                    <td>00001</td>
-                    <td>Funcrionario 1</td>
-                    <td>consultor</td>
-                    <td>Funcrionario1@gmail.com</td>
-                    <td>9999-9999</td>
+                    <td>{{Funcionarios[0].Matricula}}</td>
+                    <td>{{Funcionarios[0].Nome}}</td>
+                    <td>Engenheiro</td>
+                    <td>{{Funcionarios[0].Email}}</td>
+                    <td>{{Funcionarios[0].Telefone}}</td>
                     <td class="text-center"> <button class="pl-2 pr-2 ">detalhes</button></td>
                 </tr>
 
