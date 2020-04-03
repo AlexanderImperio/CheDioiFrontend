@@ -179,6 +179,7 @@
                             <label for="inputCEP">CEP</label>
                             <input type="text" class="form-control" id="inputCEP" placeholder="00000-000">
                         </div>
+                        <div class="form-group col-md-1"><!--Espacamento--></div>
                         <div class="form-group col-md-3">
                             <label for="inputEstado">Estado *</label>
                             <select id="inputEstado" class="form-control">
@@ -187,6 +188,7 @@
                                 <option>Mato Grosso Do Sul</option>
                             </select>
                         </div>
+                        <div class="form-group col-md-1"><!--Espacamento--></div>
                         <div class="form-group col-md-3">
                             <label for="inputMunicipio">Municipio *</label>
                             <select id="inputMunicipio" class="form-control">
@@ -197,14 +199,16 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-5">
                             <label for="inputLougradoro">Lougradoro *</label>
                             <input type="text" class="form-control" id="inputLougradoro">
                         </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputNumero">Número *</label>
                             <input type="text" class="form-control" id="inputNumero">
                         </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputBairro">Bairro *</label>
                             <input type="text" class="form-control" id="inputBairro">
@@ -226,18 +230,346 @@
                 </form>
             </div>
             <div class="tab-pane fade" id="infoAdicionais" role="tabpanel" aria-labelledby="infoAdicionais-tab">
-                <br />Info Adicionais
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">@</span>
+                <br />
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputCTPS">CTPS *</label>
+                            <input type="text" class="form-control" id="inputCTPS">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputSerieCart">Série Cart. Trab *</label>
+                            <input type="text" class="form-control" id="inputSerieCart" placeholder="">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputUFCart">UF Cart. Trab *</label>
+                            <input type="text" class="form-control" id="inputUFCart" placeholder="">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputPisPasep">Pis / Pasep *</label>
+                            <input type="text" class="form-control" id="inputPisPasep">
+                        </div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputTipoConta">Tipo de conta *</label>
+                            <select id="inputTipoConta" class="form-control">
+                                <option selected>...</option>
+                                <option>Salário</option>
+                                <option>Corrente</option>
+                                <option>Pupança</option>
+                            </select>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group col-md-3">
+                            <label for="inputBanco">Banco *</label>
+                            <input type="text" class="form-control" id="inputBanco">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group col-md-2">
+                            <label for="inputAgencia">Agência *</label>
+                            <input type="text" class="form-control" id="inputAgencia">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group col-md-2">
+                            <label for="inputConta">Conta *</label>
+                            <input type="text" class="form-control" id="inputConta">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputInter">Interesses</label>
+                            <textarea class="form-control" id="inputInter"></textarea>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row-reverse col-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" ng-click="">Voltar</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        <div class="tab-pane fade" id="dependentes" role="tabpanel" aria-labelledby="dependentes-tab"><br/>Dependentes</div>
-        <div class="tab-pane fade" id="contrato" role="tabpanel" aria-labelledby="contrato-tab">Contrato</div>
-        <div class="tab-pane fade" id="reajuste" role="tabpanel" aria-labelledby="reajuste-tab">Reajuste</div>
-        <div class="tab-pane fade" id="recibo" role="tabpanel" aria-labelledby="recibo-tab">Recibo</div>
+            <div class="tab-pane fade" id="dependentes" role="tabpanel" aria-labelledby="dependentes-tab">
+                <br />
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-2" style="display:flex; flex-direction: row; justify-content: flex-start; align-self: flex-start; white-space: nowrap">
+                            <label for="inputDepedente">Possui dependentes?</label>&nbsp;&nbsp;
+                            <input type="checkbox" class="form-control" id="inputDepedente">&nbsp;&nbsp;
+                            <label for="inputDepedente">Sim</label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputNomeDep">Nome *</label>
+                            <input type="text" class="form-control" id="inputNomeDep">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputRGDep">RG</label>
+                            <input type="text" class="form-control" id="inputRGDep" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputOrgaoDep">Órgão Emissor</label>
+                            <input type="text" class="form-control" id="inputOrgaoDep" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputCPFDep">CPF</label>
+                            <input type="text" class="form-control" id="inputCPFDep" placeholder="">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputSexoDep">Sexo *</label>
+                            <select id="inputSexoDep" class="form-control">
+                                <option selected>...</option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputGrau">Grau de parentesco *</label>
+                            <input type="text" class="form-control" id="inputGrau">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputDataNascDep">Data de Nascimento *</label>
+                            <div class="input-group datepicker">
+                                <input type="date" class="form-control" id="inputDataNascDep" placeholder="dd/mm/aaaa">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-calendar-alt"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCertNascDep">Nº Certidão de Nascimento *</label>
+                            <input type="text" class="form-control" id="inputCertNascDep">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputCEPDep">CEP</label>
+                            <input type="text" class="form-control" id="inputCEPDep">
+                        </div>
+                        <div class="form-group col-md-1"><!--Espacamento--></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group col-md-3">
+                            <label for="inputEstadoDep">Estado *</label>
+                            <select id="inputEstadoDep" class="form-control">
+                                <option selected>...</option>
+                                <option>Estado 1</option>
+                                <option>Estado 2</option>
+                                <option>Estado 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-1"><!--Espacamento--></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group col-md-3">
+                            <label for="inputMunicipioDep">Município *</label>
+                            <select id="inputMunicipioDep" class="form-control">
+                                <option selected>...</option>
+                                <option>Municipio 1</option>
+                                <option>Municipio 2</option>
+                                <option>Municipio 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputLogradouroDep">Logradouro *</label>
+                            <input type="text" class="form-control" id="inputLogradouroDep">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputNumeroDep">Número *</label>
+                            <input type="text" class="form-control" id="inputNumeroDep">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputBairroDep">Bairro *</label>
+                            <input type="text" class="form-control" id="inputBairroDep">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputComplementoDep">Complemento</label>
+                            <input type="text" class="form-control" id="inputComplementoDep">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row-reverse col-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" ng-click="">Voltar</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                        </div>
+                    </div>
+                    <br /><br />
+                </form>
+            </div>
+            <div class="tab-pane fade" id="contrato" role="tabpanel" aria-labelledby="contrato-tab">
+                <br />
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputStatusAtual">Status Atual *</label>
+                            <select id="inputStatusAtual" class="form-control">
+                                <option selected>...</option>
+                                <option>Ativo</option>
+                                <option>Inativo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputDataAdimi">Data Adimissão*</label>
+                            <div class="input-group datepicker">
+                                <input type="date" class="form-control" id="inputDataAdimi" placeholder="dd/mm/aaaa">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-calendar-alt"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputDataReci">Data Recissão*</label>
+                            <div class="input-group datepicker">
+                                <input type="date" class="form-control" id="inputDataReci" placeholder="dd/mm/aaaa">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-calendar-alt"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row-reverse col-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" ng-click="">Voltar</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="reajuste" role="tabpanel" aria-labelledby="reajuste-tab">
+                <br />
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputDataReajuSalData">Reajuste Salarial Data*</label>
+                            <div class="input-group datepicker">
+                                <input type="date" class="form-control" id="inputDataReajuSalData" placeholder="dd/mm/aaaa">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-calendar-alt"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-1"><!--Espacamento--></div>
+                        <div class="form-group col-md-3">
+                            <label for="inputReajuSalValor">Reajuste Salarial Valor*</label>
+                            <div class="input-group datepicker">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button">R$</button>
+                                </span>
+                                <input type="text" class="form-control" id="inputReajuSalValor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputDataReajuSinData">Reajuste Sindical Data*</label>
+                            <div class="input-group datepicker">
+                                <input type="date" class="form-control" id="inputDataReajuSinData" placeholder="dd/mm/aaaa">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-calendar-alt"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-1"><!--Espacamento--></div>
+                        <div class="form-group col-md-3">
+                            <label for="inputReajuSinValor">Reajuste Sindical Valor*</label>
+                            <div class="input-group datepicker">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button">R$</button>
+                                </span>
+                                <input type="text" class="form-control" id="inputReajuSinValor">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row-reverse col-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" ng-click="">Voltar</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="recibo" role="tabpanel" aria-labelledby="recibo-tab">
+                <br />
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputDataPadrao">Data Padrão*</label>
+                            <div class="input-group datepicker">
+                                <input type="date" class="form-control" id="inputDataPadrao" placeholder="dd/mm/aaaa">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button"><i class="fas fa-calendar-alt"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputValInicial">Valor Inicial*</label>
+                            <div class="input-group datepicker">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button">R$</button>
+                                </span>
+                                <input type="text" class="form-control" id="inputValInicial">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputValAtual">Valor Atual*</label>
+                            <div class="input-group datepicker">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button">R$</button>
+                                </span>
+                                <input type="text" class="form-control" id="inputValAtual">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            Pagamento Adiantado:
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">S</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">N</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputValFerias">Valor Férias*</label>
+                            <div class="input-group datepicker">
+                                <span class="input-group-addon">
+                                    <button class="btn btn-primary" type="button">R$</button>
+                                </span>
+                                <input type="text" class="form-control" id="inputValFerias">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row-reverse col-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" ng-click="">Voltar</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
