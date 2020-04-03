@@ -1,4 +1,5 @@
-﻿var myApp = angular.module('myApp', ['ngRoute', 'ControllerHeader', 'ControllerRead', 'ControllerCreate']);
+﻿var myApp = angular.module('myApp',['ngRoute', 'ControllerHeader',
+        'ControllerRead', 'ControllerCreate', 'ControllerUpdate']);
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.

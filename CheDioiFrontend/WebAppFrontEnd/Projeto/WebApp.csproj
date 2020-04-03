@@ -102,6 +102,7 @@
     <Content Include="View\Funcionario\Create.html" />
     <Content Include="View\Funcionario\Funcionario.html" />
     <Content Include="View\Funcionario\Index.html" />
+    <Content Include="View\Funcionario\Update.html" />
     <Content Include="View\Home\header.html" />
     <Content Include="View\Home\Index.html" />
     <Content Include="View\Home\Menu.html" />
