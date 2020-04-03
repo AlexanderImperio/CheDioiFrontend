@@ -20,14 +20,14 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
                         IdDependente: 1,
                         IdEndereco: 1,
                         Nome: 'Leticia Magalhães',
-                        CertidaoNascimento: '123456789',
-                        RG: '12345678',
+                        CertidaoDeNascimento: '123456789',
+                        Rg: '12345678',
                         OrgaoEmissor: 'SEJUSP',
-                        CPF: '04789685264',
+                        Cpf: '04789685264',
                         DataNascimento: '25/03/2000',
                         Sexo: 'Feminino',
-                        GrauParentesco
-                    }
+                        GrauParentesco: 'Esposa'
+                    },
                 }
             ];
         }
