@@ -8,7 +8,7 @@
     </div>
     <br>
     <br>
-    <button class="float-right mt-2 mb-3 pl-3 pr-3">Cadastro</button>
+    <button class="float-right mt-2 mb-3 pl-3 pr-3" ng-click="CarregarPagina('Cadastrar')">Cadastro</button>
 
     <div class="boxContent table-responsive">
 
@@ -34,13 +34,13 @@
             </thead>
             <tbody>
 
-                <tr ng-repeat="funcrionario in funcrionarios">
-                    <td>{{Funcionarios[0].Matricula}}</td>
-                    <td>{{Funcionarios[0].Nome}}</td>
+                <tr ng-repeat="Funcrionario in Funcionarios">
+                    <td>{{Funcrionario.Matricula}}</td>
+                    <td>{{Funcrionario.Nome}}</td>
                     <td>Engenheiro</td>
-                    <td>{{Funcionarios[0].Email}}</td>
-                    <td>{{Funcionarios[0].Telefone}}</td>
-                    <td class="text-center"> <button class="pl-2 pr-2 ">detalhes</button></td>
+                    <td>{{Funcrionario.Email}}</td>
+                    <td>{{Funcrionario.Telefone}}</td>
+                    <td class="text-center"> <button class="pl-2 pr-2" ng-click="DefineFuncionario(Funcrionario); CarregarPagina('Atualizar')">detalhes</button></td>
                 </tr>
 
             </tbody>
