@@ -1,7 +1,10 @@
 ﻿var myControllers = angular.module("ControllerCreate", []);
 
 myControllers.controller('ControllerCreate', ['$rootScope', '$scope', '$http', '$location',
-     function ($rootScope, $scope, $http, $location) {
+    function ($rootScope, $scope, $http, $location) {
+
+        $scope.TemDependente;
+
          $scope.Cadastrar = function () {
              const NovoCadastro = {
                  Endereco: {
@@ -78,7 +81,20 @@ myControllers.controller('ControllerCreate', ['$rootScope', '$scope', '$http', '
                  Salario: $scope.Salario
              };
              console.log(NovoCadastro);
-         };
+        };
+
+        $scope.AbaDependetes = function () {
+            if (!$scope.TemDependente) {
+                $scope.NomeDependente = null;
+                $scope.CertidaoNascimento = null;
+                $scope.RgDependente = null;
+                $scope.OrgaoDependente = null;
+                $scope.CpfDependente = null;
+                $scope.DataNascimentoDependente = null;
+                $scope.SexoDependente = null;
+                $scope.GrauParentesco = null;
+            }
+        }
        
     }
 ]);
