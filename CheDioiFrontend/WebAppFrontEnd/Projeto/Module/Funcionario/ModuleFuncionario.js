@@ -3,8 +3,8 @@
 
 myApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.
-        when('/funcionarios', { templateUrl: endereco + 'Funcionario/funcionario.html' }).
+        when('/Funcionario', { templateUrl: endereco + 'Funcionario/Funcionario.html' }).
         when('/Atualizar', { templateUrl: endereco + 'Funcionario/Update.html' }).
         when('/Cadastrar', { templateUrl: endereco + 'Funcionario/Create.html' }).
-        otherwise({ redirectTo: '/funcionarios' });
+        otherwise({ redirectTo: '/Funcionario', controller: 'Read' });
 }]);
