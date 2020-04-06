@@ -528,8 +528,8 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
             ];
         }
 
-        $rootScope.DefineFuncionario = function (FuncionarioAtual) {
-            $rootScope.FuncionarioAtual = FuncionarioAtual;
+        $rootScope.DefineFuncionario = function (Funcionario) {
+            $rootScope.FuncionarioAtual = Funcionario;
         }
 
         $rootScope.CarregarPagina = function (url) {
