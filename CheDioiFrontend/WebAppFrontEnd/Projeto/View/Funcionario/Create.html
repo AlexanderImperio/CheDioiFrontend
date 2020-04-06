@@ -34,19 +34,19 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="dadosGerais" role="tabpanel" aria-labelledby="dadosGerais-tab">
                 <br />
-                <form>
+                <form ng-submit="Cadastrar(user)" name="DadosGeraisForm">
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="inputName">Nome *</label>
-                            <input ng-model="Nome" class="form-control" id="inputName">
+                            <input ng-model="Nome" class="form-control" pattern="[a-zA-Z0-9]+" id="inputName" required>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCPF">CPF *</label>
-                            <input ng-model="Cpf" class="form-control" id="inputCPF" placeholder="000.000.000-00">
+                            <input ng-model="Cpf" class="form-control" id="inputCPF" placeholder="000.000.000-00" required>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputRG">RG *</label>
-                            <input ng-model="Rg" class="form-control" id="inputRG" placeholder="0.000.000">
+                            <input ng-model="Rg" class="form-control" id="inputRG" placeholder="0.000.000" required>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputOrgao">Orgão Emissor *</label>
@@ -150,7 +150,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">@</button>
                                 </span>
-                                <input ng-model="Email" class="form-control" id="inputEmail">
+                                <input ng-model="Email" type="email" class="form-control" id="inputEmail">
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit" >Salvar</button>
                         </div>
                     </div>
                 </form>
