@@ -38,26 +38,26 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="inputName">Nome *</label>
-                            <input type="text" class="form-control" id="inputName">
+                            <input ng-model="Nome" class="form-control" id="inputName">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCPF">CPF *</label>
-                            <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000-00">
+                            <input ng-model="Cpf" class="form-control" id="inputCPF" placeholder="000.000.000-00">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputRG">RG *</label>
-                            <input type="text" class="form-control" id="inputRG" placeholder="0.000.000">
+                            <input ng-model="Rg" class="form-control" id="inputRG" placeholder="0.000.000">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputOrgao">Orgão Emissor *</label>
-                            <input type="text" class="form-control" id="inputOrgao">
+                            <input ng-model="OrgaoEmissor" type="text" class="form-control" id="inputOrgao">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataNasc">Data de Nascimento *</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataNasc" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataNascimento" type="date" class="form-control" id="inputDataNasc" placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputSexo">Sexo *</label>
-                            <select id="inputSexo" class="form-control">
+                            <select ng-model="Sexo" id="inputSexo" class="form-control">
                                 <option selected>...</option>
                                 <option>Masculino</option>
                                 <option>Feminino</option>
@@ -75,18 +75,18 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCNH">CNH</label>
-                            <input type="text" class="form-control" id="inputCNH" placeholder="00000000000">
+                            <input ng-model="Cnh" type="text" class="form-control" id="inputCNH" placeholder="00000000000">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputMatricula">Matricula *</label>
-                            <input type="text" class="form-control" id="inputMatricula" placeholder="000000000">
+                            <input ng-model="Matricula" type="text" class="form-control" id="inputMatricula" placeholder="000000000">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataAdim">Data de Adimissão *</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataAdim" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataDeAdimissao" class="form-control" id="inputDataAdim" placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -100,7 +100,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputSalario">
+                                <input ng-model="Salario" type="text" class="form-control" id="inputSalario">
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -111,7 +111,7 @@
                                         <i class="fas fa-phone-square-alt"></i>
                                     </button>
                                 </span>
-                                <input type="text" class="form-control" id="inputTelefone"
+                                <input ng-model="Telefone" type="text" class="form-control" id="inputTelefone"
                                        placeholder="(00) 99999-9999">
                             </div>
                         </div>
@@ -123,14 +123,14 @@
                                         <i class="fas fa-mobile-alt"></i>
                                     </button>
                                 </span>
-                                <input type="text" class="form-control" id="inputCelular" placeholder="(00) 99999-9999">
+                                <input ng-model="Celular" type="text" class="form-control" id="inputCelular" placeholder="(00) 99999-9999">
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputEstadoCivil">Estado Civil *</label>
-                            <select id="inputEstadoCivil" class="form-control">
+                            <select ng-model="EstadoCivil" id="inputEstadoCivil" class="form-control">
                                 <option selected>...</option>
                                 <option>Solteiro</option>
                                 <option>Casado</option>
@@ -138,7 +138,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputProfissao">Profissão *</label>
-                            <select id="inputProfissao" class="form-control">
+                            <select ng-model="Profissao" id="inputProfissao" class="form-control">
                                 <option selected>...</option>
                                 <option>Analista de Requistos</option>
                                 <option>Desenvolvedor FrontEnd</option>
@@ -150,14 +150,14 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">@</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputEmail">
+                                <input ng-model="Email" class="form-control" id="inputEmail">
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputAreaDeConhec">Área de Conhecimento *</label>
-                            <select id="inputAreaDeConhec" class="form-control">
+                            <select ng-model="AreaDeConhecimento" id="inputAreaDeConhec" class="form-control">
                                 <option selected>...</option>
                                 <option>Desenvolvimento Responsivel de Telas</option>
                                 <option>Controle de Versão de Git</option>
@@ -168,7 +168,7 @@
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" ng-click="">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                 </form>
@@ -179,14 +179,14 @@
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputCEP">CEP</label>
-                            <input type="text" class="form-control" id="inputCEP" placeholder="00000-000">
+                            <input ng-model="Cep" type="text" class="form-control" id="inputCEP" placeholder="00000-000">
                         </div>
                         <div class="form-group col-md-1">
                             <!--Espacamento-->
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEstado">Estado *</label>
-                            <select id="inputEstado" class="form-control">
+                            <select ng-model="Estado" id="inputEstado" class="form-control">
                                 <option selected>...</option>
                                 <option>Acre</option>
                                 <option>Mato Grosso Do Sul</option>
@@ -197,7 +197,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputMunicipio">Municipio *</label>
-                            <select id="inputMunicipio" class="form-control">
+                            <select ng-model="Municipio" id="inputMunicipio" class="form-control">
                                 <option selected>...</option>
                                 <option>Campo Grande</option>
                                 <option>Dourados</option>
@@ -207,30 +207,30 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="inputLougradoro">Lougradoro *</label>
-                            <input type="text" class="form-control" id="inputLougradoro">
+                            <input ng-model="Logradouro" type="text" class="form-control" id="inputLougradoro">
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputNumero">Número *</label>
-                            <input type="text" class="form-control" id="inputNumero">
+                            <input ng-model="Numero" type="text" class="form-control" id="inputNumero">
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputBairro">Bairro *</label>
-                            <input type="text" class="form-control" id="inputBairro">
+                            <input ng-model="Bairro" type="text" class="form-control" id="inputBairro">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputComplemento">Complemento</label>
-                            <input type="text" class="form-control" id="inputComplemento">
+                            <input ng-model="Complemento" type="text" class="form-control" id="inputComplemento">
                         </div>
                     </div>
                     <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" ng-click="">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                 </form>
@@ -241,25 +241,25 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputCTPS">CTPS *</label>
-                            <input type="text" class="form-control" id="inputCTPS">
+                            <input ng-model="Ctps" type="text" class="form-control" id="inputCTPS">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputSerieCart">Série Cart. Trab *</label>
-                            <input type="text" class="form-control" id="inputSerieCart" placeholder="">
+                            <input ng-model="CtpsSerie" type="text" class="form-control" id="inputSerieCart" placeholder="">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputUFCart">UF Cart. Trab *</label>
-                            <input type="text" class="form-control" id="inputUFCart" placeholder="">
+                            <input ng-model="CtpsUf" type="text" class="form-control" id="inputUFCart" placeholder="">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPisPasep">Pis / Pasep *</label>
-                            <input type="text" class="form-control" id="inputPisPasep">
+                            <input ng-model="PisPasep" type="text" class="form-control" id="inputPisPasep">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputTipoConta">Tipo de conta *</label>
-                            <select id="inputTipoConta" class="form-control">
+                            <select ng-model="TipoDeConta" id="inputTipoConta" class="form-control">
                                 <option selected>...</option>
                                 <option>Salário</option>
                                 <option>Corrente</option>
@@ -269,30 +269,30 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputBanco">Banco *</label>
-                            <input type="text" class="form-control" id="inputBanco">
+                            <input ng-model="Banco" type="text" class="form-control" id="inputBanco">
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputAgencia">Agência *</label>
-                            <input type="text" class="form-control" id="inputAgencia">
+                            <input ng-model="Agencia" type="text" class="form-control" id="inputAgencia">
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputConta">Conta *</label>
-                            <input type="text" class="form-control" id="inputConta">
+                            <input ng-model="Conta" type="text" class="form-control" id="inputConta">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputInter">Interesses</label>
-                            <textarea class="form-control" id="inputInter"></textarea>
+                            <textarea ng-model="Interesses" class="form-control" id="inputInter"></textarea>
                         </div>
                     </div>
                     <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
-                            <button class="btn btn-success" type="button" ng-click="">Voltar</button>
+                            <button class="btn btn-success" type="button" ng-click="" >Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                 </form>
@@ -311,25 +311,25 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNomeDep">Nome *</label>
-                            <input type="text" class="form-control" id="inputNomeDep">
+                            <input ng-model="NomeDependente" type="text" class="form-control" id="inputNomeDep">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputRGDep">RG</label>
-                            <input type="text" class="form-control" id="inputRGDep" placeholder="">
+                            <input ng-model="RgDependente" type="text" class="form-control" id="inputRGDep" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputOrgaoDep">Órgão Emissor</label>
-                            <input type="text" class="form-control" id="inputOrgaoDep" placeholder="">
+                            <input ng-model="OrgaoDependente" type="text" class="form-control" id="inputOrgaoDep" placeholder="">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputCPFDep">CPF</label>
-                            <input type="text" class="form-control" id="inputCPFDep" placeholder="">
+                            <input ng-model="CpfDependente" type="text" class="form-control" id="inputCPFDep" placeholder="">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputSexoDep">Sexo *</label>
-                            <select id="inputSexoDep" class="form-control">
+                            <select ng-model="SexoDependente" id="inputSexoDep" class="form-control">
                                 <option selected>...</option>
                                 <option>Masculino</option>
                                 <option>Feminino</option>
@@ -337,12 +337,12 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputGrau">Grau de parentesco *</label>
-                            <input type="text" class="form-control" id="inputGrau">
+                            <input ng-model="GrauParentesco" type="text" class="form-control" id="inputGrau">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputDataNascDep">Data de Nascimento *</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataNascDep" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataNascimentoDependente" type="date" class="form-control" id="inputDataNascDep" placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -354,13 +354,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCertNascDep">Nº Certidão de Nascimento *</label>
-                            <input type="text" class="form-control" id="inputCertNascDep">
+                            <input ng-model="CertidaoNascimento" type="text" class="form-control" id="inputCertNascDep">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputCEPDep">CEP</label>
-                            <input type="text" class="form-control" id="inputCEPDep">
+                            <input ng-model="CepDependente" type="text" class="form-control" id="inputCEPDep">
                         </div>
                         <div class="form-group col-md-1">
                             <!--Espacamento-->
@@ -368,7 +368,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputEstadoDep">Estado *</label>
-                            <select id="inputEstadoDep" class="form-control">
+                            <select ng-model="EstadoDependente" id="inputEstadoDep" class="form-control">
                                 <option selected>...</option>
                                 <option>Estado 1</option>
                                 <option>Estado 2</option>
@@ -381,7 +381,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputMunicipioDep">Município *</label>
-                            <select id="inputMunicipioDep" class="form-control">
+                            <select ng-model="MunicipioDependente" id="inputMunicipioDep" class="form-control">
                                 <option selected>...</option>
                                 <option>Municipio 1</option>
                                 <option>Municipio 2</option>
@@ -392,28 +392,28 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputLogradouroDep">Logradouro *</label>
-                            <input type="text" class="form-control" id="inputLogradouroDep">
+                            <input ng-model="LogradouroDependente" type="text" class="form-control" id="inputLogradouroDep">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputNumeroDep">Número *</label>
-                            <input type="text" class="form-control" id="inputNumeroDep">
+                            <input ng-model="NumeroDependente" type="text" class="form-control" id="inputNumeroDep">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputBairroDep">Bairro *</label>
-                            <input type="text" class="form-control" id="inputBairroDep">
+                            <input ng-model="BairroDependente" type="text" class="form-control" id="inputBairroDep">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputComplementoDep">Complemento</label>
-                            <input type="text" class="form-control" id="inputComplementoDep">
+                            <input ng-model="ComplementoDependente" type="text" class="form-control" id="inputComplementoDep">
                         </div>
                     </div>
                     <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" ng-click="">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                     <br /><br />
@@ -425,7 +425,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputStatusAtual">Status Atual *</label>
-                            <select id="inputStatusAtual" class="form-control">
+                            <select ng-model="StatusAtual" id="inputStatusAtual" class="form-control">
                                 <option selected>...</option>
                                 <option>Ativo</option>
                                 <option>Inativo</option>
@@ -436,7 +436,7 @@
                         <div class="form-group col-md-3">
                             <label for="inputDataAdimi">Data Adimissão*</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataAdimi" placeholder="dd/mm/aaaa">
+                                <input  type="date" class="form-control" id="inputDataAdimi" placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -449,7 +449,7 @@
                         <div class="form-group col-md-3">
                             <label for="inputDataReci">Data Recissão*</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataReci" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataRecisao" type="date" class="form-control" id="inputDataReci" placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -462,7 +462,7 @@
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" ng-click="">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                 </form>
@@ -474,7 +474,7 @@
                         <div class="form-group col-md-3">
                             <label for="inputDataReajuSalData">Reajuste Salarial Data*</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataReajuSalData"
+                                <input ng-model="Reajuste_SalarialData" type="date" class="form-control" id="inputDataReajuSalData"
                                        placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
@@ -492,7 +492,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputReajuSalValor">
+                                <input ng-model="Reajuste_SalarialValor" type="text" class="form-control" id="inputReajuSalValor">
                             </div>
                         </div>
                     </div>
@@ -500,7 +500,7 @@
                         <div class="form-group col-md-3">
                             <label for="inputDataReajuSinData">Reajuste Sindical Data*</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataReajuSinData"
+                                <input ng-model="Reajuste_SindicalData" type="date" class="form-control" id="inputDataReajuSinData"
                                        placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
@@ -518,7 +518,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputReajuSinValor">
+                                <input ng-model="Reajuste_SindicalValor" type="text" class="form-control" id="inputReajuSinValor">
                             </div>
                         </div>
                     </div>
@@ -526,7 +526,7 @@
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" ng-click="">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button"ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                 </form>
@@ -538,7 +538,7 @@
                         <div class="form-group col-md-3">
                             <label for="inputDataPadrao">Data Padrão*</label>
                             <div class="input-group datepicker">
-                                <input type="date" class="form-control" id="inputDataPadrao" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataPadrao" type="date" class="form-control" id="inputDataPadrao" placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -554,7 +554,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputValInicial">
+                                <input ng-model="ValorInicial" type="text" class="form-control" id="inputValInicial">
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -563,7 +563,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputValAtual">
+                                <input ng-model="ValorAtual" type="text" class="form-control" id="inputValAtual">
                             </div>
                         </div>
                     </div>
@@ -587,7 +587,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputValFerias">
+                                <input ng-model="ValorFerias" type="text" class="form-control" id="inputValFerias">
                             </div>
                         </div>
                     </div>
@@ -595,7 +595,7 @@
                         <div class="input-group-append">
                             <button class="btn btn-success" type="button" ng-click="">Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="">Salvar</button>
+                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
                         </div>
                     </div>
                 </form>
