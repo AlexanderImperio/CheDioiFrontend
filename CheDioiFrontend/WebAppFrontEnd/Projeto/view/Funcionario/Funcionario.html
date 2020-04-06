@@ -26,7 +26,7 @@
                 <tr>
                     <th scope="col">Matrícula</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Profição</th>
+                    <th scope="col">Profissão</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Telefone</th>
                     <th scope="col"></th>
@@ -34,13 +34,13 @@
             </thead>
             <tbody>
 
-                <tr ng-repeat="Funcrionario in Funcionarios">
-                    <td>{{Funcrionario.Matricula}}</td>
-                    <td>{{Funcrionario.Nome}}</td>
-                    <td>Engenheiro</td>
-                    <td>{{Funcrionario.Email}}</td>
-                    <td>{{Funcrionario.Telefone}}</td>
-                    <td class="text-center"> <button class="pl-2 pr-2" ng-click="DefineFuncionario(Funcrionario); CarregarPagina('Atualizar')">detalhes</button></td>
+                <tr ng-repeat="Funcionario in Funcionarios">
+                    <td>{{Funcionario.Matricula}}</td>
+                    <td>{{Funcionario.Nome}}</td>
+                    <td>{{Funcionario.IdAreaDeConhecimento}}</td>
+                    <td>{{Funcionario.Email}}</td>
+                    <td>{{Funcionario.Telefone}}</td>
+                    <td class="text-center"> <button class="pl-2 pr-2" ng-click="DefineFuncionario(Funcionario); CarregarPagina('Atualizar')">detalhes</button></td>
                 </tr>
 
             </tbody>
