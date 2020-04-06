@@ -1,0 +1,23 @@
+<section class="menu">
+
+    <div class="container">
+
+        <fieldset class="fieldset-border">
+            <legend class="legend-border"><span><i class="fas fa-home"></i></span> HOME</legend>
+            <div class="boxContent">
+
+                <div class="card-wraper">
+                    <card-component 
+                        ng-repeat="card in vm.cards"
+                        title="{{card.title}}" 
+                        icon="{{card.icon}}" 
+                        link="{{card.link}}" 
+                    />
+                    </card-component>
+                    
+                </div>
+            </div>
+        </fieldset>
+
+    </div>
+</section>

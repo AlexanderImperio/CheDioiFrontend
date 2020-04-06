@@ -1,0 +1,25 @@
+<div class="container mt-4" ng-controller="EstadosControllerUpdate as update">
+    <div class="row justify-content-center">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+            <form class="form-crud w-100">
+                <label>Nome do Estado:</label>
+                <input class="form-control" type="text" required="required" name="text"
+                    pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" ng-model="vm.estadoAtual.nome" />
+
+                <label class="mt-2">UF:</label>
+                <input class="form-control" type="text" required="required" name="text"
+                    pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" ng-model="update.estado.sigla" />
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="d-flex justify-content-center align-items-center w-50">
+                        <button title="Criar" class="btn btn-success w-50" ng-click="update.update()">Criar</button>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-50">
+                        <a ng-href="#!/estados" title="Voltar" class="btn btn-warning w-50">Voltar</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
