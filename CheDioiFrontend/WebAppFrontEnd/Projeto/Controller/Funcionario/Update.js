@@ -3,12 +3,14 @@
 myControllers.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        //$scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.Descricao;
+        //$scope.FuncionarioCpf = $rootScope.FuncionarioAtual.Cpf;
 
         $scope.Atualizar = function () {
-            $rootScope.Funcionario.map(element => {
+
+            $rootScope.Funcionarios.map(element => {
 
                 if (element.IdFuncionario == $rootScope.FuncionarioAtual.IdFuncionario) {
+
                     if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Endereco.CEP.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
@@ -154,7 +156,7 @@ myControllers.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '
                             element.Recibo.ValorFerias = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-                    } 
+                    }*/ 
                 }
 
             });
