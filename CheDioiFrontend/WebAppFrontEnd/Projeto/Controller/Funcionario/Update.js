@@ -3,7 +3,7 @@
 myControllers.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        $scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.Descricao;
+        //$scope.AreaConhecimento = $rootScope.AreaDeConhecimentoAtual.Descricao;
 
         $scope.Atualizar = function () {
             $rootScope.Funcionario.map(element => {
