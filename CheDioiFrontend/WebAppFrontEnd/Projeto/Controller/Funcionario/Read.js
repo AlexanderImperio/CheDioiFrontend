@@ -528,7 +528,7 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
             ];
         }
 
-        $rootScope.DefineFuncionario = function (FuncionarioAtual) {
+        $rootScope.DefineFuncionarioAtual = function (FuncionarioAtual) {
             $rootScope.FuncionarioAtual = FuncionarioAtual;
         }
 
@@ -541,7 +541,6 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
             $scope.Reverse = !$scope.Reverse;
         }
 
-        $scope.funcrionarios = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     }
 ]);
 
