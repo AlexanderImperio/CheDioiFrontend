@@ -4,6 +4,9 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
     async function ($rootScope, $scope, $http, $location) {
         $rootScope.Funcionarios;
 
+        $scope.SortKey = 'Nome';
+        $scope.Reverse;
+
         if (!$rootScope.Funcionarios) {
             $rootScope.Funcionarios = [
                 {
@@ -501,7 +504,7 @@ myControllers.controller('ControllerRead', ['$rootScope', '$scope', '$http', '$l
                     IdEndereco: 1,
                     IdProfissao: 3,
                     IdAreaDeConhecimento: 3,
-                    Matricula: 123456,
+                    Matricula: 1,
                     Nome: 'Bruno Garcia',
                     Rg: '20520745',
                     OrgaoEmissor: 'SEJUSP',
