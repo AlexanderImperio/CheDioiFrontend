@@ -34,30 +34,30 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="dadosGerais" role="tabpanel" aria-labelledby="dadosGerais-tab">
                 <br />
-                <form ng-submit="Cadastrar(user)" name="DadosGeraisForm">
+                <form ng-submit="Cadastrar()" name="DadosGeraisForm">
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="inputName">Nome *</label>
-                            <input ng-model="Nome" class="form-control" pattern="[a-zA-Z0-9]+" id="inputName" required>
+                            <input ng-model="Nome" class="form-control" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" id="inputName" required>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCPF">CPF *</label>
-                            <input ng-model="Cpf" class="form-control" id="inputCPF" placeholder="000.000.000-00" required>
+                            <input ng-model="Cpf" class="form-control" id="inputCPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputRG">RG *</label>
-                            <input ng-model="Rg" class="form-control" id="inputRG" placeholder="0.000.000" required>
+                            <input ng-model="Rg" class="form-control" id="inputRG" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}" placeholder="00.000.000-0" required>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputOrgao">Orgão Emissor *</label>
-                            <input ng-model="OrgaoEmissor" type="text" class="form-control" id="inputOrgao">
+                            <input ng-model="OrgaoEmissor" type="text" class="form-control" id="inputOrgao" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataNasc">Data de Nascimento *</label>
                             <div class="input-group datepicker">
-                                <input ng-model="DataNascimento" type="text" class="form-control" id="inputDataNasc" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataNascimento" type="text" class="form-control" id="inputDataNasc" placeholder="dd/mm/aaaa" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required>
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -67,26 +67,26 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputSexo">Sexo *</label>
-                            <select ng-model="Sexo" id="inputSexo" class="form-control">
-                                <option selected>...</option>
-                                <option>Masculino</option>
-                                <option>Feminino</option>
+                            <select ng-model="Sexo" id="inputSexo" class="form-control" required>
+                                <option disabled value="">Selecione</option>
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option> 
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCNH">CNH</label>
-                            <input ng-model="Cnh" type="text" class="form-control" id="inputCNH" placeholder="00000000000">
+                            <input ng-model="Cnh" type="text" class="form-control" id="inputCNH" placeholder="00000000000" pattern="[0-9]{11}">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputMatricula">Matricula *</label>
-                            <input ng-model="Matricula" type="text" class="form-control" id="inputMatricula" placeholder="000000000">
+                            <input ng-model="Matricula" type="text" class="form-control" id="inputMatricula" pattern="[0-9]+$" placeholder="000000000" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataAdim">Data de Adimissão *</label>
                             <div class="input-group datepicker">
-                                <input ng-model="DataDeAdimissao" class="form-control" id="inputDataAdim" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataDeAdimissao" class="form-control" id="inputDataAdim" placeholder="dd/mm/aaaa" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required>
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -100,7 +100,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input ng-model="Salario" type="text" class="form-control" id="inputSalario">
+                                <input ng-model="Salario" type="text" class="form-control" id="inputSalario" pattern="[\d,.]*" required>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -112,7 +112,7 @@
                                     </button>
                                 </span>
                                 <input ng-model="Telefone" type="text" class="form-control" id="inputTelefone"
-                                       placeholder="(00) 99999-9999">
+                                       placeholder="(00) 99999-9999" pattern="\([0-9]{2}\)[0-9]{4}-[0-9]{4}$" required>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -123,23 +123,24 @@
                                         <i class="fas fa-mobile-alt"></i>
                                     </button>
                                 </span>
-                                <input ng-model="Celular" type="text" class="form-control" id="inputCelular" placeholder="(00) 99999-9999">
+                                <input ng-model="Celular" type="text" class="form-control" id="inputCelular" 
+                                       placeholder="(00) 99999-9999"  pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}$" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputEstadoCivil">Estado Civil *</label>
-                            <select ng-model="EstadoCivil" id="inputEstadoCivil" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="EstadoCivil" id="inputEstadoCivil" class="form-control" required>
+                                <option disabled value="">Selecione</option>
                                 <option>Solteiro</option>
                                 <option>Casado</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputProfissao">Profissão *</label>
-                            <select ng-model="Profissao" id="inputProfissao" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="Profissao" id="inputProfissao" class="form-control" required>
+                                <option disabled value="">Selecione</option>
                                 <option>Analista de Requistos</option>
                                 <option>Desenvolvedor FrontEnd</option>
                             </select>
@@ -157,8 +158,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputAreaDeConhec">Área de Conhecimento *</label>
-                            <select ng-model="AreaDeConhecimento" id="inputAreaDeConhec" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="AreaDeConhecimento" id="inputAreaDeConhec" class="form-control" required>
+                                <option disabled value="">Selecione</option>
                                 <option>Desenvolvimento Responsivel de Telas</option>
                                 <option>Controle de Versão de Git</option>
                             </select>
@@ -175,19 +176,19 @@
             </div>
             <div class="tab-pane fade" id="endereco" role="tabpanel" aria-labelledby="endereco-tab">
                 <br />
-                <form>
+                <form ng-submit="Cadastrar()" name="EnderecoForm">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputCEP">CEP</label>
-                            <input ng-model="Cep" type="text" class="form-control" id="inputCEP" placeholder="00000-000">
+                            <input ng-model="Cep" type="text" class="form-control" id="inputCEP" pattern="[0-9]{5}-[0-9]{3}$" placeholder="00000-000">
                         </div>
                         <div class="form-group col-md-1">
                             <!--Espacamento-->
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputEstado">Estado *</label>
-                            <select ng-model="Estado" id="inputEstado" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="Estado" id="inputEstado" class="form-control" required>
+                                <option disabled value="">Selecione</option>
                                 <option>Acre</option>
                                 <option>Mato Grosso Do Sul</option>
                             </select>
@@ -197,8 +198,8 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputMunicipio">Municipio *</label>
-                            <select ng-model="Municipio" id="inputMunicipio" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="Municipio" id="inputMunicipio" class="form-control" required>
+                                <option disabled value="">Selecione</option>
                                 <option>Campo Grande</option>
                                 <option>Dourados</option>
                             </select>
@@ -206,61 +207,61 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label for="inputLougradoro">Logradouro *</label>
-                            <input ng-model="Logradouro" type="text" class="form-control" id="inputLougradoro">
+                            <label for="inputLougradoro">Lougradoro *</label>
+                            <input ng-model="Logradouro" type="text" class="form-control" id="inputLougradoro" required>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputNumero">Número *</label>
-                            <input ng-model="Numero" type="text" class="form-control" id="inputNumero">
+                            <input ng-model="Numero" type="text" class="form-control" id="inputNumero" pattern="[0-9]+$" required>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputBairro">Bairro *</label>
-                            <input ng-model="Bairro" type="text" class="form-control" id="inputBairro">
+                            <input ng-model="Bairro" type="text" class="form-control" id="inputBairro" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputComplemento">Complemento</label>
-                            <input ng-model="Complemento" type="text" class="form-control" id="inputComplemento">
+                            <input ng-model="Complemento" type="text" class="form-control" id="inputComplemento" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+">
                         </div>
                     </div>
                     <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit">Salvar</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="tab-pane fade" id="infoAdicionais" role="tabpanel" aria-labelledby="infoAdicionais-tab">
                 <br />
-                <form>
+                <form ng-submit="Cadastrar()" name="InfoAdicionaisForm">
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputCTPS">CTPS *</label>
-                            <input ng-model="Ctps" type="text" class="form-control" id="inputCTPS">
+                            <input ng-model="Ctps" type="text" class="form-control" id="inputCTPS" pattern="[0-9]{7}" placeholder="0000000" required>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputSerieCart">Série Cart. Trab *</label>
-                            <input ng-model="CtpsSerie" type="text" class="form-control" id="inputSerieCart" placeholder="">
+                            <input ng-model="CtpsSerie" type="text" class="form-control" id="inputSerieCart" pattern="[0-9]{3}" placeholder="000" required> 
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputUFCart">UF Cart. Trab *</label>
-                            <input ng-model="CtpsUf" type="text" class="form-control" id="inputUFCart" placeholder="">
+                            <input ng-model="CtpsUf" type="text" class="form-control" id="inputUFCart" pattern="^[a-zA-Z]{2}$" placeholder="XX" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputPisPasep">Pis / Pasep *</label>
-                            <input ng-model="PisPasep" type="text" class="form-control" id="inputPisPasep">
+                            <input ng-model="PisPasep" type="text" class="form-control" id="inputPisPasep" pattern="[0-9]{3}.[0-9]{5}.[0-9]{2}-[0-9]{1}$" placeholder="000.00000.00-0" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputTipoConta">Tipo de conta *</label>
-                            <select ng-model="TipoDeConta" id="inputTipoConta" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="TipoDeConta" id="inputTipoConta" class="form-control" required>
+                                <option value="">Selecione</option>
                                 <option>Salário</option>
                                 <option>Corrente</option>
                                 <option>Pupança</option>
@@ -269,80 +270,82 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputBanco">Banco *</label>
-                            <input ng-model="Banco" type="text" class="form-control" id="inputBanco">
+                            <input ng-model="Banco" type="text" class="form-control" id="inputBanco" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" required>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputAgencia">Agência *</label>
-                            <input ng-model="Agencia" type="text" class="form-control" id="inputAgencia">
+                            <input ng-model="Agencia" type="text" class="form-control" id="inputAgencia" placeholder="0000" pattern="[0-9]{4}$" required>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
                             <label for="inputConta">Conta *</label>
-                            <input ng-model="Conta" type="text" class="form-control" id="inputConta">
+                            <input ng-model="Conta" type="text" class="form-control" id="inputConta" placeholder="00000000-0" pattern="[0-9]{8}-[0-9]{1}$" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputInter">Interesses</label>
-                            <textarea ng-model="Interesses" class="form-control" id="inputInter"></textarea>
+                            <textarea ng-model="Interesses" class="form-control" id="inputInter"  pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+"></textarea>
                         </div>
                     </div>
                     <div class="d-flex flex-row-reverse col-sm">
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit">Salvar</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="tab-pane fade" id="dependentes" role="tabpanel" aria-labelledby="dependentes-tab">
                 <br />
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-2"
-                             style="display:flex; flex-direction: row; justify-content: flex-start; align-self: flex-start; white-space: nowrap">
-                            <label for="inputDepedente">Possui dependentes?</label>&nbsp;&nbsp;
-                            <input type="checkbox" class="form-control" id="inputDepedente">&nbsp;&nbsp;
-                            <label for="inputDepedente">Sim</label>
+                <div class="form-row">
+                    <div>
+                        <div class="form-check">
+                            <label>Possui dependentes?</label> &nbsp;&nbsp;&nbsp;
+                            <input ng-click="AbaDependetes()" ng-model="TemDependente" type="checkbox" class="form-check-input" id="inputDepedente">
+                            <label class="form-check-label" for="inputDepedente">Sim</label>
                         </div>
                     </div>
+                </div>
+                <form ng-show="TemDependente" ng-hide="!TemDependente" ng-submit="Cadastrar()" name="DependentesForm">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNomeDep">Nome *</label>
-                            <input ng-model="NomeDependente" type="text" class="form-control" id="inputNomeDep">
+                            <input ng-model="NomeDependente" type="text" class="form-control" id="inputNomeDep" pattern="[A-Za-zÀ-ú., -]{5,}" ng-required="TemDependente">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputRGDep">RG</label>
-                            <input ng-model="RgDependente" type="text" class="form-control" id="inputRGDep" placeholder="">
+                            <input ng-model="RgDependente" type="text" class="form-control" id="inputRGDep" pattern="\d{2}\.\d{3}\.\d{3}-\d{1}"  placeholder="00.000.000-0">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputOrgaoDep">Órgão Emissor</label>
-                            <input ng-model="OrgaoDependente" type="text" class="form-control" id="inputOrgaoDep" placeholder="">
+                            <input ng-model="OrgaoDependente" type="text" class="form-control" id="inputOrgaoDep" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputCPFDep">CPF</label>
-                            <input ng-model="CpfDependente" type="text" class="form-control" id="inputCPFDep" placeholder="">
+                            <input ng-model="CpfDependente" type="text" class="form-control" id="inputCPFDep" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputSexoDep">Sexo *</label>
-                            <select ng-model="SexoDependente" id="inputSexoDep" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="SexoDependente" id="inputSexoDep" class="form-control" ng-required="TemDependente">
+                                <option disabled value="">Selecione</option>
                                 <option>Masculino</option>
                                 <option>Feminino</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputGrau">Grau de parentesco *</label>
-                            <input ng-model="GrauParentesco" type="text" class="form-control" id="inputGrau">
+                            <input ng-model="GrauParentesco" type="text" class="form-control" id="inputGrau" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+" ng-required="TemDependente">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputDataNascDep">Data de Nascimento *</label>
                             <div class="input-group datepicker">
-                                <input ng-model="DataNascimentoDependente" type="text" class="form-control" id="inputDataNascDep" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataNascimentoDependente" type="text" class="form-control" id="inputDataNascDep" 
+                                       placeholder="dd/mm/aaaa" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" ng-required="TemDependente">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -354,13 +357,15 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCertNascDep">Nº Certidão de Nascimento *</label>
-                            <input ng-model="CertidaoNascimento" type="text" class="form-control" id="inputCertNascDep">
+                            <input ng-model="CertidaoNascimento" type="text" class="form-control" id="inputCertNascDep" 
+                                   placeholder="000000 00 00 0000 0 00000 000 0000000-00" 
+                                   pattern="[0-9]{6} [0-9]{2} [0-9]{2} [0-9]{4} [0-9]{1} [0-9]{5} [0-9]{3} [0-9]{7}-[0-9]{2}" ng-required="TemDependente">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputCEPDep">CEP</label>
-                            <input ng-model="CepDependente" type="text" class="form-control" id="inputCEPDep">
+                            <input ng-model="CepDependente" type="text" class="form-control" id="inputCEPDep" pattern="[0-9]{5}-[0-9]{3}$">
                         </div>
                         <div class="form-group col-md-1">
                             <!--Espacamento-->
@@ -368,8 +373,8 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputEstadoDep">Estado *</label>
-                            <select ng-model="EstadoDependente" id="inputEstadoDep" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="EstadoDependente" id="inputEstadoDep" class="form-control" ng-required="TemDependente">
+                                <option value="">Selecione</option>
                                 <option>Estado 1</option>
                                 <option>Estado 2</option>
                                 <option>Estado 3</option>
@@ -413,7 +418,7 @@
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit">Salvar</button>
                         </div>
                     </div>
                     <br /><br />
