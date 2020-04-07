@@ -156,7 +156,7 @@ myControllers.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '
                             element.Recibo.ValorFerias = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-                    }*/ 
+                    };
                 }
 
             });

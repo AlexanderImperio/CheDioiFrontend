@@ -207,8 +207,8 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label for="inputLougradoro">Lougradoro *</label>
-                            <input ng-model="Logradouro" type="text" class="form-control" id="inputLougradoro" required>
+                            <label for="inputLogradoro">Logradoro *</label>
+                            <input ng-model="Logradouro" type="text" class="form-control" id="inputLogradoro" required>
                         </div>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-2">
@@ -374,7 +374,7 @@
                         <div class="form-group col-md-3">
                             <label for="inputEstadoDep">Estado *</label>
                             <select ng-model="EstadoDependente" id="inputEstadoDep" class="form-control" ng-required="TemDependente">
-                                <option value="">Selecione</option>
+                                <option disabled value="">Selecione</option>
                                 <option>Estado 1</option>
                                 <option>Estado 2</option>
                                 <option>Estado 3</option>
@@ -386,8 +386,8 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="form-group col-md-3">
                             <label for="inputMunicipioDep">Município *</label>
-                            <select ng-model="MunicipioDependente" id="inputMunicipioDep" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="MunicipioDependente" id="inputMunicipioDep" class="form-control" ng-required="TemDependente">
+                                <option disabled value="">Selecionado</option>
                                 <option>Municipio 1</option>
                                 <option>Municipio 2</option>
                                 <option>Municipio 3</option>
@@ -397,21 +397,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputLogradouroDep">Logradouro *</label>
-                            <input ng-model="LogradouroDependente" type="text" class="form-control" id="inputLogradouroDep">
+                            <input ng-model="LogradouroDependente" type="text" class="form-control" id="inputLogradouroDep" ng-required="TemDependente">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputNumeroDep">Número *</label>
-                            <input ng-model="NumeroDependente" type="text" class="form-control" id="inputNumeroDep">
+                            <input ng-model="NumeroDependente" type="text" class="form-control" id="inputNumeroDep" pattern="[0-9]+$" ng-required="TemDependente">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputBairroDep">Bairro *</label>
-                            <input ng-model="BairroDependente" type="text" class="form-control" id="inputBairroDep">
+                            <input ng-model="BairroDependente" type="text" class="form-control" id="inputBairroDep" ng-required="TemDependente">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputComplementoDep">Complemento</label>
-                            <input ng-model="ComplementoDependente" type="text" class="form-control" id="inputComplementoDep">
+                            <input ng-model="ComplementoDependente" type="text" class="form-control" id="inputComplementoDep" pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+">
                         </div>
                     </div>
                     <div class="d-flex flex-row-reverse col-sm">
@@ -426,12 +426,12 @@
             </div>
             <div class="tab-pane fade" id="contrato" role="tabpanel" aria-labelledby="contrato-tab">
                 <br />
-                <form>
+                <form ng-submit="Cadastrar()" name="ContratoForm">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputStatusAtual">Status Atual *</label>
-                            <select ng-model="StatusAtual" id="inputStatusAtual" class="form-control">
-                                <option selected>...</option>
+                            <select ng-model="StatusAtual" id="inputStatusAtual" class="form-control" required>
+                                <option disabled value="">Selecione</option>
                                 <option>Ativo</option>
                                 <option>Inativo</option>
                             </select>
@@ -439,9 +439,10 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
-                            <label for="inputDataAdimi">Data Adimissão*</label>
+                            <label for="inputDataAdimiContrato">Data Adimissão*</label>
                             <div class="input-group datepicker">
-                                <input  type="text" class="form-control" id="inputDataAdimi" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataDeAdimissao" class="form-control" id="inputDataAdimContrato" placeholder="dd/mm/aaaa" 
+                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required>
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -454,8 +455,9 @@
                         <div class="form-group col-md-3">
                             <label for="inputDataReci">Data Recissão*</label>
                             <div class="input-group datepicker">
-                                <input ng-model="DataRecisao" type="text" class="form-control" id="inputDataReci" placeholder="dd/mm/aaaa">
-                                <span class="input-group-addon">
+                                <input ng-model="DataRecisao" type="text" class="form-control" id="inputDataReci" 
+                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" placeholder="dd/mm/aaaa" required>
+                                <span class="input-group-addon">    
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
                                     </button>
@@ -467,20 +469,20 @@
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit">Salvar</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="tab-pane fade" id="reajuste" role="tabpanel" aria-labelledby="reajuste-tab">
                 <br />
-                <form>
+                <form ng-submit="Cadastrar()" name="ReajusteForm">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataReajuSalData">Reajuste Salarial Data*</label>
                             <div class="input-group datepicker">
-                                <input ng-model="Reajuste_SalarialData" type="text" class="form-control" id="inputDataReajuSalData"
-                                       placeholder="dd/mm/aaaa">
+                                <input ng-model="Reajuste_SalarialData" type="text" class="form-control" id="inputDataReajuSalData" 
+                                      pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -497,7 +499,8 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input ng-model="Reajuste_SalarialValor" type="text" class="form-control" id="inputReajuSalValor">
+                                <input ng-model="Reajuste_SalarialValor" type="text" class="form-control" id="inputReajuSalValor"
+                                       pattern="[\d,.]*" required>
                             </div>
                         </div>
                     </div>
@@ -506,7 +509,7 @@
                             <label for="inputDataReajuSinData">Reajuste Sindical Data*</label>
                             <div class="input-group datepicker">
                                 <input ng-model="Reajuste_SindicalData" type="text" class="form-control" id="inputDataReajuSinData"
-                                       placeholder="dd/mm/aaaa">
+                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -523,7 +526,8 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input ng-model="Reajuste_SindicalValor" type="text" class="form-control" id="inputReajuSinValor">
+                                <input ng-model="Reajuste_SindicalValor" type="text" class="form-control" id="inputReajuSinValor" 
+                                       pattern="[\d,.]*" required>
                             </div>
                         </div>
                     </div>
@@ -531,19 +535,20 @@
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button"ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit">Salvar</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="tab-pane fade" id="recibo" role="tabpanel" aria-labelledby="recibo-tab">
                 <br />
-                <form>
+                <form ng-submit="Cadastrar()" name="ReciboForm">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataPadrao">Data Padrão*</label>
                             <div class="input-group datepicker">
-                                <input ng-model="DataPadrao" type="text" class="form-control" id="inputDataPadrao" placeholder="dd/mm/aaaa">
+                                <input ng-model="DataPadrao" type="text" class="form-control" id="inputDataPadrao" 
+                                       pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" required placeholder="dd/mm/aaaa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -559,7 +564,8 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input ng-model="ValorInicial" type="text" class="form-control" id="inputValInicial">
+                                <input ng-model="ValorInicial" type="text" class="form-control" id="inputValInicial"
+                                       pattern="[\d,.]*" required>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -568,7 +574,8 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input ng-model="ValorAtual" type="text" class="form-control" id="inputValAtual">
+                                <input ng-model="ValorAtual" type="text" class="form-control" id="inputValAtual"
+                                       pattern="[\d,.]*" required>
                             </div>
                         </div>
                     </div>
@@ -576,23 +583,24 @@
                         <div class="form-group col-md-3">
                             Pagamento Adiantado:
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                       value="option1">
+                                <input ng-model="PagamentoAdiantado"  class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                       value="true">
                                 <label class="form-check-label" for="inlineRadio1">S</label>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                       value="option2">
+                            <div  class="form-check form-check-inline">
+                                <input ng-model="PagamentoAdiantado" class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                       value="false">
                                 <label class="form-check-label" for="inlineRadio2">N</label>
                             </div>
-                        </div>
+                        </div>  
                         <div class="form-group col-md-3">
                             <label for="inputValFerias">Valor Férias*</label>
                             <div class="input-group datepicker">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">R$</button>
                                 </span>
-                                <input ng-model="ValorFerias" type="text" class="form-control" id="inputValFerias">
+                                <input ng-model="ValorFerias" type="text" class="form-control" id="inputValFerias"
+                                        pattern="[\d,.]*" required>
                             </div>
                         </div>
                     </div>
@@ -600,7 +608,7 @@
                         <div class="input-group-append">
                             <button ng-click="CarregarPagina('/Funcionario')" title="Voltar" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar</button>
                             &nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-success" type="button" ng-click="Cadastrar()" >Salvar</button>
+                            <button class="btn btn-success" type="submit">Salvar</button>
                         </div>
                     </div>
                 </form>
