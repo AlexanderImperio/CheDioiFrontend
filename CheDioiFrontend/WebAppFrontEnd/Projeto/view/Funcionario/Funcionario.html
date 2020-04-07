@@ -3,7 +3,7 @@
     <span>Mostrar <input type="number" class="pl-2" value="10" style="width: 45px;"> registros</span>
 
     <div class="searchbar float-right">
-        <input class="search_input" type="text" name="" placeholder="Search...">
+        <input class="search_input" type="text" name="" placeholder="Search..." ng-model="Busca.Nome">
         <button class="search_icon"><i class="fas fa-search"></i></button>
     </div>
     <br>
@@ -24,18 +24,19 @@
         <table class="table table-bordered">
             <thead class="thead-light">
                 <tr>
-                    <th scope="col">Matrícula</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Profissão</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col"></th>
+                    <th scope="col" ng-click="Sort('Matricula')" class="no-select">Matricula</th>
+                    <th scope="col" ng-click="Sort('Nome')" class="no-select">Nome</th>
+                    <th scope="col" class="no-select">Profissão</th>
+                    <th scope="col" class="no-select">E-mail</th>
+                    <th scope="col" class="no-select">Telefone</th>
+                    <th scope="col" class="no-select"></th>
                 </tr>
             </thead>
             <tbody>
 
-                <tr ng-repeat="Funcionario in Funcionarios">
+                <tr ng-repeat="Funcionario in Funcionarios | orderBy: SortKey : Reverse | filter: Busca">
                     <td>{{Funcionario.Matricula}}</td>
+
                     <td>{{Funcionario.Nome}}</td>
                     <td>{{Funcionario.IdAreaDeConhecimento}}</td>
                     <td>{{Funcionario.Email}}</td>
