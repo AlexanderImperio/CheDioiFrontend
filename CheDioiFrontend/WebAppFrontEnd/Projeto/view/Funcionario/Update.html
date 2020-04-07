@@ -38,26 +38,26 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="inputName">Nome *</label>
-                            <input type="text" class="form-control" id="inputName" value="{{FuncionarioAtual.Nome}}">
+                            <input type="text" class="form-control" id="inputName"  ng-model="FuncionarioNome">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCPF">CPF *</label>
-                            <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000-00"  value="{{FuncionarioAtual.Cpf}}">
+                            <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000-00" ng-model="FuncionarioCpf">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputRG">RG *</label>
-                            <input type="text" class="form-control" id="inputRG" placeholder="0.000.000"  value="{{FuncionarioAtual.Rg}}">
+                            <input type="text" class="form-control" id="inputRG" placeholder="0.000.000"  ng-model="FuncionarioRg">
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputOrgao">Orgão Emissor *</label>
-                            <input type="text" class="form-control" value="{{FuncionarioAtual.OrgaoEmissor}}" id="inputOrgao">
+                            <input type="text" class="form-control" id="inputOrgao" ng-model="FuncionarioOrgaoEmissor">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataNasc">Data de Nascimento *</label>
                             <div class="input-group datepicker">
-                                <input type="text" class="form-control" id="inputDataNasc" placeholder="" value="{{FuncionarioAtual.DataNascimento}}">
+                                <input type="text" class="form-control" id="inputDataNasc" placeholder="" ng-model="FuncionarioDn">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -75,18 +75,18 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCNH">CNH</label>
-                            <input type="text" class="form-control" id="inputCNH" placeholder="00000000000" value="{{FuncionarioAtual.Cnh}}">
+                            <input type="text" class="form-control" id="inputCNH" placeholder="00000000000" ng-model="FuncionarioCnh">
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputMatricula">Matricula *</label>
-                            <input type="text" class="form-control" id="inputMatricula" placeholder="000000000" value="{{FuncionarioAtual.Matricula}}" >
+                            <input type="text" class="form-control" id="inputMatricula" placeholder="000000000" ng-model="FuncionarioMatricula">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="inputDataAdim">Data de Adimissão *</label>
                             <div class="input-group datepicker">
-                                <input type="text" class="form-control" id="inputDataAdim" placeholder="dd/mm/aaaa" value="{{FuncionarioAtual.Contrato.DataDeAdimissao}}">
+                                <input type="text" class="form-control" id="inputDataAdim" placeholder="dd/mm/aaaa" ng-model="FuncionarioDa">
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">
                                         <i class="fas fa-calendar-alt"></i>
@@ -100,7 +100,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button" >R$</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputSalario" value="{{FuncionarioAtual.Salario}}">
+                                <input type="text" class="form-control" id="inputSalario" ng-model="FuncionarioSalario">
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -112,7 +112,7 @@
                                     </button>
                                 </span>
                                 <input type="text" class="form-control" id="inputTelefone"
-                                       placeholder="(00) 99999-9999" value="{{FuncionarioAtual.Telefone}}">
+                                       placeholder="(00) 99999-9999" ng-model="FuncionarioTelefone">
                             </div>
                         </div>
                         <div class="form-group col-md-3">
@@ -123,7 +123,7 @@
                                         <i class="fas fa-mobile-alt"></i>
                                     </button>
                                 </span>
-                                <input type="text" class="form-control" id="inputCelular" placeholder="(00) 99999-9999" value="{{FuncionarioAtual.Celular}}">
+                                <input type="text" class="form-control" id="inputCelular" placeholder="(00) 99999-9999" ng-model="FuncionarioCelular">
                             </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                                 <span class="input-group-addon">
                                     <button class="btn btn-primary" type="button">@</button>
                                 </span>
-                                <input type="text" class="form-control" id="inputEmail" value="{{FuncionarioAtual.Email}}">
+                                <input type="text" class="form-control" id="inputEmail" ng-model="FuncionarioEmail"">
                             </div>
                         </div>
                     </div>

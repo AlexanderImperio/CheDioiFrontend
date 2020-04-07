@@ -3,153 +3,181 @@
 myControllers.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '$location',
     function ($rootScope, $scope, $http, $location) {
 
-        //$scope.FuncionarioCpf = $rootScope.FuncionarioAtual.Cpf;
+        $scope.FuncionarioNome = $rootScope.FuncionarioAtual.Nome;
+        $scope.FuncionarioCpf = $rootScope.FuncionarioAtual.Cpf;
+        $scope.FuncionarioRg = $rootScope.FuncionarioAtual.Rg;
+        $scope.FuncionarioOrgaoEmissor = $rootScope.FuncionarioAtual.OrgaoEmissor;
+        $scope.FuncionarioDn = $rootScope.FuncionarioAtual.DataNascimento;
+        $scope.FuncionarioCnh = $rootScope.FuncionarioAtual.Cnh;
+        $scope.FuncionarioMatricula = $rootScope.FuncionarioAtual.Matricula;
+        $scope.FuncionarioDa = $rootScope.FuncionarioAtual.Contrato.DataDeAdimissao;
+        $scope.FuncionarioSalario = $rootScope.FuncionarioAtual.Salario;
+        $scope.FuncionarioTelefone = $rootScope.FuncionarioAtual.Telefone;
+        $scope.FuncionarioCelular = $rootScope.FuncionarioAtual.Celular;
+        $scope.FuncionarioEmail = $rootScope.FuncionarioAtual.Email;
 
         $scope.Atualizar = function () {
-
             $rootScope.Funcionarios.map(element => {
-
+                
                 if (element.IdFuncionario == $rootScope.FuncionarioAtual.IdFuncionario) {
 
-                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Endereco.CEP.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    if ($scope.FuncionarioNome.toLowerCase() == $rootScope.FuncionarioAtual.Nome.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração NOME');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Endereco.CEP}?`)) {
-                            element.Endereco.CEP = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Nome}?`)) {
+                            element.Nome = $scope.FuncionarioNome;
                             alert('Registro alterado com sucesso!');
                         }
 
                     }
-                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Endereco.Bairro.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    if ($scope.FuncionarioCpf.toLowerCase() == $rootScope.FuncionarioAtual.Cpf.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração CPF');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Endereco.Bairro}?`)) {
-                            element.Endereco.Bairro = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Cpf}?`)) {
+                            element.Cpf = $scope.FuncionarioCpf;
                             alert('Registro alterado com sucesso!');
                         }
 
                     }
-                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Endereco.Logradouro.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    if ($scope.FuncionarioRg.toLowerCase() == $rootScope.FuncionarioAtual.Rg.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração RG');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Endereco.Logradouro}?`)) {
-                            element.Endereco.Logradouro = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Rg}?`)) {
+                            element.Rg = $scope.FuncionarioRg;
                             alert('Registro alterado com sucesso!');
                         }
 
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Endereco.Numero.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }
+                    if ($scope.FuncionarioOrgaoEmissor.toLowerCase() == $rootScope.FuncionarioAtual.OrgaoEmissor.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração ORG EMI');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Endereco.Numero}?`)) {
-                            element.Endereco.Numero = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.OrgaoEmissor}?`)) {
+                            element.OrgaoEmissor = $scope.FuncionarioOrgaoEmissor;
                             alert('Registro alterado com sucesso!');
                         }
 
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Endereco.Complemento.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }
+                    if ($scope.FuncionarioDn.toLowerCase() == $rootScope.FuncionarioAtual.DataNascimento.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração DATA NASC');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Endereco.Complemento}?`)) {
-                            element.Endereco.Complemento = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.DataNascimento}?`)) {
+                            element.DataNascimento = $scope.FuncionarioDn;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.Nome.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }
+                    if ($scope.FuncionarioCnh.toLowerCase() == $rootScope.FuncionarioAtual.Cnh.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração CNH');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.Nome}?`)) {
-                            element.Dependente.Nome = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Cnh}?`)) {
+                            element.Cnh = $scope.FuncionarioCnh;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.CertidaoDeNascimento.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }
+                    if ($scope.FuncionarioMatricula == $rootScope.FuncionarioAtual.Matricula) {
+                        alert('Não foi feita nenhuma alteração MATRI');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.CertidaoDeNascimento}?`)) {
-                            element.Dependente.CertidaoDeNascimento = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Matricula}?`)) {
+                            element.Matricula = $scope.FuncionarioMatricula;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.Rg.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }                
+                    if ($scope.FuncionarioDa == $rootScope.FuncionarioAtual.Contrato.DataDeAdimissao) {
+                        alert('Não foi feita nenhuma alteração DATA ADIM');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.Rg}?`)) {
-                            element.Dependente.Rg = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Contrato.DataDeAdimissao}?`)) {
+                            element.Contrato.DataDeAdimissao = $scope.FuncionarioDa;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.OrgaoEmissor.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }
+                    if ($scope.FuncionarioSalario == $rootScope.FuncionarioAtual.Salario) {
+                        alert('Não foi feita nenhuma alteração SAL');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.OrgaoEmissor}?`)) {
-                            element.Dependente.OrgaoEmissor = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Salario}?`)) {
+                            element.Salario = $scope.FuncionarioSalario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.Cpf.toLowerCase()) {
-                        alert('Não foi feita nenhuma alteração');
+                    }
+                    if ($scope.FuncionarioTelefone == $rootScope.FuncionarioAtual.Telefone) {
+                        alert('Não foi feita nenhuma alteração TEL');
                     } else {
-                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.Cpf}?`)) {
-                            element.Dependente.Cpf = $scope.Funcionario;
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Telefone}?`)) {
+                            element.Telefone = $scope.FuncionarioTelefone;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.DataNascimento.toLowerCase()) {
+                    }
+                    if ($scope.FuncionarioCelular == $rootScope.FuncionarioAtual.Celular) {
+                        alert('Não foi feita nenhuma alteração CEL');
+                    } else {
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Celular}?`)) {
+                            element.Celular = $scope.FuncionarioCelular;
+                            alert('Registro alterado com sucesso!');
+                        }
+                    }
+                    if ($scope.FuncionarioEmail.toLowerCase() == $rootScope.FuncionarioAtual.Email.toLowerCase()) {
+                        alert('Não foi feita nenhuma alteração EMAIL');
+                    } else {
+                        if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Email}?`)) {
+                            element.Email = $scope.FuncionarioEmail;
+                            alert('Registro alterado com sucesso!');
+                        }
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.DataNascimento.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.DataNascimento}?`)) {
                             element.Dependente.DataNascimento = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.Sexo.toLowerCase()) {
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.Sexo.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.Sexo}?`)) {
                             element.Dependente.Sexo = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.GrauParentesco.toLowerCase()) {
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Dependente.GrauParentesco.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Dependente.GrauParentesco}?`)) {
                             element.Dependente.GrauParentesco = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.DataPadrao.toLowerCase()) {
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.DataPadrao.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Recibo.DataPadrao}?`)) {
                             element.Recibo.DataPadrao = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.ValorInicial.toLowerCase()) {
+                    }        
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.ValorInicial.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Recibo.ValorInicial}?`)) {
                             element.Recibo.ValorInicial = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.ValorAtual.toLowerCase()) {
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.ValorAtual.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Recibo.ValorAtual}?`)) {
                             element.Recibo.ValorAtual = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.Pagamento_Adiantamento.toLowerCase()) {
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.Pagamento_Adiantamento.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Recibo.Pagamento_Adiantamento}?`)) {
                             element.Recibo.Pagamento_Adiantamento = $scope.Funcionario;
                             alert('Registro alterado com sucesso!');
                         }
-
-                    } if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.ValorFerias.toLowerCase()) {
+                    }
+                    if ($scope.Funcionario.toLowerCase() == $rootScope.FuncionarioAtual.Recibo.ValorFerias.toLowerCase()) {
                         alert('Não foi feita nenhuma alteração');
                     } else {
                         if (confirm(`Deseja realmente alterar ${$rootScope.FuncionarioAtual.Recibo.ValorFerias}?`)) {
@@ -158,10 +186,8 @@ myControllers.controller('ControllerUpdate', ['$rootScope', '$scope', '$http', '
                         }
                     }
                 }
-
             });
-        }
-
+        }  
     }
 ]);
 
