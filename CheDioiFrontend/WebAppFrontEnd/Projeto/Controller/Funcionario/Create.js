@@ -34,7 +34,7 @@ myControllers.controller('ControllerCreate', ['$rootScope', '$scope', '$http', '
                      DataPadrao: $scope.DataPadrao,
                      ValorInicial: $scope.ValorInicial,
                      ValorAtual: $scope.ValorAtual,
-                     Pagamento_Adiantamento: null,
+                     Pagamento_Adiantamento: $scope.PagamentoAdiantado,
                      ValorFerias: $scope.ValorFerias
                  },
                  Reajuste: {
