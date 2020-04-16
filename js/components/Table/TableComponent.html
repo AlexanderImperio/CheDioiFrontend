@@ -1,0 +1,20 @@
+<div class="table-responsive mt-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th ng-repeat="head in vm.header" scope="col">{{head}}</th>
+                <th class="text-center" scope="col">acões</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="body in vm.body | orderBy: 'vm.orderby'">
+                <td ng-repeat="campo in vm.campos">{{body[campo]}}</td>
+                <td class="d-flex justify-content-around align-items-center">
+                    <button ng-repeat="acao in vm.acoes" class="btn {{acao.class}}" ng-click="acao.function()">
+                        {{acao.nome}}
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+<section class="container mt-4" ng-controller="MunicipiosControllerRead as read">
+    <table-component
+        header="['Descricão', 'UF']"
+        campos="['nome', 'uf']"
+        body="read.municipioList"
+        orderby="nome"
+        acoes="read.tableAcoes"
+    >
+
+    </table-component>    
+</section>

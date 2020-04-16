@@ -16,6 +16,18 @@ function EstadosControllerRead(api) {
 
     vm.estadoList = [];
 
+    vm.tableAcoes = [
+        {
+            nome: "deletar",
+            class: "btn-danger",
+            function: vm.printName,
+        },
+        {
+            nome: "Editar",
+            class: "btn-primary",
+        },
+    ]
+
     if (api.estadoList.length) {
         vm.estadoList = api.estadoList;
     } else {
