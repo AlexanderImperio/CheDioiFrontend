@@ -7,7 +7,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="body in vm.body | orderBy: 'vm.orderby'">
+            <tr dir-paginate="body in vm.body | orderBy: vm.orderby| itemsPerPage: 10">
                 <td ng-repeat="campo in vm.campos">{{body[campo]}}</td>
                 <td class="d-flex justify-content-around align-items-center">
                     <button ng-repeat="acao in vm.acoes" class="btn {{acao.class}}" ng-click="acao.function()">
@@ -17,4 +17,5 @@
             </tr>
         </tbody>
     </table>
+    <dir-pagination-controls></dir-pagination-controls>
 </div>

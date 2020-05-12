@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/pagination.css">
     <link rel="stylesheet" href="css/style.css">
     <title>CheJoe</title>
 </head>
 
 <body>
     <div ng-app="myApp" ng-controller="CheJoeController as main">
-        <header-component></header-component>
+        <header-component ishomepage="main.isHomePage()"></header-component>
         <ng-view>
 
         </ng-view>
@@ -25,6 +26,7 @@
     <script src="js/libs/popper.min.js"></script>
     <script src="js/libs/all.min.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/dirPagination.js"></script>
     <script src="js/app.js"></script>
     <script src="js/routes.js"></script>
     <script src="js/controllers/CheJoeController.js"></script>

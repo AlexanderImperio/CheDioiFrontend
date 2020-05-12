@@ -13,7 +13,4 @@ app.component('tableComponent', {
 
 function TableController() {
     const vm = this;
-
-    vm.$onInit = function () {
-    }
 }

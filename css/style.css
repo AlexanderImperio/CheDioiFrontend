@@ -22,6 +22,14 @@ nav.navbar {
   text-align: center;
 }
 
+nav.navbar.home{
+  position: absolute;
+  width: 100%;
+  min-height: 74px;
+  background: #19181a;
+  text-align: center;
+}
+
 nav.navbar a {
   font-size: 32px;
   font-weight: normal;
@@ -43,8 +51,12 @@ section.menu {
   padding: 40px 0;
 }
 
-section.menu > .container {
-  height: auto;
+section.menu{
+  min-height: 100vh;
+  background: #222629;
+  width: 100%;
+  padding-top: calc(74px + 40px);
+  padding-bottom: 40px;
 }
 
 .fieldset-border {

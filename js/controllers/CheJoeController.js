@@ -1,7 +1,11 @@
 app.controller('CheJoeController', CheJoeController);
 
-function CheJoeController() {
-    vm = this;
+CheJoeController.$inject = ['$location']
 
-    vm.title="CheJoe Controller Success Created"
+function CheJoeController($location) {
+    vm = this;
+    vm.isHomePage = function () {
+        return $location.path() === '/' ? true : false;
+    }
+    vm.title = "CheJoe Controller Success Created"
 }

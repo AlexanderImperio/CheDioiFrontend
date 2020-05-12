@@ -3,8 +3,8 @@
         <i class=" {{vm.icon}}"></i>
     </div>
     <div class="card-body">
-        <a class="btn btn-home" ng-href="#!{{vm.link}}">
+        <button class="btn btn-home" ng-click="vm.changePage(vm.link)">
             <span>{{ vm.title.toUpperCase() }}</span>
-        </a>
+        </button>
     </div>
 </div>
