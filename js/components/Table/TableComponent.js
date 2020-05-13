@@ -8,6 +8,7 @@ app.component('tableComponent', {
         orderby: '@',
         campos: '=',
         acoes: '=',
+        search: '='
     }
 });
 

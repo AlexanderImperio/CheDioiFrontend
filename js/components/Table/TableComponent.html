@@ -7,10 +7,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr dir-paginate="body in vm.body | orderBy: vm.orderby| itemsPerPage: 10">
+            <tr dir-paginate="body in vm.body | orderBy: vm.orderby | filter: vm.search | itemsPerPage: 10 ">
                 <td ng-repeat="campo in vm.campos">{{body[campo]}}</td>
                 <td class="d-flex justify-content-around align-items-center">
-                    <button ng-repeat="acao in vm.acoes" class="btn {{acao.class}}" ng-click="acao.function()">
+                    <button ng-repeat="acao in vm.acoes" class="btn {{acao.class}}"
+                        ng-click="acao.function(acao.nome === 'Deletar' ? body.id : acao.nome === 'Editar' && body)">
                         {{acao.nome}}
                     </button>
                 </td>

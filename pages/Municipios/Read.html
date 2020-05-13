@@ -1,11 +1,18 @@
 <section class="container mt-4" ng-controller="MunicipiosControllerRead as read">
-    <table-component
-        header="['Descricão', 'UF']"
-        campos="['nome', 'uf']"
-        body="read.municipioList"
-        orderby="nome"
-        acoes="read.tableAcoes"
-    >
+    <h2 class="text-center">Lista de Municípios</h2>
 
-    </table-component>    
+    <div class="d-flex flex-row-reverse col-sm p-0">
+        <div class="input-group-append">
+            <span class="input-group-text"> <i class="fas fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Pesquisar" ng-model="read.search.nome">&nbsp;&nbsp;&nbsp;
+            <button ng-click="main.toPage('/municipios/')" class="btn btn-success" type="button">
+                Cadastrar
+            </button>
+        </div>
+    </div>
+
+    <table-component header="['Descricão', 'UF']" campos="['nome', 'uf']" body="read.municipioList" orderby="nome"
+        acoes="read.tableAcoes" search="read.search">
+
+    </table-component>
 </section>

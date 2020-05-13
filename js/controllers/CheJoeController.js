@@ -5,7 +5,14 @@ CheJoeController.$inject = ['$location']
 function CheJoeController($location) {
     vm = this;
     vm.isHomePage = function () {
-        return $location.path() === '/' ? true : false;
+        if ($location.path() === '/') {
+            return true;
+        }
+
+        return false;
     }
-    vm.title = "CheJoe Controller Success Created"
+
+    vm.toPage = function (path) {
+        $location.path(path);
+    }
 }

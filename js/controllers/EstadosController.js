@@ -3,28 +3,46 @@ app.controller('EstadosControllerRead', EstadosControllerRead);
 app.controller('EstadosControllerCreate', EstadosControllerCreate);
 app.controller('EstadosControllerUpdate', EstadosControllerUpdate);
 
-EstadosControllerRead.$inject = ['Api'];
-EstadosControllerCreate.$inject = ['Api'];
-
+let estadoAtual;
 function EstadosController() {
     const vm = this;
-
 }
 
-function EstadosControllerRead(api) {
+
+EstadosControllerRead.$inject = ['Api', '$location'];
+function EstadosControllerRead(api, $location) {
     const vm = this;
 
     vm.estadoList = [];
 
+    vm.estadoAtual;
+
+    vm.toUpdatePage = function (estado) {
+        estadoAtual = estado;
+        $location.path('estados/atualizar');
+    }
+
+    vm.deleteEstado = function (id) {
+        const deleteConfirm = confirm('Deseja realmente deletar este estado');
+        if (deleteConfirm) {
+            console.log('deletado com sucesso!');
+            api.estadoList.map((item, index) => {
+                item.id == id && api.estadoList.splice(index, 1);
+            });
+        }
+    }
+
     vm.tableAcoes = [
         {
-            nome: "deletar",
+            nome: "Deletar",
             class: "btn-danger",
-            function: vm.printName,
+            function: vm.deleteEstado
+
         },
         {
             nome: "Editar",
             class: "btn-primary",
+            function: vm.toUpdatePage,
         },
     ]
 
@@ -39,6 +57,7 @@ function EstadosControllerRead(api) {
 
 }
 
+EstadosControllerCreate.$inject = ['Api'];
 function EstadosControllerCreate(api) {
     const vm = this;
 
@@ -71,9 +90,12 @@ function EstadosControllerCreate(api) {
 
 }
 
-function EstadosControllerUpdate() {
+EstadosControllerUpdate.$inject = ['$location'];
+function EstadosControllerUpdate($location) {
     vm = this;
+    vm.estadoAtual = estadoAtual;
 
-    vm.estado = '';
-
+    if (vm.estadoAtual === undefined || !vm.estadoAtual) {
+        $location.path('/estados');
+    }
 }
