@@ -20,6 +20,14 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '../pages/Municipios/Read.html',
             controller: 'MunicipiosController as vm'
         })
+        .when('/municipios/novo', {
+            templateUrl: '../pages/Municipios/Create.html',
+            controller: 'MunicipiosController as vm'
+        })
+        .when('/municipios/atualizar', {
+            templateUrl: '../pages/Municipios/Update.html',
+            controller: 'MunicipiosController as vm'
+        })
         .otherwise({
             redirectTo: '/',
         })

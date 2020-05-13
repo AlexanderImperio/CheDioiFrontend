@@ -83,7 +83,7 @@ function EstadosControllerCreate(api) {
                     });
             }
         } else {
-            alert('todos os campos são obrigatorios!');
+            alert('Todos os campos são obrigatorios!');
         }
 
     }
