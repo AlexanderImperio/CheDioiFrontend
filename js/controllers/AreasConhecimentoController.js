@@ -1,12 +1,15 @@
 app.controller('AreasConhecimentoController', AreasConhecimentoController);
 app.controller('AreasConhecimentoControllerRead', AreasConhecimentoControllerRead);
+app.controller('AreasConhecimentoControllerUpdate', AreasConhecimentoControllerUpdate);
+
+let areaConhecimentoAtual;
 
 function AreasConhecimentoController() {
     const vm = this;
 }
 
-AreasConhecimentoControllerRead.$inject = ['Api'];
-function AreasConhecimentoControllerRead(api) {
+AreasConhecimentoControllerRead.$inject = ['Api', '$location'];
+function AreasConhecimentoControllerRead(api, $location) {
     const vm = this;
 
     vm.areasConhecimentoList = [];
@@ -23,6 +26,11 @@ function AreasConhecimentoControllerRead(api) {
         }
     }
 
+    vm.toUpdatePage = function (areaConhecimento) {
+        areaConhecimentoAtual = areaConhecimento;
+        $location.path('areas-de-conhecimento/atualizar');
+    }
+
     vm.tableAcoes = [
         {
             nome: "Deletar",
@@ -32,6 +40,7 @@ function AreasConhecimentoControllerRead(api) {
         {
             nome: "Editar",
             class: "btn-primary",
+            function: vm.toUpdatePage,
         },
     ]
 
@@ -42,5 +51,16 @@ function AreasConhecimentoControllerRead(api) {
             });
     } else {
         vm.areasConhecimentoList = api.areasConhecimentoList;
+    }
+}
+
+AreasConhecimentoControllerUpdate.$inject = ['$location']
+function AreasConhecimentoControllerUpdate($location) {
+    const vm = this;
+
+    vm.areaConhecimentoAtual = areaConhecimentoAtual;
+
+    if (vm.areaConhecimentoAtual === undefined) {
+        $location.path('/areas-de-conhecimento');
     }
 }

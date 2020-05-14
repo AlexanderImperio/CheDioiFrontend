@@ -32,6 +32,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '../pages/AreasConhecimento/Read.html',
             controller: 'AreasConhecimentoController as vm'
         })
+        .when('/areas-de-conhecimento/atualizar', {
+            templateUrl: '../pages/AreasConhecimento/Update.html',
+            controller: 'AreasConhecimentoController as vm'
+        })
         .otherwise({
             redirectTo: '/',
         })
