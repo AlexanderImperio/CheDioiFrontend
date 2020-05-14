@@ -1,0 +1,19 @@
+<section class="container mt-4" ng-controller="AreasConhecimentoControllerRead as read">
+
+    <h2 class="text-center">Lista de Areas de conhecimentos</h2>
+
+    <div class="d-flex flex-row-reverse col-sm p-0">
+        <div class="input-group-append">
+            <span class="input-group-text"> <i class="fas fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Pesquisar"
+                ng-model="read.search.nome">&nbsp;&nbsp;&nbsp;
+            <button ng-click="main.toPage('/areas-de-conhecimento')" class="btn btn-success" type="button">
+                Cadastrar
+            </button>
+        </div>
+    </div>
+
+    <table-component header="['ID', 'Descrição']" campos="['id', 'descricao']" body="read.areasConhecimentoList"
+        orderby="descricao" acoes="read.tableAcoes" search="read.search">
+    </table-component>
+</section>

@@ -17,7 +17,7 @@ function HomeController() {
         {
             title: 'ÁREAS DE CONHECIMENTO',
             icon: 'fas fa-graduation-cap',
-            link: '/areaDeConhecimento',
+            link: '/areas-de-conhecimento',
         },
         {
             title: 'PROFISSÕES',
