@@ -40,6 +40,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: '../pages/AreasConhecimento/Create.html',
             controller: 'AreasConhecimentoController as vm'
         })
+        .when('/profissoes', {
+            templateUrl: '../pages/Profissoes/Read.html',
+            controller: 'ProfissoesController as vm'
+        })
         .otherwise({
             redirectTo: '/',
         })

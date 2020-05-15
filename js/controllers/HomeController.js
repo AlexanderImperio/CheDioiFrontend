@@ -22,12 +22,12 @@ function HomeController() {
         {
             title: 'PROFISSÕES',
             icon: 'fab fa-black-tie',
-            link: '/profissao',
+            link: '/profissoes',
         },
         {
             title: 'FUNCIONÁRIOS',
             icon: 'far fa-address-card',
-            link: '/funcionario',
+            link: '/funcionarios',
         },
         {
             title: '....',
