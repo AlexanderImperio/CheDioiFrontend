@@ -1,0 +1,23 @@
+<div class="container mt-4" ng-controller="AreasConhecimentoControllerCreate as create">
+    <div class="row justify-content-center">
+        <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+            <div class="form-crud w-100">
+                <h4 class="text-center">Novo area de conhecimento</h4>
+                <label>Descricão: </label>
+                <input class="form-control" type="text" required="required" name="text"
+                    pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" ng-model="create.newAreaConhecimento.descricao" />
+
+                <div class="d-flex justify-content-center align-items-center w-100 mt-4">
+                    <div class="d-flex justify-content-center align-items-center w-50">
+                        <button title="Criar" class="btn btn-success w-50"
+                            ng-click="create.createNewAreaConhecimento()">Criar</button>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center w-50">
+                        <a ng-href="#!/areas-de-conhecimento" title="Voltar" class="btn btn-warning w-50">Voltar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
